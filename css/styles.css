@@ -785,6 +785,20 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .gallery .ph { aspect-ratio: 1; border-radius: var(--radius-sm); }
 .gallery .ph:first-child { grid-column: span 2; aspect-ratio: 16/9; }
 
+/* PRODUTO — ficha rápida, faixas de preço, praças */
+.facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.fact { display: inline-flex; align-items: center; gap: 9px; background: #fff; box-shadow: var(--sombra-sutil); border-radius: 999px; padding: 9px 16px 9px 9px; font-size: .85rem; font-weight: 600; color: var(--grafite); }
+.fact b { color: var(--accent-ink); font-weight: 800; }
+.fact .fi { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; font-size: .95rem; flex: 0 0 auto; }
+.tiers { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.tier { background: var(--accent-soft); color: var(--accent-ink); border-radius: var(--radius-sm); padding: 12px 20px; font-family: var(--serif); font-weight: 700; font-size: 1.15rem; line-height: 1; }
+.tier span { display: block; font-family: var(--sans); font-size: .62rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; opacity: .75; margin-bottom: 5px; }
+.pracas { display: flex; flex-wrap: wrap; gap: 9px; }
+.praca { display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; border-radius: 999px; background: #fff; box-shadow: var(--sombra-sutil); font-weight: 600; font-size: .88rem; }
+.praca::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.praca--main { background: var(--accent); color: #fff; }
+.praca--main::before { background: #fff; }
+
 .pkg { display: grid; gap: 20px; }
 .pkg-card { background: #fff; border-radius: var(--radius); padding: 30px; box-shadow: var(--sombra-sutil); border-top: 4px solid var(--areia); }
 .pkg-card--feat { border-top-color: var(--accent); position: relative; }
