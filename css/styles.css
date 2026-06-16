@@ -44,11 +44,14 @@
   --header-h: 72px;
 }
 
-/* ---------- Fontes da marca (Helvetica Now) ----------
-   Coloque os arquivos em assets/fonts/ e o site usa automaticamente.
-   Sem eles, cai para Helvetica Neue/Helvetica/Arial. */
-@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay.woff2") format("woff2"); font-weight: 300 800; font-display: swap; }
-@font-face { font-family: "Helvetica Now Text"; src: url("../assets/fonts/HelveticaNowText.woff2") format("woff2"); font-weight: 300 700; font-display: swap; }
+/* ---------- Fontes da marca (Helvetica Now Display) ----------
+   Arquivos enviados: Bold + Black (com itálicos). Pesos <=700 usam Bold,
+   801-900 usam Black. O corpo de texto (Helvetica Now Text) ainda cai para
+   Helvetica Neue/Arial até chegarem os pesos de texto. */
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"); font-weight: 100 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BoldIta.woff2") format("woff2"); font-weight: 100 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Black.woff2") format("woff2"); font-weight: 701 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BlackIta.woff2") format("woff2"); font-weight: 701 900; font-style: italic; font-display: swap; }
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -183,8 +186,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 20px; }
 .logo { display: inline-flex; flex-direction: row; align-items: center; gap: 0; line-height: 1; }
 .logo__sq { width: 13px; height: 13px; background: var(--vermelho); display: block; align-self: flex-start; margin: 2px 6px 0 0; flex: 0 0 auto; }
-.logo__bom { font-weight: 800; font-size: 1.25rem; color: var(--tinta); letter-spacing: -.045em; }
-.logo__gourmet { font-weight: 800; font-size: 1.25rem; color: var(--vermelho); letter-spacing: -.045em; }
+.logo__bom { font-family: var(--serif); font-weight: 800; font-size: 1.25rem; color: var(--tinta); letter-spacing: -.045em; }
+.logo__gourmet { font-family: var(--serif); font-weight: 800; font-size: 1.25rem; color: var(--vermelho); letter-spacing: -.045em; }
 /* variação para fundo escuro (rodapé) */
 .mega-footer .logo__bom, .footer .logo__bom { color: #fff; }
 .mf-intro .logo__sq { width: 16px; height: 16px; }
