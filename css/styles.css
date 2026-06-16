@@ -30,9 +30,9 @@
   --ouro: #c8993f;
   --ouro-claro: #e7c577;
 
-  /* Tipografia — Helvetica Now (padrão da marca). Coloque os .woff2 em assets/fonts/. */
-  --serif: "Helvetica Now Display", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --sans: "Helvetica Now Text", "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Tipografia — Helvetica Now Display (padrão da marca, self-hosted em assets/fonts/). */
+  --serif: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* Layout */
   --max: 1200px;
@@ -44,14 +44,17 @@
   --header-h: 72px;
 }
 
-/* ---------- Fontes da marca (Helvetica Now Display) ----------
-   Arquivos enviados: Bold + Black (com itálicos). Pesos <=700 usam Bold,
-   801-900 usam Black. O corpo de texto (Helvetica Now Text) ainda cai para
-   Helvetica Neue/Arial até chegarem os pesos de texto. */
-@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"); font-weight: 100 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BoldIta.woff2") format("woff2"); font-weight: 100 700; font-style: italic; font-display: swap; }
-@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Black.woff2") format("woff2"); font-weight: 701 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BlackIta.woff2") format("woff2"); font-weight: 701 900; font-style: italic; font-display: swap; }
+/* ---------- Fontes da marca (Helvetica Now Display, self-hosted) ----------
+   Família completa em uso (Regular/Medium/Bold/Black + itálicos). Faixas de peso
+   sem buracos: 400=Regular, 500=Medium, 600-700=Bold, 800+=Black. */
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"); font-weight: 1 449; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-RegIta.woff2") format("woff2"); font-weight: 1 449; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Medium.woff2") format("woff2"); font-weight: 450 549; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-MedIta.woff2") format("woff2"); font-weight: 450 549; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Bold.woff2") format("woff2"); font-weight: 550 799; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BoldIta.woff2") format("woff2"); font-weight: 550 799; font-style: italic; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-Black.woff2") format("woff2"); font-weight: 800 1000; font-style: normal; font-display: swap; }
+@font-face { font-family: "Helvetica Now Display"; src: url("../assets/fonts/HelveticaNowDisplay-BlackIta.woff2") format("woff2"); font-weight: 800 1000; font-style: italic; font-display: swap; }
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
