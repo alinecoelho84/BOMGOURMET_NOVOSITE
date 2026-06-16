@@ -273,17 +273,17 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .hero__showcase { position: relative; }
 .showcase { position: relative; }
 .showcase__viewport { overflow: hidden; border-radius: var(--radius-sm); }
-.showcase__track { display: flex; gap: 10px; will-change: transform; }
+.showcase__track { display: flex; gap: 6px; will-change: transform; }
 .panel {
-  flex: 0 0 calc((100% - 10px) / 2);
-  position: relative; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden;
+  flex: 0 0 calc((100% - 6px) / 1.4);
+  position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden;
   background-size: cover; background-position: center; box-shadow: var(--sombra-sutil);
   display: flex; flex-direction: column; justify-content: flex-end;
 }
 .panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,24,23,0) 36%, rgba(28,24,23,.9)); transition: background .3s; }
 .panel:hover::after { background: linear-gradient(180deg, rgba(204,1,36,.18), rgba(28,24,23,.92)); }
-.panel__cat { position: relative; z-index: 1; margin: 0 12px; font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ouro-claro); }
-.panel__title { position: relative; z-index: 1; margin: 4px 12px 14px; color: #fff; font-size: .9rem; line-height: 1.15; }
+.panel__cat { position: relative; z-index: 1; margin: 0 16px; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ouro-claro); }
+.panel__title { position: relative; z-index: 1; margin: 5px 16px 18px; color: #fff; font-size: 1.12rem; line-height: 1.15; }
 
 .showcase__nav { display: flex; align-items: center; margin-top: 14px; }
 .showcase__bar { flex: 1; height: 3px; background: var(--areia); border-radius: 999px; overflow: hidden; }
@@ -294,8 +294,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .sc-prev { left: -10px; }
 .sc-next { right: -10px; }
 
-@media (min-width: 600px) { .panel { flex-basis: calc((100% - 10px) / 2); } }
-@media (min-width: 900px) { .panel { flex-basis: calc((100% - 20px) / 3); } }
+@media (min-width: 600px) { .panel { flex-basis: calc((100% - 6px) / 2); } }
+@media (min-width: 900px) { .panel { flex-basis: calc((100% - 6px) / 2); } }
 
 /* =========================================================
    FAIXA / MANIFESTO
