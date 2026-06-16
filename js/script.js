@@ -244,6 +244,17 @@
     });
   });
 
+  /* ---- Cards inteiros clicáveis ---- */
+  document.querySelectorAll("article.card").forEach((card) => {
+    const link = card.querySelector("a.card__link[href], a[href]");
+    if (!link) return;
+    card.style.cursor = "pointer";
+    card.addEventListener("click", (e) => {
+      if (e.target.closest("a, button")) return;
+      window.location.href = link.getAttribute("href");
+    });
+  });
+
   /* ---- FAQ accordion ---- */
   document.querySelectorAll(".faq-q").forEach((q) =>
     q.addEventListener("click", () => {

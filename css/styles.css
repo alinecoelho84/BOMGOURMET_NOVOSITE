@@ -291,6 +291,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .manifesto__grid { display: grid; gap: 32px; align-items: center; }
 .manifesto h2 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); }
 .manifesto p { color: #d8cfc6; margin-top: 16px; }
+.manifesto .btn--ghost { color: #fff; border-color: rgba(255,255,255,.4); }
+.manifesto .btn--ghost:hover { background: #fff; color: var(--tinta); border-color: #fff; }
 .manifesto .ph { aspect-ratio: 16/10; border-radius: var(--radius); }
 
 /* =========================================================
@@ -301,7 +303,7 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
   background: var(--areia); border-radius: var(--radius); overflow: hidden;
 }
 .num { background: var(--creme); padding: 18px 14px; text-align: center; }
-.num b { display: block; font-family: var(--serif); font-size: clamp(1.8rem, 6vw, 2.6rem); color: var(--vermelho); line-height: 1; }
+.num b { display: block; font-family: var(--serif); font-size: clamp(1.4rem, 3.6vw, 1.95rem); color: var(--vermelho); line-height: 1; white-space: nowrap; }
 .num span { display: block; margin-top: 8px; font-size: .76rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--grafite); }
 
 /* =========================================================
@@ -315,10 +317,13 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 }
 .card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
 .card__media { aspect-ratio: 16/10; position: relative; }
+.card__media--logo { display: flex; align-items: center; justify-content: center; background: var(--accent-ink); background-image: linear-gradient(140deg, var(--accent), var(--accent-ink)); }
+.card__logo { max-height: 56%; max-width: 70%; width: auto; filter: drop-shadow(0 6px 16px rgba(0,0,0,.25)); }
+.card__name { font-family: var(--serif); color: #fff; font-size: 1.4rem; font-weight: 700; text-align: center; padding: 0 18px; line-height: 1.1; }
 .card__media .ph, .post__media .ph, .feed__item .ph { position: absolute; inset: 0; width: 100%; height: 100%; }
 .card__tag {
   position: absolute; top: 14px; left: 14px;
-  background: var(--vermelho); color: #fff; font-size: .68rem; font-weight: 700;
+  background: var(--accent); color: #fff; font-size: .68rem; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px;
 }
 .card__status {
@@ -711,9 +716,13 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 /* =========================================================
    LANDING DO PRODUTO (festival.html)
    ========================================================= */
-.product-hero { position: relative; color: #fff; padding: 0; }
-.product-hero::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; z-index: 3; background: var(--accent); }
-.product-hero__logo { max-height: 128px; width: auto; max-width: min(82%, 440px); margin-bottom: 22px; display: block; filter: drop-shadow(0 8px 24px rgba(0,0,0,.4)); }
+.product-hero { position: relative; color: #fff; padding: 0; overflow: hidden; background: linear-gradient(140deg, var(--accent), var(--accent-ink)); }
+.product-hero__logo { max-height: 150px; width: auto; max-width: min(86%, 480px); margin-bottom: 22px; display: block; filter: drop-shadow(0 8px 24px rgba(0,0,0,.28)); }
+.product-hero .lead { color: rgba(255,255,255,.92); }
+.product-hero .btn--primary { background: #fff; color: var(--accent-ink); box-shadow: none; }
+.product-hero .btn--primary:hover { background: var(--creme); }
+.product-hero .btn--light, .product-hero .btn--ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.55); }
+.product-hero .btn--light:hover, .product-hero .btn--ghost:hover { background: #fff; color: var(--accent-ink); border-color: #fff; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* ---- Temas por produto (cada página de produto recebe uma classe) ---- */
@@ -728,8 +737,9 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .theme-casa       { --accent:#cf0023; --accent-soft:#fbdce1; --accent-ink:#a4001c; --ouro:#cf0023; --ouro-claro:#ec8090; }
 .theme-rs         { --accent:#2a8a86; --accent-soft:#dcefed; --accent-ink:#1f6a66; --ouro:#2a8a86; --ouro-claro:#8ccfca; }
 .theme-personalize{ --accent:#4b5bd6; --accent-soft:#e7e9fb; --accent-ink:#3a48ad; --ouro:#4b5bd6; --ouro-claro:#aab2f0; }
-.product-hero__bg { position: absolute; inset: 0; }
-.product-hero__bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,24,23,.4), rgba(28,24,23,.85)); }
+.product-hero__bg { position: absolute; inset: 0; opacity: .16; mix-blend-mode: soft-light; }
+.product-hero__bg .ph--dark { background-color: transparent; }
+.product-hero__bg .ph--dark[style*="background-image"]::before { display: none; }
 .product-hero__inner { position: relative; padding: 90px 0; }
 .product-hero h1 { font-size: clamp(2.6rem, 9vw, 5rem); }
 .product-hero .lead { color: #e8ded3; margin: 20px 0 28px; }
