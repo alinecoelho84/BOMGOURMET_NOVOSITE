@@ -275,8 +275,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .showcase__viewport { overflow: hidden; border-radius: var(--radius-sm); }
 .showcase__track { display: flex; gap: 6px; will-change: transform; }
 .panel {
-  flex: 0 0 calc((100% - 6px) / 1.4);
-  position: relative; aspect-ratio: 9 / 16; border-radius: 20px; overflow: hidden;
+  flex: 0 0 calc((100% - 6px) / 2);
+  position: relative; aspect-ratio: 2 / 5; border-radius: 16px; overflow: hidden;
   background-size: cover; background-position: center; box-shadow: var(--sombra-sutil);
   display: flex; flex-direction: column; justify-content: flex-end;
 }
@@ -294,8 +294,8 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; line-height: 1
 .sc-prev { left: -10px; }
 .sc-next { right: -10px; }
 
-@media (min-width: 600px) { .panel { flex-basis: calc((100% - 6px) / 2); } }
-@media (min-width: 900px) { .panel { flex-basis: calc((100% - 6px) / 2); } }
+@media (min-width: 600px) { .panel { flex-basis: calc((100% - 12px) / 3); } }
+@media (min-width: 900px) { .panel { flex-basis: calc((100% - 18px) / 4); } }
 
 /* =========================================================
    FAIXA / MANIFESTO
