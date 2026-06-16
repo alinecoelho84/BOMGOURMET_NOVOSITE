@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícias — Bom Gourmet</title>
+  <meta name="description" content="As últimas notícias do ecossistema Bom Gourmet — filtre por produto e acompanhe tudo sobre Festival, Prêmio, Circuitos, FoodCo, Vinada e mais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=22" />
+</head>
+<body>
+
+  <div data-component="header"></div>
+
+  <main>
+
+    <section class="section">
+      <div class="container">
+        <p class="breadcrumb reveal" style="color:var(--cinza); font-size:.82rem; margin-bottom:14px"><a href="index.html">Início</a> / <strong>Notícias</strong></p>
+        <div class="reveal" style="max-width:720px; margin-bottom:26px">
+          <span class="eyebrow">Conteúdo &amp; notícias</span>
+          <h1 class="h-section" style="font-size:clamp(2rem,5vw,3rem)">As últimas do ecossistema</h1>
+          <p class="lead" style="margin-top:12px">Tudo o que está acontecendo no Bom Gourmet, das mais recentes para as mais antigas. Use o filtro para ver só o que interessa a você.</p>
+        </div>
+
+        <div class="filterbar reveal" data-news-filter>
+          <button class="filter-btn is-active" type="button" data-product="all">Todas</button>
+          <button class="filter-btn" type="button" data-product="festival">Festival</button>
+          <button class="filter-btn" type="button" data-product="premio">Prêmio</button>
+          <button class="filter-btn" type="button" data-product="circuito">Circuitos</button>
+          <button class="filter-btn" type="button" data-product="cwburguer">CWBurguer</button>
+          <button class="filter-btn" type="button" data-product="foodco">FoodCo</button>
+          <button class="filter-btn" type="button" data-product="vinada">Vinada</button>
+          <button class="filter-btn" type="button" data-product="mercado">Mercado</button>
+          <button class="filter-btn" type="button" data-product="geral">Geral</button>
+        </div>
+
+        <div class="posts" data-news>
+          <article class="post reveal" data-product="festival">
+            <div class="post__media"><div class="ph" data-ph="Festival Bom Gourmet"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--festival">Festival</span><span class="post__date">10 jun 2026</span></div>
+              <h3>Festival Bom Gourmet 2026 abre cotas de patrocínio</h3>
+              <p>A maior temporada gastronômica do estado já tem data e começa a montar o time de marcas parceiras.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="premio">
+            <div class="post__media"><div class="ph" data-ph="Prêmio Bom Gourmet"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--premio">Prêmio</span><span class="post__date">05 jun 2026</span></div>
+              <h3>Prêmio Bom Gourmet anuncia as categorias da nova edição</h3>
+              <p>A premiação mais importante da gastronomia paranaense começa a mobilizar o setor.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="foodco">
+            <div class="post__media"><div class="ph" data-ph="Post FoodCo"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--foodco">FoodCo</span><span class="post__date">01 jun 2026</span></div>
+              <h3>FoodCo lota edição sobre pessoas e liderança</h3>
+              <p>“Gente é meu maior problema” reuniu operadores em uma das edições mais comentadas do ano.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="mercado">
+            <div class="post__media"><div class="ph" data-ph="Tendências"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--mercado">Mercado</span><span class="post__date">28 mai 2026</span></div>
+              <h3>Tendências que vão mover a gastronomia nos próximos anos</h3>
+              <p>Do delivery inteligente à experiência presencial: o que o food service precisa observar.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="circuito">
+            <div class="post__media"><div class="ph" data-ph="Circuito de Inverno"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--circuito">Circuitos</span><span class="post__date">20 mai 2026</span></div>
+              <h3>Circuito de Inverno aquece a economia gastronômica</h3>
+              <p>Dezenas de restaurantes criam pratos especiais para a temporada mais fria do ano.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="cwburguer">
+            <div class="post__media"><div class="ph" data-ph="CWBurguer Fest"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--cwburguer">CWBurguer</span><span class="post__date">12 mai 2026</span></div>
+              <h3>CWBurguer Fest bate recorde de hambúrgueres vendidos</h3>
+              <p>O festival mais saboroso de Curitiba movimentou as hamburguerias da cidade.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="vinada">
+            <div class="post__media"><div class="ph" data-ph="Vinada Cultural"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--vinada">Vinada</span><span class="post__date">05 mai 2026</span></div>
+              <h3>Vinada Cultural: o novo território do ecossistema</h3>
+              <p>Vinho, cultura e gastronomia se encontram no projeto que está sendo construído para 2026.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="geral">
+            <div class="post__media"><div class="ph" data-ph="Bom Gourmet RS"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--geral">Geral</span><span class="post__date">28 abr 2026</span></div>
+              <h3>Bom Gourmet desembarca no Rio Grande do Sul</h3>
+              <p>O ecossistema expande seu modelo de live marketing para a gastronomia gaúcha.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="mercado">
+            <div class="post__media"><div class="ph" data-ph="Reportagem"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--mercado">Reportagem</span><span class="post__date">20 abr 2026</span></div>
+              <h3>A nova criatividade da cozinha brasileira</h3>
+              <p>Chefs reinventam tradições e valorizam ingredientes nacionais que conquistam o mundo.</p>
+            </div>
+          </article>
+
+          <article class="post reveal" data-product="geral">
+            <div class="post__media"><div class="ph" data-ph="Guia"></div></div>
+            <div class="post__body">
+              <div class="post__meta"><span class="ntag ntag--geral">Guia</span><span class="post__date">12 abr 2026</span></div>
+              <h3>Guia de Inverno: 20 lugares para conhecer agora</h3>
+              <p>Uma seleção para você montar o roteiro e viver a cidade pela mesa.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="center reveal" style="margin-top:36px">
+          <a href="#" class="btn btn--dark">Carregar mais notícias</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="js/components.js?v=22"></script>
+  <script src="js/script.js?v=22"></script>
+</body>
+</html>
