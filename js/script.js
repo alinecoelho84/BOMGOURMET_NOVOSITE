@@ -154,6 +154,25 @@
     start();
   });
 
+  /* ---- Carrosséis horizontais com setas laterais (Em Destaque, Colunistas) ---- */
+  document.querySelectorAll("[data-carousel]").forEach((car) => {
+    const track = car.querySelector(".carousel__track");
+    const prev = car.querySelector(".carousel__arrow--prev");
+    const next = car.querySelector(".carousel__arrow--next");
+    if (!track) return;
+    const step = () => Math.max(track.clientWidth * 0.8, 240);
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 4;
+      if (prev) prev.style.visibility = track.scrollLeft <= 4 ? "hidden" : "visible";
+      if (next) next.style.visibility = track.scrollLeft >= max ? "hidden" : "visible";
+    };
+    next?.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+    prev?.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+
   /* ---- Filtro do calendário por região ---- */
   const filterbar = document.querySelector("[data-filter]");
   if (filterbar) {

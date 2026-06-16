@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=24" />
+  <link rel="stylesheet" href="css/styles.css?v=26" />
 </head>
 <body>
 
@@ -79,26 +79,47 @@
     <!-- ================= EM DESTAQUE (notícias) ================= -->
     <section class="section section--creme2" id="destaque">
       <div class="container">
-        <div class="reveal" style="margin-bottom:28px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:16px">
-          <div>
-            <span class="eyebrow">Em destaque</span>
-            <h2 class="h-section">O que está movendo a gastronomia agora</h2>
-          </div>
-          <a href="#" class="btn btn--ghost">Ver todas as matérias</a>
+        <div class="reveal" style="margin-bottom:22px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px">
+          <span class="eyebrow">Em destaque</span>
+          <a href="noticias.html" class="btn btn--ghost">Ver todas as matérias</a>
         </div>
-        <div class="posts">
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Reportagem"></div></div>
-            <div class="post__body"><span class="post__cat">Reportagem</span><h3>A nova criatividade da cozinha brasileira</h3></div>
-          </article>
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Tendências"></div></div>
-            <div class="post__body"><span class="post__cat">Mercado</span><h3>Tendências que vão mover a gastronomia nos próximos anos</h3></div>
-          </article>
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Guia"></div></div>
-            <div class="post__body"><span class="post__cat">Guia</span><h3>Guia de Inverno: 20 lugares para conhecer agora</h3></div>
-          </article>
+        <div class="carousel reveal" data-carousel>
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="carousel__track">
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Reportagem"></div></div>
+              <div class="post__body"><span class="post__cat">Reportagem</span><h3>A nova criatividade da cozinha brasileira</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Tendências"></div></div>
+              <div class="post__body"><span class="post__cat">Mercado</span><h3>Tendências que vão mover a gastronomia nos próximos anos</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Guia"></div></div>
+              <div class="post__body"><span class="post__cat">Guia</span><h3>Guia de Inverno: 20 lugares para conhecer agora</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Festival Bom Gourmet"></div></div>
+              <div class="post__body"><span class="post__cat">Festival</span><h3>Os menus mais comentados do Festival deste ano</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Prêmio Bom Gourmet"></div></div>
+              <div class="post__body"><span class="post__cat">Prêmio</span><h3>Quem são os indicados ao Prêmio Bom Gourmet</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Reels drink"></div></div>
+              <div class="post__body"><span class="post__cat">Bar</span><h3>Os drinks autorais que dominaram a temporada</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="CWBurguer Fest"></div></div>
+              <div class="post__body"><span class="post__cat">CWBurguer</span><h3>O ranking dos hambúrgueres mais pedidos de Curitiba</h3></div>
+            </article>
+            <article class="post">
+              <div class="post__media"><div class="ph" data-ph="Post FoodCo"></div></div>
+              <div class="post__body"><span class="post__cat">FoodCo</span><h3>O que o food service precisa saber para crescer agora</h3></div>
+            </article>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
       </div>
     </section>
@@ -108,7 +129,7 @@
       <div class="container">
         <div class="center reveal" style="margin-bottom:40px">
           <span class="eyebrow">Nosso portfólio</span>
-          <h2 class="h-section">Produtos que conectam o ecossistema</h2>
+          <h2 class="h-section">O Ecossistema Bom Gourmet</h2>
           <p class="lead" style="margin:14px auto 0">Cada projeto funciona como uma frente de negócio — e como uma mini landing page pronta para patrocínio e participação.</p>
         </div>
 
@@ -171,10 +192,10 @@
           </article>
 
           <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Vinada Cultural"></div><span class="card__tag">Novo</span><span class="card__status card__status--plan"><i></i>Em construção</span></div>
+            <div class="card__media"><div class="ph" data-ph="Vinada Cultural"></div><span class="card__tag">Novo</span><span class="card__status card__status--live"><i></i>Em cartaz</span></div>
             <div class="card__body">
               <h3>Vinada Cultural</h3>
-              <p>Experiência que une vinho, cultura e gastronomia — em construção e já no nosso planejamento.</p>
+              <p>Cultura curitibana, gastronomia democrática e música ao vivo na Praça Afonso Botelho — duas edições por ano.</p>
               <a href="vinada.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
           </article>
@@ -259,21 +280,25 @@
       <div class="container">
         <div class="center reveal" style="margin-bottom:22px">
           <span class="eyebrow">Colunistas</span>
-          <h2 class="h-section">Vozes do ecossistema</h2>
+          <h2 class="h-section">Nosso time de Colunistas</h2>
         </div>
-        <div class="columnists">
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Patrícia Melo</b><span>Mesa de Abertura</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Alexandre Soares</b><span>Deguste</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Claudia Krauspenhar</b><span>Comer &amp; Beber</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Luiz Américo</b><span>Giro Gastronômico</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Luiz Gama</b><span>Gastronomia S/A</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Fernanda Meneguetti</b><span>Cozinha Prática</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Ricardo Tavares</b><span>Vinho &amp; Cia</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Marina Costa</b><span>Doçaria</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>João Pedro Lima</b><span>Boteco</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Helena Dias</b><span>Café com Letras</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Bruno Almeida</b><span>Churrasco</span></div>
-          <div class="columnist reveal"><div class="ph" data-ph=""></div><b>Sofia Ramos</b><span>Cozinha do Mundo</span></div>
+        <div class="carousel reveal" data-carousel>
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <div class="carousel__track">
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Patrícia Melo</b><span>Mesa de Abertura</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Alexandre Soares</b><span>Deguste</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Claudia Krauspenhar</b><span>Comer &amp; Beber</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Luiz Américo</b><span>Giro Gastronômico</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Luiz Gama</b><span>Gastronomia S/A</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Fernanda Meneguetti</b><span>Cozinha Prática</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Ricardo Tavares</b><span>Vinho &amp; Cia</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Marina Costa</b><span>Doçaria</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>João Pedro Lima</b><span>Boteco</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Helena Dias</b><span>Café com Letras</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Bruno Almeida</b><span>Churrasco</span></div>
+            <div class="columnist"><div class="ph" data-ph=""></div><b>Sofia Ramos</b><span>Cozinha do Mundo</span></div>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
         </div>
       </div>
     </section>
@@ -281,26 +306,20 @@
     <!-- ================= CONTEÚDO QUE INSPIRA E CONECTA (atemporal) ================= -->
     <section class="section section--creme2" id="inspira">
       <div class="container">
-        <div class="reveal" style="margin-bottom:28px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:16px">
-          <div>
-            <span class="eyebrow">Conteúdo que inspira e conecta</span>
-            <h2 class="h-section">Histórias que ficam, não só notícias</h2>
-          </div>
-          <a href="#" class="btn btn--ghost">Acessar conteúdo</a>
+        <div class="reveal" style="margin-bottom:24px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px">
+          <span class="eyebrow">Conteúdo que inspira e conecta</span>
+          <a href="noticias.html" class="btn btn--ghost">Acessar conteúdo</a>
         </div>
-        <div class="posts">
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Inspira historia"></div></div>
-            <div class="post__body"><span class="post__cat">Cultura</span><h3>A história da gastronomia paranaense</h3></div>
-          </article>
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Inspira tecnicas"></div></div>
-            <div class="post__body"><span class="post__cat">Cozinha</span><h3>Técnicas que todo apaixonado por cozinha deveria saber</h3></div>
-          </article>
-          <article class="post reveal">
-            <div class="post__media"><div class="ph" data-ph="Inspira sustentabilidade"></div></div>
-            <div class="post__body"><span class="post__cat">Sustentabilidade</span><h3>O novo ingrediente do sucesso no food service</h3></div>
-          </article>
+        <div class="inspira-grid">
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">📜</span><div><span class="post__cat">Cultura</span><h3>A história da gastronomia paranaense</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🔪</span><div><span class="post__cat">Cozinha</span><h3>Técnicas que todo apaixonado deveria saber</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🌱</span><div><span class="post__cat">Sustentabilidade</span><h3>O novo ingrediente do sucesso no food service</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🍷</span><div><span class="post__cat">Vinhos</span><h3>Como montar uma harmonização sem erro</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">👩‍🍳</span><div><span class="post__cat">Bastidores</span><h3>Os chefs que estão moldando a cena local</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🥘</span><div><span class="post__cat">Receitas</span><h3>Pratos afetivos para fazer em casa</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">📈</span><div><span class="post__cat">Mercado</span><h3>O que move o food service em 2026</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🍸</span><div><span class="post__cat">Bar</span><h3>A nova coquetelaria autoral do Paraná</h3></div></a>
+          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🗺️</span><div><span class="post__cat">Roteiros</span><h3>Onde comer bem em cada canto da cidade</h3></div></a>
         </div>
       </div>
     </section>
@@ -360,9 +379,9 @@
         <aside class="reveal">
           <div class="community__card community__card--gl" style="min-height:auto">
             <span class="eyebrow" style="color:#ffd9dd">Não perca nada</span>
-            <h3>Receba a agenda no seu WhatsApp</h3>
-            <p>Entre na comunidade Gourmet Lovers e fique por dentro de tudo que vai rolar na cidade.</p>
-            <a href="#social" class="btn btn--light">Quero participar</a>
+            <h3>Receba a agenda na newsletter</h3>
+            <p>Entre na comunidade Gourmet Lovers e receba no seu e-mail tudo que vai rolar na cidade.</p>
+            <a href="#comunidades" class="btn btn--light">Quero participar</a>
           </div>
         </aside>
       </div>
@@ -379,13 +398,13 @@
           <div class="community__card community__card--gl reveal">
             <span class="eyebrow" style="color:#ffd9dd">Para o público</span>
             <h3>Gourmet Lovers</h3>
-            <p>A comunidade de quem ama comer bem. Newsletter, grupos de WhatsApp, benefícios exclusivos e acesso antecipado às experiências.</p>
+            <p>A comunidade de quem ama comer bem. Newsletter, benefícios exclusivos e acesso antecipado às experiências do ecossistema.</p>
             <a href="#" class="btn btn--light">Seja um Gourmet Lover</a>
           </div>
           <div class="community__card community__card--fc reveal">
             <span class="eyebrow" style="color:var(--ouro-claro)">Para operadores</span>
             <h3>Comunidade FoodCo</h3>
-            <p>Para quem opera no food service: eventos, mentorias, conteúdo de gestão e conexões para impulsionar o seu negócio.</p>
+            <p>Para quem opera no food service: grupos de WhatsApp, eventos, mentorias, conteúdo de gestão e conexões para impulsionar o seu negócio.</p>
             <a href="#" class="btn btn--primary">Entrar na FoodCo</a>
           </div>
         </div>
@@ -454,7 +473,7 @@
 
         <div class="social-cta reveal">
           <a href="#" class="btn btn--primary">Seguir o Bom Gourmet</a>
-          <a href="#" class="btn btn--ghost">Entrar no grupo do WhatsApp</a>
+          <a href="#comunidades" class="btn btn--ghost">Entrar na Comunidade FoodCo</a>
         </div>
       </div>
     </section>
@@ -608,7 +627,7 @@
   </main>
   <div data-component="footer"></div>
 
-  <script src="js/components.js?v=24"></script>
-  <script src="js/script.js?v=24"></script>
+  <script src="js/components.js?v=26"></script>
+  <script src="js/script.js?v=26"></script>
 </body>
 </html>
