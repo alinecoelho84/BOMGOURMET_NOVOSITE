@@ -161,9 +161,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .colrow { display: flex; gap: 22px; overflow-x: auto; padding: 6px 2px 16px; scrollbar-width: none; }
 .colrow::-webkit-scrollbar { display: none; }
 .colu { flex: 0 0 auto; width: 130px; text-align: center; }
-.colu .colu__ph { width: 116px; height: 116px; border-radius: 50%; margin: 0 auto 10px; background-size: cover; background-position: center; border: 3px solid #fff; box-shadow: var(--sombra-sutil); }
+.colu .colu__ph { display: block; width: 116px; height: 116px; border-radius: 50%; margin: 0 auto 10px; background-size: cover; background-position: center; border: 3px solid #fff; box-shadow: var(--sombra-sutil); }
 .colu b { display: block; font-size: .88rem; line-height: 1.2; }
 .colu span { font-size: .76rem; color: var(--cinza); }
+.colu__link { display: block; margin-top: 5px; font-size: .72rem; font-weight: 700; font-style: normal; color: var(--vermelho); cursor: pointer; }
 
 /* ---------- Depoimentos ---------- */
 .quotecols { display: grid; grid-template-columns: 1fr; gap: 28px; }
