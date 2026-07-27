@@ -1,5 +1,20 @@
 /* Protótipos V1/V2/V3 — slider do hero, rodapé e seletor de versões */
 (function () {
+  /* Modo teste cego: link com ?t=1 esconde a barra de protótipo e o seletor,
+     para envio externo sem viés. Ex.: v2.html?t=1 */
+  const MODO_TESTE = new URLSearchParams(location.search).has("t");
+  if (MODO_TESTE) {
+    document.querySelector(".proto-bar")?.remove();
+    // mantém o modo nos links internos da própria página
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("a[href]");
+      if (!a) return;
+      const href = a.getAttribute("href");
+      if (href && !href.startsWith("#") && !href.startsWith("http") && !href.includes("?")) {
+        a.setAttribute("href", href + "?t=1");
+      }
+    }, true);
+  }
   /* ---- Hero slider (fade + autoplay) ---- */
   document.querySelectorAll("[data-vslider]").forEach((sl) => {
     const slides = [...sl.querySelectorAll(".vslide")];
@@ -63,14 +78,15 @@
           </div>
         </div>
         <div class="vfooter__base">
-          <span>© Bom Gourmet — protótipo de estudo, sem valor comercial.</span>
+          <span>© Bom Gourmet · protótipo de estudo, sem valor comercial.</span>
           <span>Paraná &amp; Rio Grande do Sul</span>
         </div>
       </div>
     </footer>`;
   }
 
-  /* ---- Seletor fixo de versões ---- */
+  /* ---- Seletor fixo de versões (não aparece no modo teste cego) ---- */
+  if (MODO_TESTE) return;
   const cur = document.body.dataset.v || "";
   const sw = document.createElement("nav");
   sw.className = "vswitch";

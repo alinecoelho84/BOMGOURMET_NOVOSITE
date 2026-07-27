@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de medição · Nova home Bom Gourmet</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/versoes.css?v=7" />
+  <style>
+    .plan-hero { padding: 60px 0 36px; text-align: center; }
+    .plan-hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); max-width: 760px; margin: 0 auto 14px; }
+    .plan-hero p { max-width: 620px; margin: 0 auto; color: var(--cinza); font-size: 1.02rem; }
+    .plan-sec { padding: 40px 0; }
+    .plan-sec + .plan-sec { border-top: 1px solid var(--areia); }
+    .plan-sec h2 { font-size: 1.5rem; margin-bottom: 6px; }
+    .plan-sec .lead-line { color: var(--cinza); font-size: .95rem; margin-bottom: 24px; }
+    .fasetag { display: inline-flex; background: var(--vermelho); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; padding: 6px 13px; border-radius: 999px; margin-bottom: 12px; }
+    .fasetag--dark { background: var(--tinta); }
+    .persona-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 860px) { .persona-grid { grid-template-columns: repeat(4, 1fr); } }
+    .persona { background: #fff; border-radius: var(--radius-sm); padding: 18px; box-shadow: var(--sombra-sutil); }
+    .persona b { display: block; font-family: var(--display); font-size: 1.6rem; color: var(--vermelho); }
+    .persona h3 { font-size: .98rem; margin: 2px 0 6px; }
+    .persona p { font-size: .82rem; color: var(--cinza); line-height: 1.45; }
+    .roteiro { counter-reset: passo; display: grid; gap: 10px; }
+    .roteiro li { list-style: none; background: #fff; border-radius: var(--radius-sm); padding: 16px 18px 16px 58px; position: relative; box-shadow: var(--sombra-sutil); font-size: .93rem; line-height: 1.5; }
+    .roteiro li::before { counter-increment: passo; content: counter(passo); position: absolute; left: 16px; top: 15px; width: 28px; height: 28px; border-radius: 50%; background: var(--tinta); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: .85rem; }
+    .roteiro b { color: var(--tinta); }
+    .duocol { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 860px) { .duocol { grid-template-columns: 1fr 1fr; } }
+    .notebox { background: #fff; border-left: 4px solid var(--vermelho); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 18px 22px; font-size: .92rem; line-height: 1.55; }
+    .notebox b { display: block; margin-bottom: 4px; }
+    .linkcego { display: block; background: var(--tinta); color: #fff; border-radius: var(--radius-sm); padding: 13px 18px; font-size: .88rem; font-weight: 600; }
+    .linkcego small { display: block; color: var(--ouro-claro); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+    .crono { display: grid; gap: 0; }
+    .crono li { list-style: none; display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--areia); font-size: .93rem; align-items: baseline; }
+    .crono li:last-child { border-bottom: 0; }
+    .crono b { flex: 0 0 130px; font-family: var(--display); color: var(--vermelho); }
+    .criterio-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 860px) { .criterio-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body data-v="hub">
+
+  <div class="proto-bar"><b>Estudo interno</b> · plano de medição para escolher a nova home · <a href="versoes.html">ver os protótipos</a></div>
+
+  <header class="vheader">
+    <div class="container vheader__inner">
+      <a class="vlogo" href="versoes.html"><i></i><b>bom</b><b>Gourmet</b></a>
+      <a class="vbtn vbtn--ghost vbtn--sm" href="versoes.html">Ver as 3 versões</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="plan-hero container">
+      <span class="vchip">Plano de medição</span>
+      <h1>Como escolher a home com evidência, e não com opinião</h1>
+      <p>Duas fases: uma semana de testes guiados com gente de fora e duas semanas de medição automática. No fim, três números decidem.</p>
+    </section>
+
+    <!-- O que queremos responder -->
+    <section class="plan-sec container">
+      <h2>As 3 perguntas que o teste responde</h2>
+      <p class="lead-line">Tudo que a gente medir serve a uma dessas perguntas. Se não serve, não entra.</p>
+      <div class="criterio-grid">
+        <div class="notebox"><b>1. A página explica o que somos?</b> Quem nunca ouviu falar do Bom Gourmet consegue dizer, em 5 segundos, o que a empresa faz?</div>
+        <div class="notebox"><b>2. Cada público acha seu caminho?</b> Consumidor, restaurante e marca encontram onde clicar sem ajuda e sem hesitar?</div>
+        <div class="notebox"><b>3. Qual versão ganha?</b> Qual das três preferem as pessoas que não participaram da nossa discussão interna?</div>
+      </div>
+    </section>
+
+    <!-- FASE 1 -->
+    <section class="plan-sec container">
+      <span class="fasetag">Fase 1 · Esta semana</span>
+      <h2>Teste guiado com 12 pessoas de fora</h2>
+      <p class="lead-line">Sessões individuais de 15 minutos, presenciais ou por chamada de vídeo com a tela compartilhada. Sempre no celular, que é onde a maioria vai usar.</p>
+
+      <div class="persona-grid">
+        <div class="persona"><b>4</b><h3>Consumidores que não conhecem a marca</h3><p>São o teste de clareza de verdade. Quem já conhece completa a frase de cabeça.</p></div>
+        <div class="persona"><b>2</b><h3>Consumidores que já conhecem</h3><p>Para conferir se o novo site não estranha para a base que já ama a marca.</p></div>
+        <div class="persona"><b>3</b><h3>Restaurantes e operações</h3><p>Um que já participou de projeto e dois que nunca participaram.</p></div>
+        <div class="persona"><b>3</b><h3>Marcas e indústria</h3><p>Um patrocinador atual e dois potenciais. Pode ser gente de marketing de empresas conhecidas.</p></div>
+      </div>
+
+      <h2 style="margin-top:36px">Roteiro da sessão (15 min)</h2>
+      <p class="lead-line">Cada pessoa começa numa versão diferente, em rodízio: a primeira começa na V1, a segunda na V2, a terceira na V3, e assim por diante. A primeira impressão só acontece uma vez, então ela é o dado mais valioso.</p>
+      <ol class="roteiro">
+        <li><b>Teste dos 5 segundos.</b> Mostre só o topo da versão por 5 segundos e feche. Pergunte: "o que essa empresa faz?" e "pra quem é esse site?". Anote a resposta literal.</li>
+        <li><b>Tarefa do perfil.</b> Consumidor: "você quer um programa gastronômico pro fim de semana, onde clicaria?". Restaurante: "você quer colocar sua casa no Festival, me mostra o caminho". Marca: "sua empresa quer patrocinar um evento de gastronomia, o que faria nessa página?". Anote se achou, em quanto tempo e onde hesitou.</li>
+        <li><b>Comparação livre.</b> Agora mostre as outras duas versões, 2 minutos cada. Pergunte: qual explica melhor o que o Bom Gourmet é? Qual você usaria? Por quê?</li>
+        <li><b>Pergunta final.</b> "O que você sentiu falta?" e encerra. Agradeça com um mimo da marca se possível.</li>
+      </ol>
+    </section>
+
+    <!-- FASE 2 -->
+    <section class="plan-sec container">
+      <span class="fasetag fasetag--dark">Fase 2 · Próximas 2 semanas</span>
+      <h2>Medição automática com Microsoft Clarity</h2>
+      <p class="lead-line">Ferramenta gratuita da Microsoft. Um código em cada página e ela grava mapa de calor de cliques, até onde cada visita rolou e o replay da navegação.</p>
+
+      <div class="duocol">
+        <div class="notebox">
+          <b>Como distribuir</b>
+          Separe uma lista de contatos em 3 lotes iguais, sorteados. Cada lote recebe o link de uma versão só e nunca vê as outras. De 30 a 50 pessoas por versão já mostra padrão claro nos mapas de calor. Vale usar a base Gourmet Lovers, os grupos da FoodCo e os contatos comerciais, cada um recebendo pela régua certa.
+        </div>
+        <div class="notebox">
+          <b>O que olhar depois de 2 semanas</b>
+          Quantos clicam nos botões do topo e em qual. A proporção entre cliques de público e cliques de negócio. Quantos chegam ao fim da página. E os replays de quem se perdeu ou saiu rápido.
+        </div>
+      </div>
+
+      <h2 style="margin-top:36px">Links cegos para envio externo</h2>
+      <p class="lead-line">Estes links abrem as versões sem a barra de estudo e sem o seletor, para não influenciar ninguém. Nunca envie o hub para gente de fora: ele mostra a nossa análise e contamina a resposta.</p>
+      <div class="duocol">
+        <a class="linkcego" href="v1.html?t=1"><small>Lote 1</small>bomgourmet · v1.html?t=1</a>
+        <a class="linkcego" href="v2.html?t=1"><small>Lote 2</small>bomgourmet · v2.html?t=1</a>
+        <a class="linkcego" href="v3.html?t=1"><small>Lote 3</small>bomgourmet · v3.html?t=1</a>
+      </div>
+    </section>
+
+    <!-- CRITÉRIOS -->
+    <section class="plan-sec container">
+      <h2>Critérios de decisão, combinados antes</h2>
+      <p class="lead-line">Definir a régua antes de ver os resultados é o que impede a reunião final de virar opinião de novo.</p>
+      <div class="criterio-grid">
+        <div class="notebox"><b>Clareza</b> Vence quem tiver mais acertos no teste dos 5 segundos com quem não conhece a marca.</div>
+        <div class="notebox"><b>Navegação</b> Vence quem tiver mais tarefas completadas sem ajuda e sem hesitação.</div>
+        <div class="notebox"><b>Preferência</b> Vence a mais escolhida pelos 12 participantes externos. O voto do time não conta aqui.</div>
+        <div class="notebox"><b>Desempate</b> Se der empate, pesa o dado que já temos: 90% do tráfego entra pela matéria, então a home é vitrine para quem chega de propósito. E pesa o custo de manter cada versão viva.</div>
+      </div>
+    </section>
+
+    <!-- CRONOGRAMA -->
+    <section class="plan-sec container" style="padding-bottom:80px">
+      <h2>Cronograma</h2>
+      <ol class="crono">
+        <li><b>Amanhã</b><span>Apresentar o plano. Cada pessoa do time indica 2 ou 3 contatos para os perfis da Fase 1.</span></li>
+        <li><b>Dias 2 a 5</b><span>Rodar as 12 sessões guiadas, divididas entre o time. Registrar tudo na planilha.</span></li>
+        <li><b>Dia 5</b><span>Criar a conta no Clarity, instalar o código e disparar os 3 links cegos para os lotes.</span></li>
+        <li><b>Semanas 2 e 3</b><span>Clarity coletando. Sem mexer nas páginas nesse período para não sujar o dado.</span></li>
+        <li><b>Fim da semana 3</b><span>Reunião de decisão: planilha da Fase 1 + mapas do Clarity + critérios acima. Sai a home escolhida.</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <div data-vfooter></div>
+  <script src="js/versoes.js?v=2"></script>
+</body>
+</html>
