@@ -85,6 +85,16 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .defbar p { font-family: var(--display); font-weight: 700; font-size: clamp(1rem, 2vw, 1.18rem); letter-spacing: -.015em; max-width: 900px; }
 .defbar p em { font-style: normal; color: var(--vermelho); }
 
+/* ---------- "Como a gente faz" (3 passos, sem jargão) ---------- */
+.vsec--how { padding: 52px 0; background: #fff; border-bottom: 1px solid var(--areia); }
+.howgrid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 860px) { .howgrid { grid-template-columns: repeat(3, 1fr); } }
+.howstep { position: relative; padding: 22px 22px 22px 68px; background: var(--creme); border-radius: var(--radius-sm); }
+.howstep > b { position: absolute; left: 20px; top: 22px; width: 34px; height: 34px; border-radius: 50%; background: var(--vermelho); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: 1rem; }
+.howstep h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.howstep p { font-size: .9rem; color: var(--cinza); line-height: 1.5; }
+.howstep p strong { color: var(--tinta); }
+
 /* ---------- Seções ---------- */
 .vsec { padding: 72px 0; }
 .vsec--creme2 { background: var(--creme2); }
