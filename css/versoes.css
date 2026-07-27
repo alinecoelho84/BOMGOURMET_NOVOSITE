@@ -135,6 +135,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .vcard__body { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
 .vcat { font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--vermelho); }
 .vcard__body h3 { font-size: 1.02rem; line-height: 1.22; }
+.vcard__body p { font-size: .8rem; color: var(--cinza); line-height: 1.45; }
 .vmeta { font-size: .8rem; color: var(--cinza); margin-top: auto; padding-top: 6px; }
 .vcard__link { font-size: .85rem; font-weight: 700; color: var(--vermelho); margin-top: auto; padding-top: 8px; }
 
