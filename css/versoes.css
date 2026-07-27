@@ -85,6 +85,23 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .defbar p { font-family: var(--display); font-weight: 700; font-size: clamp(1rem, 2vw, 1.18rem); letter-spacing: -.015em; max-width: 900px; }
 .defbar p em { font-style: normal; color: var(--vermelho); }
 
+/* ---------- Topo: quem somos + gancho de público ---------- */
+.topintro { background: #fff; border-bottom: 1px solid var(--areia); padding: 26px 0 30px; }
+.topintro__inner { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+.topintro .def { font-family: var(--display); font-weight: 700; letter-spacing: -.015em; line-height: 1.35; font-size: clamp(1.05rem, 2.2vw, 1.3rem); max-width: 900px; }
+.topintro .def em { font-style: normal; color: var(--vermelho); }
+.pubgate { display: grid; grid-template-columns: 1fr; gap: 12px; width: 100%; max-width: 900px; }
+@media (min-width: 760px) { .pubgate { grid-template-columns: 1fr 1fr; } }
+.pubbtn { display: flex; flex-direction: column; gap: 3px; text-align: left; padding: 16px 20px; border-radius: var(--radius-sm); transition: transform .18s, box-shadow .18s; }
+.pubbtn:hover { transform: translateY(-3px); box-shadow: var(--sombra); }
+.pubbtn small { font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.pubbtn b { font-family: var(--display); font-weight: 800; font-size: 1.12rem; letter-spacing: -.02em; }
+.pubbtn span { font-size: .84rem; opacity: .92; }
+.pubbtn--red { background: var(--vermelho); color: #fff; }
+.pubbtn--red small { color: #ffd9dd; }
+.pubbtn--dark { background: var(--tinta); color: #fff; }
+.pubbtn--dark small { color: var(--ouro-claro); }
+
 /* ---------- "Como a gente faz" (3 passos, sem jargão) ---------- */
 .vsec--how { padding: 52px 0; background: #fff; border-bottom: 1px solid var(--areia); }
 .howgrid { display: grid; grid-template-columns: 1fr; gap: 16px; }
@@ -94,6 +111,8 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .howstep h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .howstep p { font-size: .9rem; color: var(--cinza); line-height: 1.5; }
 .howstep p strong { color: var(--tinta); }
+.howlabel { margin-top: 20px; text-align: center; font-size: .95rem; color: var(--cinza); }
+.howlabel strong { color: var(--tinta); }
 
 /* ---------- Seções ---------- */
 .vsec { padding: 72px 0; }
