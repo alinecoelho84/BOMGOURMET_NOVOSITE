@@ -48,6 +48,23 @@
     go(0); start();
   });
 
+  /* ---- Sliders horizontais com setas (produtos, colunistas, matérias) ---- */
+  document.querySelectorAll("[data-hslider]").forEach((sl) => {
+    const track = sl.querySelector(".hs-track");
+    if (!track) return;
+    const step = () => Math.max(track.clientWidth * 0.8, 240);
+    sl.querySelector(".hs-next")?.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+    sl.querySelector(".hs-prev")?.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+  });
+
+  /* ---- WhatsApp flutuante com escolha de perfil ---- */
+  document.querySelectorAll("[data-wafloat]").forEach((w) => {
+    const btn = w.querySelector(".wafloat__btn");
+    const menu = w.querySelector(".wafloat__menu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click", () => { menu.hidden = !menu.hidden; });
+  });
+
   /* ---- Rodapé compartilhado (igual nas 3 versões, conforme briefing) ---- */
   const footer = document.querySelector("[data-vfooter]");
   if (footer) {
