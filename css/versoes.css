@@ -101,6 +101,8 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .pubbtn--red small { color: #ffd9dd; }
 .pubbtn--dark { background: var(--tinta); color: #fff; }
 .pubbtn--dark small { color: var(--ouro-claro); }
+.topintro__aside { font-size: .85rem; color: var(--cinza); }
+.topintro__aside a { color: var(--vermelho); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- "Como a gente faz" (3 passos, sem jargão) ---------- */
 .vsec--how { padding: 52px 0; background: #fff; border-bottom: 1px solid var(--areia); }
