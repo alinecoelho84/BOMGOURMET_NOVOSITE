@@ -79,6 +79,26 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .vdots button.is-on { width: 26px; background: #fff; }
 @media (max-width: 640px) { .vhero__arrows button { display: none; } }
 
+/* ---------- Hero dividido: texto da marca + painéis de fotos ---------- */
+.vhero2 { padding: 44px 0 36px; }
+.vhero2__grid { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: center; }
+@media (min-width: 940px) { .vhero2__grid { grid-template-columns: .92fr 1.08fr; } }
+.vhero2__copy h1 { font-size: clamp(2rem, 3.8vw, 3rem); margin: 14px 0; letter-spacing: -.03em; }
+.vhero2__copy h1 em { font-style: normal; color: var(--vermelho); }
+.vhero2__copy > p { color: var(--cinza); font-size: 1rem; line-height: 1.6; max-width: 500px; }
+.vhero2__ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+.vhero2 .topintro__aside { margin-top: 14px; }
+.panels { position: relative; }
+.panels .hs-track { gap: 6px; padding: 0 0 4px; }
+.panels .hs-btn { top: 50%; }
+.panels .panel2 { flex: 0 0 calc((100% - 18px) / 4); min-width: 0; height: clamp(340px, 36vw, 470px); }
+.panel2 { position: relative; border-radius: 14px; overflow: hidden; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .2s; }
+.panel2:hover { transform: translateY(-4px); }
+.panel2::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,24,23,0) 40%, rgba(28,24,23,.88)); }
+.panel2__cat { position: relative; z-index: 1; margin: 0 12px; font-size: .56rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ouro-claro); }
+.panel2__title { position: relative; z-index: 1; margin: 4px 12px 13px; color: #fff; font-family: var(--display); font-weight: 800; font-size: .88rem; line-height: 1.18; }
+@media (max-width: 640px) { .panels .panel2 { flex-basis: calc((100% - 6px) / 2); height: 300px; } }
+
 /* ---------- Faixa de definição (teste dos 5 segundos) ---------- */
 .defbar { background: #fff; border-bottom: 1px solid var(--areia); }
 .defbar__inner { padding: 22px 0; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center; text-align: center; }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V3 · Home maioria produto · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=8" />
+  <link rel="stylesheet" href="css/versoes.css?v=11" />
 </head>
 <body data-v="v3">
 
@@ -25,65 +25,30 @@
   </header>
 
   <main>
-    <!-- Quem somos e para quem, antes de qualquer scroll -->
-    <section class="topintro">
-      <div class="container topintro__inner">
-        <p class="def">O Bom Gourmet é uma empresa de <em>live marketing</em>: movimentamos o ecossistema do food service no Paraná e no Rio Grande do Sul com festivais, prêmios, circuitos e encontros de negócios, gerando conexões e promovendo marcas. E amplificamos cada projeto com conteúdo próprio e colunistas.</p>
-        <div class="pubgate">
-          <a class="pubbtn pubbtn--red" href="#participar">
-            <small>Para restaurantes e operações</small>
-            <b>Sou restaurante →</b>
-            <span>Quero colocar a minha casa nos festivais, circuitos e projetos.</span>
-          </a>
-          <a class="pubbtn pubbtn--dark" href="#participar">
-            <small>Para marcas e indústria</small>
-            <b>Sou marca ou indústria →</b>
-            <span>Quero patrocinar os projetos e chegar ao público certo, ao vivo.</span>
-          </a>
+    <!-- Hero dividido: a marca à esquerda, os destaques em painéis -->
+    <section class="vhero2" id="topo">
+      <div class="container vhero2__grid">
+        <div class="vhero2__copy">
+          <span class="vchip">Para restaurantes, marcas e indústria</span>
+          <h1>Os projetos que movem o <em>food service</em> do Sul.</h1>
+          <p>O Bom Gourmet é uma empresa de live marketing: movimentamos o ecossistema do food service no Paraná e no Rio Grande do Sul com festivais, prêmios, circuitos e encontros de negócios, gerando conexões e promovendo marcas. E amplificamos cada projeto com conteúdo próprio e colunistas.</p>
+          <div class="vhero2__ctas"><a class="vbtn vbtn--red" href="#participar">Sou restaurante</a>
+            <a class="vbtn vbtn--dark" href="#participar">Sou marca ou indústria</a></div>
+          <p class="topintro__aside">Só quer saber onde comer e o que fazer na cidade? <a href="#conteudo">Veja nosso conteúdo</a></p>
         </div>
-        <p class="topintro__aside">Só quer saber onde comer e o que fazer na cidade? <a href="#conteudo">Veja nosso conteúdo</a></p>
-      </div>
-    </section>
-
-    <!-- 1. Hero: projetos -->
-    <section class="vhero" data-vslider>
-      <div class="vslide is-on" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Festival · cotas abertas</span>
-          <h1>Festival Bom Gourmet</h1>
-          <p>Mais de 500 restaurantes, 300 mil menus vendidos e a cidade inteira falando de comida durante um mês.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
+        <div class="panels" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="panels__track hs-track">
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Festival · cotas abertas</span><span class="panel2__title">Festival Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Premiação</span><span class="panel2__title">Prêmio Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Comunidade B2B</span><span class="panel2__title">FoodCo.</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Espaço</span><span class="panel2__title">Casa Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Sob medida</span><span class="panel2__title">Branded Content</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Festival</span><span class="panel2__title">CWBurguer Fest</span></a>
+          </div>
         </div>
       </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Premiação</span>
-          <h2>Prêmio Bom Gourmet</h2>
-          <p>A noite que reúne todo o mercado gastronômico para eleger os melhores do ano.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Comunidade B2B</span>
-          <h2>FoodCo.</h2>
-          <p>A comunidade que reúne donos e gestores de restaurantes em eventos, mentorias e negócios.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Espaço · Curitiba</span>
-          <h2>Casa Bom Gourmet</h2>
-          <p>Um endereço pronto para lançamentos, ativações e experiências da sua marca.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vhero__arrows">
-        <button class="vprev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button class="vnext" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-      </div>
-      <div class="vdots"></div>
     </section>
 
     <!-- Como a gente faz: o mecanismo em 3 passos, sem jargão -->

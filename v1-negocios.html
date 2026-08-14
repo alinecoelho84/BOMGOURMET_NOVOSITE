@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V1 · Home de negócios · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=8" />
+  <link rel="stylesheet" href="css/versoes.css?v=11" />
 </head>
 <body data-v="v1">
 
@@ -17,6 +17,7 @@
       <nav class="vnav">
         <a href="#projetos">Projetos</a>
         <a href="#numeros">Resultados</a>
+        <a href="#agenda">Agenda</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="v1-conteudo.html">Conteúdo</a>
       </nav>
@@ -25,60 +26,29 @@
   </header>
 
   <main>
-    <!-- Quem somos, logo no topo -->
-    <div class="defbar">
-      <div class="container defbar__inner">
-        <p>O Bom Gourmet é uma empresa de <em>live marketing</em>: movimentamos o ecossistema do food service no Paraná e no Rio Grande do Sul com festivais, prêmios, circuitos e encontros de negócios, gerando conexões e promovendo marcas. E amplificamos cada projeto com conteúdo próprio e colunistas.</p>
-      </div>
-    </div>
-
-    <!-- 1. Hero: um projeto por slide -->
-    <section class="vhero" data-vslider>
-      <div class="vslide is-on" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Festival · fev e nov</span>
-          <h1>Festival Bom Gourmet</h1>
-          <p>Um mês de menus exclusivos em mais de 500 restaurantes do Paraná e do RS, com mais de 300 mil vendidos por ano.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
+    <!-- Hero dividido: a marca à esquerda, os destaques em painéis -->
+    <section class="vhero2" id="topo">
+      <div class="container vhero2__grid">
+        <div class="vhero2__copy">
+          <span class="vchip">Para restaurantes, marcas e indústria</span>
+          <h1>Sua marca no meio da <em>experiência</em>.</h1>
+          <p>O Bom Gourmet é uma empresa de live marketing: movimentamos o ecossistema do food service no Paraná e no Rio Grande do Sul com festivais, prêmios, circuitos e encontros de negócios, gerando conexões e promovendo marcas. E amplificamos cada projeto com conteúdo próprio e colunistas.</p>
+          <div class="vhero2__ctas"><a class="vbtn vbtn--red" href="#participar">Fale com o comercial</a>
+            <a class="vbtn vbtn--ghost" href="#projetos">Ver os projetos</a></div>
+        </div>
+        <div class="panels" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="panels__track hs-track">
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Festival · fev e nov</span><span class="panel2__title">Festival Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Premiação</span><span class="panel2__title">Prêmio Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Comunidade B2B</span><span class="panel2__title">FoodCo.</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Circuitos</span><span class="panel2__title">Inverno e Verão</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Espaço</span><span class="panel2__title">Casa Bom Gourmet</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Cultura</span><span class="panel2__title">Vinada Cultural</span></a>
+          </div>
         </div>
       </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Premiação · outubro</span>
-          <h2>Prêmio Bom Gourmet</h2>
-          <p>A premiação que elege os melhores da gastronomia, pelo voto popular e por um júri de especialistas.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Comunidade B2B</span>
-          <h2>FoodCo.</h2>
-          <p>A comunidade de donos e gestores de restaurantes: eventos, mentorias, conteúdo de gestão e negócios.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Circuitos sazonais</span>
-          <h2>Circuitos de Inverno e Verão</h2>
-          <p>Roteiros que movimentam a economia gastronômica nas estações mais fortes do ano.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Espaço · Curitiba</span>
-          <h2>Casa Bom Gourmet</h2>
-          <p>Um endereço em Curitiba para eventos, lançamentos e ativações de marca.</p>
-          <a class="vbtn vbtn--light" href="#">Conhecer o projeto</a>
-        </div>
-      </div>
-      <div class="vhero__arrows">
-        <button class="vprev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button class="vnext" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-      </div>
-      <div class="vdots"></div>
     </section>
 
     <!-- Como a gente faz: o mecanismo em 3 passos, sem jargão -->
@@ -136,8 +106,26 @@
       </div>
     </section>
 
+    <!-- 3b. Agenda: o calendário das oportunidades -->
+    <section class="vsec vsec--creme2" id="agenda">
+      <div class="container">
+        <div class="sechead">
+          <h2><span class="kicker">Planeje o ano</span>Agenda: onde a sua marca pode estar</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver agenda completa</a>
+        </div>
+        <div class="evgrid">
+          <a class="evcard" href="#"><span class="evcard__date"><b>12</b><span>Jul</span></span><span><h3>Festival Bom Gourmet</h3><p>Curitiba · PR · cotas e inscrições de restaurantes</p></span></a>
+          <a class="evcard" href="#"><span class="evcard__date"><b>03</b><span>Ago</span></span><span><h3>Circuito de Inverno</h3><p>Paraná · patrocínio e participação</p></span></a>
+          <a class="evcard" href="#"><span class="evcard__date"><b>20</b><span>Set</span></span><span><h3>FoodCo. Experience</h3><p>Londrina · PR · o encontro do food service</p></span></a>
+          <a class="evcard" href="#"><span class="evcard__date"><b>15</b><span>Out</span></span><span><h3>Prêmio Bom Gourmet</h3><p>Curitiba · PR · a noite dos melhores do ano</p></span></a>
+          <a class="evcard" href="#"><span class="evcard__date"><b>09</b><span>Nov</span></span><span><h3>Vinada Cultural</h3><p>Praça Afonso Botelho · Curitiba</p></span></a>
+          <a class="evcard" href="#"><span class="evcard__date"><b>23</b><span>Nov</span></span><span><h3>Bom Gourmet RS</h3><p>Porto Alegre · RS · estreia dos projetos no Sul</p></span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- 4. Depoimentos -->
-    <section class="vsec vsec--creme2" id="depoimentos">
+    <section class="vsec" id="depoimentos">
       <div class="container">
         <div class="sechead">
           <h2><span class="kicker">Prova social</span>Quem faz parte do nosso ecossistema</h2>
@@ -170,7 +158,7 @@
     </section>
 
     <!-- 5. Quero participar -->
-    <section class="vsec" id="participar">
+    <section class="vsec vsec--creme2" id="participar">
       <div class="container">
         <div class="sechead" style="justify-content:center; text-align:center">
           <h2><span class="kicker">Quero participar</span>Escolha o seu caminho</h2>

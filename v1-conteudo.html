@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V1 · Home de conteúdo · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=8" />
+  <link rel="stylesheet" href="css/versoes.css?v=11" />
 </head>
 <body data-v="v1">
 
@@ -25,44 +25,29 @@
   </header>
 
   <main>
-    <!-- Quem está por trás do conteúdo, logo no topo -->
-    <div class="defbar">
-      <div class="container defbar__inner">
-        <p>Você está no conteúdo do <em>Bom Gourmet</em>. Somos os mesmos que criam o Festival, o Prêmio e os circuitos que movimentam a cidade, com experiências e descontos para quem ama comer bem.</p>
-      </div>
-    </div>
-
-    <!-- 1. Hero: principais notícias do dia -->
-    <section class="vhero" data-vslider>
-      <div class="vslide is-on" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Reportagem</span>
-          <h1>A nova criatividade da cozinha brasileira</h1>
-          <p>Como uma geração de chefs está reinventando ingredientes locais, e por que Curitiba entrou nesse mapa.</p>
-          <a class="vbtn vbtn--light" href="#">Ler matéria</a>
+    <!-- Hero dividido: a marca à esquerda, os destaques em painéis -->
+    <section class="vhero2" id="topo">
+      <div class="container vhero2__grid">
+        <div class="vhero2__copy">
+          <span class="vchip">Conteúdo Bom Gourmet</span>
+          <h1>Para viver a cidade <em>pela mesa</em>.</h1>
+          <p>Você está no conteúdo do Bom Gourmet. Somos os mesmos que criam o Festival, o Prêmio e os circuitos que movimentam a cidade, com experiências e descontos para quem ama comer bem.</p>
+          <div class="vhero2__ctas"><a class="vbtn vbtn--red" href="#noticias">Ver as últimas notícias</a>
+            <a class="vbtn vbtn--ghost" href="#roteiros">Roteiros da cidade</a></div>
+        </div>
+        <div class="panels" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="panels__track hs-track">
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Reportagem</span><span class="panel2__title">A nova criatividade da cozinha</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Guia</span><span class="panel2__title">Guia de Inverno: 20 lugares</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Bares</span><span class="panel2__title">Happy hour que não acaba cedo</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Vinhos</span><span class="panel2__title">Rótulos do Sul para brindar</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Agenda</span><span class="panel2__title">Festival Bom Gourmet vem aí</span></a>
+            <a class="panel2" href="#" style="background-image:url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=500&q=72')"><span class="panel2__cat">Colunas</span><span class="panel2__title">Queijos que merecem a tábua</span></a>
+          </div>
         </div>
       </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Guia</span>
-          <h2>Guia de Inverno: 20 lugares para conhecer agora</h2>
-          <p>Fondues, caldos e vinhos: o roteiro completo para aproveitar a temporada mais saborosa do ano.</p>
-          <a class="vbtn vbtn--light" href="#">Ler matéria</a>
-        </div>
-      </div>
-      <div class="vslide" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=1800&q=75')">
-        <div class="vslide__content">
-          <span class="vchip">Mercado</span>
-          <h2>Tendências que vão mover a gastronomia nos próximos anos</h2>
-          <p>Da coquetelaria sem álcool à cozinha de fogo: o que muda no seu jeito de comer fora.</p>
-          <a class="vbtn vbtn--light" href="#">Ler matéria</a>
-        </div>
-      </div>
-      <div class="vhero__arrows">
-        <button class="vprev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-        <button class="vnext" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-      </div>
-      <div class="vdots"></div>
     </section>
 
     <!-- 2. Últimas notícias -->
