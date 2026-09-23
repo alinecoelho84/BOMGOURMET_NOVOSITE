@@ -299,3 +299,51 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 .hub-note { max-width: 860px; margin: 0 auto 70px; background: #fff; border-left: 4px solid var(--vermelho); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 24px 28px; font-size: .95rem; }
 .hub-note b { font-weight: 700; }
 .hub-note p + p { margin-top: 10px; }
+
+/* ---------- V4: a home do diagnóstico ---------- */
+.vlogo--lg b { font-size: 1.55rem; }
+.vlogo--lg i { width: 16px; height: 16px; }
+.v4intro { padding: 46px 0 28px; text-align: center; }
+.v4intro h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); max-width: 900px; margin: 14px auto 14px; letter-spacing: -.03em; }
+.v4intro h1 em { font-style: normal; color: var(--vermelho); }
+.v4intro > .container > p { max-width: 760px; margin: 0 auto; color: var(--cinza); font-size: 1.05rem; line-height: 1.6; }
+.v4intro .lm { font-size: .8rem; color: var(--cinza); opacity: .85; margin-top: 12px; }
+.gate--v4 { min-height: auto; }
+.gate--v4 .gate__door { min-height: 460px; }
+.gate--v4 .gate__door:first-child::after { background: linear-gradient(180deg, rgba(204,1,36,.12) 15%, rgba(110,0,20,.92)); }
+.gate--v4 .gate__door:last-child::after { background: linear-gradient(180deg, rgba(28,24,23,.15) 15%, rgba(28,24,23,.94)); }
+.gate--v4 .gate__content h2 { font-size: clamp(1.7rem, 3.2vw, 2.5rem); }
+.gate--v4 .ganha { list-style: none; display: grid; gap: 5px; margin: 0 0 20px; font-size: .95rem; color: #f1ebe3; }
+.gate--v4 .ganha li::before { content: "✓ "; color: var(--ouro-claro); font-weight: 700; }
+.gate--v4 .gate__door:first-child .ganha li::before { color: #ffd9dd; }
+
+/* filtro por perfil + cards de projeto com data e prazo */
+.who-filter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.who-filter button { border: 1.5px solid var(--areia); border-radius: 999px; padding: 9px 16px; font-size: .88rem; font-weight: 700; background: #fff; transition: .15s; }
+.who-filter button.is-on, .who-filter button:hover { background: var(--tinta); color: #fff; border-color: var(--tinta); }
+.pgrid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 700px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .pgrid { grid-template-columns: repeat(3, 1fr); } }
+.pcard { background: #fff; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--sombra-sutil); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, opacity .2s; }
+.pcard:hover { transform: translateY(-4px); box-shadow: var(--sombra); }
+.pcard.is-off { opacity: .28; }
+.pcard__media { aspect-ratio: 16 / 9; background-size: cover; background-position: center; }
+.pcard__body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.pcard__body h3 { font-size: 1.08rem; }
+.pcard__body > p { font-size: .86rem; color: var(--cinza); }
+.pdates { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+.pdates span { background: var(--creme2); border-radius: 10px; padding: 8px 10px; font-size: .78rem; line-height: 1.3; }
+.pdates span b { display: block; font-size: .66rem; text-transform: uppercase; letter-spacing: .08em; color: var(--cinza); margin-bottom: 2px; }
+.pdates span.prazo { background: #fde8ec; }
+.pdates span.prazo b { color: var(--vermelho); }
+.pwho { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+.pwho i { font-style: normal; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: 1px solid var(--areia); border-radius: 999px; padding: 4px 9px; color: var(--tinta); }
+.pcard .vbtn { align-self: flex-start; margin-top: 8px; }
+.pnote { font-size: .8rem; color: var(--cinza); margin-top: 14px; }
+.desconto-band { background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro)); color: #fff; border-radius: var(--radius); padding: 26px 30px; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+.desconto-band small { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #ffd9dd; margin-bottom: 6px; }
+.desconto-band h3 { font-size: 1.35rem; max-width: 560px; }
+.desconto-band p { font-size: .92rem; opacity: .92; max-width: 560px; margin-top: 4px; }
+
+@media (min-width: 700px) and (max-width: 1179px) { .hubgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1180px) { .hubgrid { grid-template-columns: repeat(4, 1fr); } }

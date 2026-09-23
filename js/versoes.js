@@ -113,6 +113,7 @@
     ["v1", "v1.html", "V1"],
     ["v2", "v2.html", "V2"],
     ["v3", "v3.html", "V3"],
+    ["v4", "v4.html", "V4"],
   ].map(([id, href, label]) =>
     `<a href="${href}" class="${cur === id ? "is-on" : ""}">${label}</a>`
   ).join("");
