@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultado dos testes · Nova home Bom Gourmet</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/versoes.css?v=11" />
+  <style>
+    .r-hero { padding: 56px 0 30px; }
+    .r-hero h1 { font-size: clamp(1.9rem, 4.4vw, 2.9rem); max-width: 820px; margin: 14px 0 12px; }
+    .r-hero .lead { color: var(--cinza); font-size: 1.05rem; max-width: 720px; line-height: 1.6; }
+    .r-sec { padding: 40px 0; }
+    .r-sec + .r-sec { border-top: 1px solid var(--areia); }
+    .r-sec h2 { font-size: 1.5rem; margin-bottom: 6px; }
+    .r-sec .sub { color: var(--cinza); font-size: .95rem; margin-bottom: 22px; max-width: 760px; }
+    .r-sec h3 { font-size: 1.05rem; margin-bottom: 10px; }
+    .tag { display: inline-flex; font-size: .68rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; background: var(--creme2); color: var(--tinta); }
+    .tag--red { background: var(--vermelho); color: #fff; }
+    .tag--dark { background: var(--tinta); color: #fff; }
+
+    /* stat tiles */
+    .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (min-width: 860px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+    .tile { background: #fff; border-radius: var(--radius-sm); padding: 18px 20px; box-shadow: var(--sombra-sutil); }
+    .tile b { display: block; font-family: var(--display); font-weight: 900; font-size: 2rem; letter-spacing: -.03em; line-height: 1; color: var(--tinta); }
+    .tile span { display: block; font-size: .82rem; color: var(--cinza); margin-top: 6px; line-height: 1.4; }
+    .tile small { display: block; font-size: .7rem; color: var(--cinza); margin-top: 6px; opacity: .8; }
+
+    /* veredito */
+    .verd { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    @media (min-width: 860px) { .verd { grid-template-columns: repeat(3, 1fr); } }
+    .vbox { background: #fff; border-radius: var(--radius-sm); padding: 20px 22px; border-top: 4px solid var(--areia); box-shadow: var(--sombra-sutil); font-size: .93rem; line-height: 1.55; }
+    .vbox--red { border-top-color: var(--vermelho); }
+    .vbox--dark { border-top-color: var(--tinta); }
+    .vbox b { display: block; font-family: var(--display); font-size: 1.02rem; margin-bottom: 8px; }
+
+    /* barras (uma cor só; a versão vive no rótulo) */
+    .charts { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 860px) { .charts { grid-template-columns: repeat(3, 1fr); } }
+    .chart { background: #fff; border-radius: var(--radius-sm); padding: 18px 20px 14px; box-shadow: var(--sombra-sutil); }
+    .chart h4 { font-size: .92rem; margin-bottom: 2px; }
+    .chart .hint { font-size: .74rem; color: var(--cinza); margin-bottom: 14px; }
+    .bar { display: grid; grid-template-columns: 34px 1fr 62px; align-items: center; gap: 10px; margin: 8px 0; font-size: .84rem; }
+    .bar .lbl { font-weight: 700; color: var(--tinta); }
+    .bar .track { height: 10px; background: var(--creme2); border-radius: 999px; overflow: hidden; position: relative; }
+    .bar .fill { height: 100%; background: var(--vermelho); border-radius: 0 4px 4px 0; transition: width .5s ease; min-width: 2px; }
+    .bar .fill.zero { background: var(--areia); width: 2px !important; }
+    .bar .val { color: var(--cinza); text-align: right; font-variant-numeric: tabular-nums; }
+    .bar .val b { color: var(--tinta); }
+    .bar[title] { cursor: help; }
+    details.tbl { margin-top: 14px; font-size: .82rem; }
+    details.tbl summary { cursor: pointer; color: var(--vermelho); font-weight: 700; }
+    details.tbl table { width: 100%; border-collapse: collapse; margin-top: 10px; background: #fff; }
+    details.tbl th, details.tbl td { padding: 8px 10px; border-bottom: 1px solid var(--areia); text-align: left; }
+    details.tbl th { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--cinza); }
+
+    /* matriz começou × preferiu */
+    .matrix { width: 100%; border-collapse: separate; border-spacing: 6px; background: transparent; }
+    .matrix th { font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--cinza); padding: 6px; font-weight: 700; }
+    .matrix td { background: #fff; border-radius: 10px; text-align: center; padding: 16px 10px; font-family: var(--display); font-weight: 800; font-size: 1.2rem; box-shadow: var(--sombra-sutil); }
+    .matrix td.hot { background: var(--vermelho); color: #fff; }
+    .matrix td.warm { background: #f3d6da; }
+    .matrix td .who { display: block; font-family: var(--texto); font-weight: 400; font-size: .7rem; color: inherit; opacity: .85; margin-top: 4px; }
+
+    /* cards por versão */
+    .vcards { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 900px) { .vcards { grid-template-columns: repeat(3, 1fr); } }
+    .vc { background: #fff; border-radius: var(--radius); padding: 22px; box-shadow: var(--sombra-sutil); display: flex; flex-direction: column; gap: 12px; }
+    .vc h3 { font-size: 1.15rem; }
+    .vc .score { display: flex; gap: 6px; flex-wrap: wrap; }
+    .vc .score span { font-size: .72rem; background: var(--creme2); border-radius: 999px; padding: 5px 10px; }
+    .vc .score span b { color: var(--vermelho); }
+    .vc ul { list-style: none; display: grid; gap: 6px; font-size: .86rem; line-height: 1.45; }
+    .vc ul li { padding-left: 18px; position: relative; }
+    .vc ul.ok li::before { content: "+"; position: absolute; left: 0; color: #1a7f4e; font-weight: 700; }
+    .vc ul.ko li::before { content: "–"; position: absolute; left: 0; color: var(--vermelho); font-weight: 700; }
+    .vc h4 { font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--cinza); margin-top: 4px; }
+    .quote { background: var(--creme2); border-radius: 12px; padding: 12px 14px; font-size: .86rem; line-height: 1.5; font-style: italic; }
+    .quote small { display: block; font-style: normal; color: var(--cinza); margin-top: 6px; font-size: .74rem; }
+    .vc .verdict { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--areia); font-size: .9rem; }
+    .vc .verdict b { color: var(--vermelho); }
+
+    /* pedidos */
+    .asks .bar { grid-template-columns: 1fr 120px 36px; }
+    .chart--wide .bar { grid-template-columns: 44px 1fr 170px; }
+    .chart--wide .bar .val { text-align: left; }
+    .asks .bar .lbl { font-weight: 600; }
+
+    /* recomendação */
+    .reco { counter-reset: p; display: grid; gap: 10px; }
+    .reco li { list-style: none; background: #fff; border-radius: var(--radius-sm); padding: 16px 18px 16px 58px; position: relative; box-shadow: var(--sombra-sutil); font-size: .93rem; line-height: 1.5; }
+    .reco li::before { counter-increment: p; content: counter(p); position: absolute; left: 16px; top: 15px; width: 28px; height: 28px; border-radius: 50%; background: var(--vermelho); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: .85rem; }
+    .reco b { color: var(--tinta); }
+    .caveat { background: #fff; border-left: 4px solid var(--ouro); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 16px 20px; font-size: .9rem; line-height: 1.55; }
+    .caveat b { display: block; margin-bottom: 4px; }
+  </style>
+</head>
+<body data-v="hub">
+
+  <div class="proto-bar"><b>Estudo interno</b> · resultado das duas fases de teste da nova home · <a href="versoes.html">ver os protótipos</a> · <a href="plano-medicao.html">ver o plano</a></div>
+
+  <header class="vheader">
+    <div class="container vheader__inner">
+      <a class="vlogo" href="versoes.html"><i></i><b>bom</b><b>Gourmet</b></a>
+      <div style="display:flex; gap:8px">
+        <a class="vbtn vbtn--ghost vbtn--sm" href="plano-medicao.html">Plano</a>
+        <a class="vbtn vbtn--ghost vbtn--sm" href="versoes.html">Ver as 3 versões</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="r-hero container">
+      <span class="vchip">Resultado dos testes · setembro de 2026</span>
+      <h1>As pessoas querem a explicação da V2 com a simplicidade da V1</h1>
+      <p class="lead">Dez entrevistas guiadas e dezesseis sessões gravadas no Clarity contam a mesma história por ângulos diferentes: quem entende o que o Bom Gourmet faz prefere escolher um caminho e seguir. Quem não entende, pede explicação. Nenhuma das três versões entrega as duas coisas ao mesmo tempo.</p>
+    </section>
+
+    <!-- VEREDITO -->
+    <section class="r-sec container">
+      <h2>Veredito em 30 segundos</h2>
+      <p class="sub">Três leituras que o time precisa ter na cabeça antes de qualquer discussão de layout.</p>
+      <div class="verd">
+        <div class="vbox vbox--dark">
+          <b>1. Pela régua combinada, a V2 vence por 2 a 1</b>
+          Clareza: V2 (2 de 3 acertos cheios no teste dos 5 segundos; V1 teve zero). Navegação: V2 (3 de 3 tarefas sem ajuda). Preferência: V1 (6 de 10 votos). O desempate também favorecia a V2. Só que a régua mede a execução, e a execução da V1 foi criticada até por quem votou nela.
+        </div>
+        <div class="vbox vbox--red">
+          <b>2. O padrão escondido nos votos</b>
+          Todo mundo que começou pela V2 votou na V1. Todo mundo que começou pela V1 votou na V2 ou na V3. Ou seja: depois de entender a empresa, a pessoa quer simplicidade; sem entender, ela quer explicação. A V1 tem a melhor arquitetura de escolha e a pior explicação. A V2 é o contrário.
+        </div>
+        <div class="vbox">
+          <b>3. A recomendação</b>
+          Uma home nova que junta as duas: a explicação concreta da V2 no topo, as duas portas grandes da V1 logo abaixo, e nada mais na primeira dobra. Cada porta leva a uma home focada, com a lógica de projetos da V3 dentro da home de negócios. A régua foi útil, mas a resposta certa não estava entre as três opções.
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="r-sec container">
+      <h2>O tamanho da amostra, sem maquiagem</h2>
+      <p class="sub">A fase de entrevistas chegou perto do planejado. A fase automática não: o Clarity registrou basicamente o próprio time e poucos convidados, então ele entra aqui como sinal, nunca como prova.</p>
+      <div class="tiles">
+        <div class="tile"><b>10</b><span>entrevistas guiadas de 12 planejadas</span><small>6 consumidores, 2 restaurantes, 2 marcas</small></div>
+        <div class="tile"><b>16</b><span>sessões gravadas no Clarity</span><small>de apenas 6 pessoas; 62% eram visitas repetidas</small></div>
+        <div class="tile"><b>67%</b><span>de rolagem média nas páginas</span><small>5,6 min de atenção ativa por sessão</small></div>
+        <div class="tile"><b>81%</b><span>das sessões no computador</span><small>o teste no celular, que era a regra, quase não aconteceu</small></div>
+      </div>
+    </section>
+
+    <!-- FASE 1 -->
+    <section class="r-sec container">
+      <span class="tag tag--red">Fase 1 · Entrevistas</span>
+      <h2 style="margin-top:12px">Clareza, navegação e preferência, por versão</h2>
+      <p class="sub">As duas primeiras medidas consideram a versão em que a pessoa começou (3 começaram na V1, 3 na V2, 4 na V3). A preferência é o voto de todos depois de ver as três.</p>
+
+      <div class="charts">
+        <div class="chart">
+          <h4>Entendeu a empresa em 5 segundos</h4>
+          <div class="hint">Resposta completa ("sim"), por versão inicial</div>
+          <div class="bar" title="V1: nenhuma das 3 pessoas que começaram aqui entendeu por completo"><span class="lbl">V1</span><div class="track"><div class="fill zero"></div></div><span class="val"><b>0</b> de 3</span></div>
+          <div class="bar" title="V2: 2 das 3 entenderam por completo"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:67%"></div></div><span class="val"><b>2</b> de 3</span></div>
+          <div class="bar" title="V3: 1 das 4 entendeu por completo"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val"><b>1</b> de 4</span></div>
+        </div>
+        <div class="chart">
+          <h4>Entendeu ou chegou perto</h4>
+          <div class="hint">"Sim" mais "parcial", por versão inicial</div>
+          <div class="bar" title="V1: 1 de 3"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
+          <div class="bar" title="V2: 3 de 3"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
+          <div class="bar" title="V3: 4 de 4"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>4</b> de 4</span></div>
+        </div>
+        <div class="chart">
+          <h4>Completou a tarefa sozinho</h4>
+          <div class="hint">Sem ajuda do entrevistador, por versão inicial</div>
+          <div class="bar" title="V1: 1 de 3 (duas pessoas precisaram de ajuda)"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
+          <div class="bar" title="V2: 3 de 3"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
+          <div class="bar" title="V3: 2 de 4 (uma com ajuda, uma não completou)"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val"><b>2</b> de 4</span></div>
+        </div>
+      </div>
+
+      <div class="charts" style="margin-top:14px; grid-template-columns:1fr">
+        <div class="chart">
+          <h4>Versão preferida depois de ver as três</h4>
+          <div class="hint">Voto de todos os 10 entrevistados</div>
+          <div class="bar" title="V1: 6 votos (3 consumidores, 2 restaurantes, 1 marca)"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>6</b> de 10</span></div>
+          <div class="bar" title="V2: 3 votos (3 consumidores)"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:30%"></div></div><span class="val"><b>3</b> de 10</span></div>
+          <div class="bar" title="V3: 1 voto (1 marca)"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:10%"></div></div><span class="val"><b>1</b> de 10</span></div>
+          <details class="tbl">
+            <summary>Ver a tabela completa das entrevistas</summary>
+            <table>
+              <tr><th>#</th><th>Perfil</th><th>Começou na</th><th>5 segundos</th><th>Tarefa</th><th>Preferiu</th></tr>
+              <tr><td>P1</td><td>Consumidor, não conhecia</td><td>V1</td><td>Parcial</td><td>Sim</td><td>V2</td></tr>
+              <tr><td>P2</td><td>Consumidor, não conhecia</td><td>V2</td><td>Sim</td><td>Sim</td><td>V1</td></tr>
+              <tr><td>P3</td><td>Consumidor, não conhecia</td><td>V3</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
+              <tr><td>P4</td><td>Consumidor, não conhecia</td><td>V1</td><td>Não</td><td>Com ajuda</td><td>V2</td></tr>
+              <tr><td>P5</td><td>Consumidor, conhecia</td><td>V2</td><td>Sim</td><td>Sim</td><td>V1</td></tr>
+              <tr><td>P6</td><td>Consumidor, conhecia</td><td>V3</td><td>Sim</td><td>Com ajuda</td><td>V2</td></tr>
+              <tr><td>P7</td><td>Restaurante</td><td>V2</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
+              <tr><td>P8</td><td>Restaurante</td><td>V3</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
+              <tr><td>P9</td><td>Marca ou indústria</td><td>V3</td><td>Parcial</td><td>Não</td><td>V1</td></tr>
+              <tr><td>P10</td><td>Marca ou indústria</td><td>V1</td><td>Não</td><td>Com ajuda</td><td>V3</td></tr>
+            </table>
+          </details>
+        </div>
+      </div>
+
+      <h3 style="margin-top:30px">Onde a pessoa começou × o que ela preferiu</h3>
+      <p class="sub">É aqui que a história aparece. Ninguém que começou na V2 ficou na V2. Ninguém que começou na V1 ficou na V1.</p>
+      <table class="matrix">
+        <tr><th></th><th>Preferiu V1</th><th>Preferiu V2</th><th>Preferiu V3</th></tr>
+        <tr><th>Começou na V1</th><td>0</td><td class="hot">2<span class="who">P1, P4</span></td><td class="warm">1<span class="who">P10</span></td></tr>
+        <tr><th>Começou na V2</th><td class="hot">3<span class="who">P2, P5, P7</span></td><td>0</td><td>0</td></tr>
+        <tr><th>Começou na V3</th><td class="hot">3<span class="who">P3, P8, P9</span></td><td class="warm">1<span class="who">P6</span></td><td>0</td></tr>
+      </table>
+    </section>
+
+    <!-- POR VERSÃO -->
+    <section class="r-sec container">
+      <h2>O que cada versão ensinou</h2>
+      <p class="sub">Leitura de UX e de marketing junto: não basta a pessoa achar o botão, ela precisa sair sabendo o que o Bom Gourmet é e onde ela entra nisso.</p>
+      <div class="vcards">
+        <div class="vc">
+          <span class="tag">Versão 1 · Dois caminhos</span>
+          <h3>A arquitetura certa, mal explicada</h3>
+          <div class="score"><span>Clareza <b>0/3</b></span><span>Navegação <b>1/3</b></span><span>Votos <b>6/10</b></span></div>
+          <h4>Funcionou</h4>
+          <ul class="ok">
+            <li>A escolha de caminho é o que as pessoas mais elogiaram: "bato o olho e sei o que quero fazer", "já não olho o que não me interessa"</li>
+            <li>Ganhou 3 dos 4 votos de restaurantes e marcas: o público de negócio quer separação, não mistura</li>
+          </ul>
+          <h4>Falhou</h4>
+          <ul class="ko">
+            <li>Ninguém que começou nela entendeu a empresa por completo. A frase de definição acima das portas não é lida ("eu nem li")</li>
+            <li>As fotos das portas dizem "site de notícias" ou "empresa que vende pra empresa", não "quem faz festivais e prêmios"</li>
+            <li>Dentro da home de conteúdo, os roteiros somem: "parece que só tem quatro, eu fecharia e sairia"</li>
+          </ul>
+          <div class="quote">"O conceito da um eu achei o mais interessante. A ideia de abrir o site e ter a opção de me guiar, eu gostei bastante. Só que ela tá mal executada."<small>P3, consumidor que não conhecia a marca</small></div>
+          <div class="verdict"><b>Veredito:</b> é a estrutura vencedora, mas a porta de entrada precisa explicar antes de pedir escolha.</div>
+        </div>
+
+        <div class="vc">
+          <span class="tag">Versão 2 · Equilibrada</span>
+          <h3>Explica melhor, cansa mais</h3>
+          <div class="score"><span>Clareza <b>2/3</b></span><span>Navegação <b>3/3</b></span><span>Votos <b>3/10</b></span></div>
+          <h4>Funcionou</h4>
+          <ul class="ok">
+            <li>Melhor resultado no teste dos 5 segundos: o texto do topo, quando lido, entrega a mensagem ("parceria pra fazer os restaurantes crescerem", "plataforma de soluções")</li>
+            <li>Todas as tarefas completadas sem ajuda; quem gosta de ver tudo na tela sem clicar votou nela</li>
+          </ul>
+          <h4>Falhou</h4>
+          <ul class="ko">
+            <li>"Muita informação", "poluída", "os conteúdos separados podem confundir": três pessoas de três perfis diferentes</li>
+            <li>Para a marca, "Tudo que faz parte do Bom Gourmet" não responde a pergunta dela: "o que isso comunica pra mim? Qual projeto eu posso participar?"</li>
+            <li>No Clarity, 68% dos cliques foram em setas de carrossel e zero em qualquer chamada comercial</li>
+          </ul>
+          <div class="quote">"Aqui tem muita informação. A das duas caixas ficou bem clara, as duas principais frentes. Não é tão poluído, eu só bato o olho e sei o que eu quero fazer."<small>P9, marca ou indústria</small></div>
+          <div class="verdict"><b>Veredito:</b> o topo dela é o melhor texto de explicação que temos. O resto da página trabalha contra ele.</div>
+        </div>
+
+        <div class="vc">
+          <span class="tag">Versão 3 · Maioria produto</span>
+          <h3>Fala com o mercado, exclui o resto</h3>
+          <div class="score"><span>Clareza <b>1/4</b></span><span>Navegação <b>2/4</b></span><span>Votos <b>1/10</b></span></div>
+          <h4>Funcionou</h4>
+          <ul class="ok">
+            <li>Quem é do mercado se enxerga: "empresa de projetos gastronômicos", e a única marca que votou nela votou porque "viu os projetos e se viu ali"</li>
+            <li>Ninguém saiu sem chegar perto de entender (4 de 4 entre "sim" e "parcial")</li>
+          </ul>
+          <h4>Falhou</h4>
+          <ul class="ko">
+            <li>"Muito direcionada a restaurantes, marcas e empresas, deixando o público geral de fora"</li>
+            <li>O termo "live marketing" virou o único foco de duas pessoas: "não dá pra ser muito específico", "dono de restaurante não entenderia"</li>
+            <li>Uma marca não completou a tarefa nela, justamente a home feita pra marcas</li>
+          </ul>
+          <div class="quote">"Eu só consegui focar no live marketing ali. É algo que fala sobre gastronomia, mas eu acho que não dá pra ser muito específico."<small>P8, restaurante</small></div>
+          <div class="verdict"><b>Veredito:</b> não é uma home. É o miolo certo para a home de negócios: projetos, prazos e onde cada perfil entra.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEDIDOS -->
+    <section class="r-sec container asks">
+      <h2>O que as pessoas pediram, em ordem de frequência</h2>
+      <p class="sub">Contagem de quantas entrevistas tocaram em cada tema, espontaneamente. Os três primeiros já apontam o desenho da home final.</p>
+      <div class="chart">
+        <div class="bar" title="P2, P6, P7, P8, P9"><span class="lbl">Caminho direto, menos informação na tela, "bato o olho e escolho"</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>5</b></span></div>
+        <div class="bar" title="P3, P7, P10"><span class="lbl">Ainda parece "site de notícias" (as fotos e os cards lembram portal)</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>3</b></span></div>
+        <div class="bar" title="P8, P9, P10"><span class="lbl">Para quem participa ou patrocina: projetos visíveis, prazos de inscrição e "onde eu entro"</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>3</b></span></div>
+        <div class="bar" title="P4, P5, P6"><span class="lbl">Mais espaço para notícias e roteiros; o público final e o turista ficam pequenos</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>3</b></span></div>
+        <div class="bar" title="P1, P3"><span class="lbl">Botões e portas com tratamento visual mais distinto; a execução da escolha está "estranha"</span><div class="track"><div class="fill" style="width:40%"></div></div><span class="val"><b>2</b></span></div>
+        <div class="bar" title="P1, P5"><span class="lbl">Calendário maior e mais forte; é por ele que descobririam eventos</span><div class="track"><div class="fill" style="width:40%"></div></div><span class="val"><b>2</b></span></div>
+        <div class="bar" title="P8, P9"><span class="lbl">O termo "live marketing" trava a leitura</span><div class="track"><div class="fill" style="width:40%"></div></div><span class="val"><b>2</b></span></div>
+        <div class="bar" title="P8"><span class="lbl">Logo do Bom Gourmet pequeno demais</span><div class="track"><div class="fill" style="width:20%"></div></div><span class="val"><b>1</b></span></div>
+        <div class="bar" title="P5"><span class="lbl">Um app ou espaço de benefícios e descontos para o consumidor</span><div class="track"><div class="fill" style="width:20%"></div></div><span class="val"><b>1</b></span></div>
+      </div>
+    </section>
+
+    <!-- FASE 2 -->
+    <section class="r-sec container">
+      <span class="tag tag--dark">Fase 2 · Clarity</span>
+      <h2 style="margin-top:12px">O que a navegação gravada mostra</h2>
+      <p class="sub">Dezesseis sessões de seis pessoas, a maioria do próprio time revisitando. Serve para confirmar tendências, não para decidir sozinho.</p>
+
+      <div class="caveat" style="margin-bottom:18px">
+        <b>Por que o Clarity ficou pequeno</b>
+        O plano pedia de 30 a 50 pessoas por versão pelos links cegos. O painel registrou 16 sessões, 62% delas de gente voltando, e 81% no computador. Os lotes não chegaram à base, ou chegaram sem clique. Se a fase 2 for repetida, o disparo precisa de dono, data e um lembrete.
+      </div>
+
+      <div class="tiles" style="margin-bottom:18px">
+        <div class="tile"><b>3,6</b><span>páginas por sessão</span><small>as pessoas circulam entre as versões</small></div>
+        <div class="tile"><b>19%</b><span>de cliques mortos</span><small>3 sessões clicaram em algo que não era link</small></div>
+        <div class="tile"><b>19%</b><span>de retornos rápidos</span><small>3 sessões entraram e saíram na hora</small></div>
+        <div class="tile"><b>0</b><span>cliques de raiva ou erros de código</span><small>nada quebrou; a fricção é de entendimento, não técnica</small></div>
+      </div>
+
+      <div class="charts">
+        <div class="chart chart--wide">
+          <h4>V2 · onde caíram os 19 cliques</h4>
+          <div class="hint">20 visualizações da página</div>
+          <div class="bar" title="Setas dos carrosséis: painéis do topo 6, colunistas 5, ecossistema 2"><span class="lbl">68%</span><div class="track"><div class="fill" style="width:68%"></div></div><span class="val">setas dos carrosséis</span></div>
+          <div class="bar" title="Menu Roteiros 1, menu Calendário 1, Ver agenda completa 1"><span class="lbl">16%</span><div class="track"><div class="fill" style="width:16%"></div></div><span class="val">roteiros e agenda</span></div>
+          <div class="bar" title="Botão vermelho Quero viver a cidade: 2 cliques"><span class="lbl">11%</span><div class="track"><div class="fill" style="width:11%"></div></div><span class="val">"Quero viver a cidade"</span></div>
+          <div class="bar" title="Para empresas, Fale com o comercial e os três cards finais: nenhum clique"><span class="lbl">0%</span><div class="track"><div class="fill zero"></div></div><span class="val">qualquer chamada comercial</span></div>
+        </div>
+        <div class="chart chart--wide">
+          <h4>V1 · a página das portas, 8 cliques</h4>
+          <div class="hint">12 visualizações da página</div>
+          <div class="bar" title="Porta e botão Quero viver a cidade: 4 cliques"><span class="lbl">50%</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val">porta do público</span></div>
+          <div class="bar" title="2 cliques no texto da definição, que não é link"><span class="lbl">25%</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val">texto "quem somos" (não é link)</span></div>
+          <div class="bar" title="Botão da porta de empresas: 1 clique"><span class="lbl">13%</span><div class="track"><div class="fill" style="width:13%"></div></div><span class="val">porta de empresas</span></div>
+          <div class="bar" title="Rodapé: 1 clique"><span class="lbl">13%</span><div class="track"><div class="fill" style="width:13%"></div></div><span class="val">rodapé</span></div>
+        </div>
+        <div class="chart chart--wide">
+          <h4>V1 · home de conteúdo, 4 cliques</h4>
+          <div class="hint">5 visualizações da página</div>
+          <div class="bar" title="Botão Para empresas no cabeçalho: 2 cliques"><span class="lbl">50%</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val">"Para empresas" no topo</span></div>
+          <div class="bar" title="Menu Notícias: 1 clique"><span class="lbl">25%</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val">notícias</span></div>
+          <div class="bar" title="Botão Roteiros da cidade: 1 clique"><span class="lbl">25%</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val">roteiros</span></div>
+        </div>
+      </div>
+
+      <div class="verd" style="margin-top:18px">
+        <div class="vbox"><b>Sinal 1: as pessoas exploram, não convertem</b>Na V2, dois em cada três cliques foram para ver mais fotos. É bom sinal de atenção e péssimo sinal de ação: a página entretém e não conduz a lugar nenhum. Zero cliques comerciais em vinte visualizações.</div>
+        <div class="vbox"><b>Sinal 2: a definição foi clicada como se fosse link</b>Na página das portas, um quarto dos cliques caiu no texto de "quem somos". A pessoa quis saber mais e não tinha para onde ir. É o mesmo pedido das entrevistas dito com o mouse: explique antes de pedir escolha.</div>
+        <div class="vbox"><b>Sinal 3: o público de negócio procura a própria porta</b>Metade dos cliques dentro da home de conteúdo foi para sair dela rumo a "Para empresas". Quem é do mercado quer o caminho dele separado, e acha.</div>
+      </div>
+    </section>
+
+    <!-- RECOMENDAÇÃO -->
+    <section class="r-sec container" style="padding-bottom:80px">
+      <h2>Recomendação: a home que nenhuma das três era</h2>
+      <p class="sub">Seis decisões concretas, na ordem em que valem mais. As três primeiras resolvem oitenta por cento do que foi dito.</p>
+      <ol class="reco">
+        <li><b>Estrutura da V1, porta de entrada refeita.</b> A primeira dobra tem duas coisas apenas: o texto de explicação do topo da V2 (título grande e a frase concreta) e as duas portas grandes logo abaixo, com tratamento visual bem distinto entre elas. Nada de carrossel, número ou card antes da escolha.</li>
+        <li><b>Explicar com as palavras que os entrevistados usaram.</b> As frases que provaram funcionar foram "empresa de projetos gastronômicos" e "parceria pra fazer os restaurantes crescerem". Começar por aí. "Live marketing" e "ecossistema" só depois, como rótulo, nunca na primeira linha.</li>
+        <li><b>Home de negócios com a lógica da V3.</b> Atrás da porta de empresas: projetos primeiro, cada um com data, prazo de inscrição e "onde eu entro" por perfil (restaurante, marca, indústria). Foi o pedido unânime de quem participa ou patrocina, e o que fez a única marca votar na V3.</li>
+        <li><b>Matar a cara de portal.</b> Três pessoas ainda leram "site de notícias". Nas portas e no topo, fotos de evento, gente, ativação e premiação. O prato bonito fica para dentro da home de conteúdo, que é onde ele pertence.</li>
+        <li><b>Home de conteúdo mais generosa.</b> Oito ou mais notícias, roteiros que não "somem" (grade visível, não carrossel), calendário maior e um espaço claro para quem visita a cidade. Logo maior em todas as páginas.</li>
+        <li><b>Testar de novo, agora no celular.</b> Cinco pessoas novas, teste dos 5 segundos só na nova porta de entrada, sempre no telefone. Se quatro de cinco completarem a frase "o Bom Gourmet é uma empresa que...", está pronto para construir. E o disparo do Clarity precisa de dono e data para valer alguma coisa.</li>
+      </ol>
+    </section>
+  </main>
+
+  <div data-vfooter></div>
+  <script src="js/versoes.js?v=3"></script>
+</body>
+</html>
