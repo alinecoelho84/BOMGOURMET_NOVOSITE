@@ -41,7 +41,7 @@
     .chart { background: #fff; border-radius: var(--radius-sm); padding: 18px 20px 14px; box-shadow: var(--sombra-sutil); }
     .chart h4 { font-size: .92rem; margin-bottom: 2px; }
     .chart .hint { font-size: .74rem; color: var(--cinza); margin-bottom: 14px; }
-    .bar { display: grid; grid-template-columns: 34px 1fr 62px; align-items: center; gap: 10px; margin: 8px 0; font-size: .84rem; }
+    .bar { display: grid; grid-template-columns: 96px 1fr 62px; align-items: center; gap: 10px; margin: 8px 0; font-size: .84rem; }
     .bar .lbl { font-weight: 700; color: var(--tinta); }
     .bar .track { height: 10px; background: var(--creme2); border-radius: 999px; overflow: hidden; position: relative; }
     .bar .fill { height: 100%; background: var(--vermelho); border-radius: 0 4px 4px 0; transition: width .5s ease; min-width: 2px; }
@@ -113,8 +113,8 @@
   <main>
     <section class="r-hero container">
       <span class="vchip">Resultado dos testes · setembro de 2026</span>
-      <h1>As pessoas querem a explicação da V2 com a simplicidade da V1</h1>
-      <p class="lead">Dez entrevistas guiadas e dezesseis sessões gravadas no Clarity contam a mesma história por ângulos diferentes: quem entende o que o Bom Gourmet faz prefere escolher um caminho e seguir. Quem não entende, pede explicação. Nenhuma das três versões entrega as duas coisas ao mesmo tempo.</p>
+      <h1>A Home com os 2 caminhos ganhou a preferência. A Híbrida ganhou em clareza.</h1>
+      <p class="lead">Foram 10 entrevistas e 16 sessões gravadas no Clarity. O resumo: as pessoas preferem escolher um caminho e ver menos coisa na tela (Home com os 2 caminhos). Mas só entendem o que o Bom Gourmet faz quando leem o texto do topo da Híbrida. A home final precisa das duas coisas.</p>
     </section>
 
     <!-- VEREDITO -->
@@ -123,16 +123,16 @@
       <p class="sub">Três leituras que o time precisa ter na cabeça antes de qualquer discussão de layout.</p>
       <div class="verd">
         <div class="vbox vbox--dark">
-          <b>1. Pela régua combinada, a V2 vence por 2 a 1</b>
-          Clareza: V2 (2 de 3 acertos cheios no teste dos 5 segundos; V1 teve zero). Navegação: V2 (3 de 3 tarefas sem ajuda). Preferência: V1 (6 de 10 votos). O desempate também favorecia a V2. Só que a régua mede a execução, e a execução da V1 foi criticada até por quem votou nela.
+          <b>1. Quem ganhou em cada critério</b>
+          Clareza: <strong>Híbrida</strong> (2 de 3 pessoas entenderam a empresa em 5 segundos; na Home com os 2 caminhos, zero). Navegação: <strong>Híbrida</strong> (3 de 3 tarefas sem ajuda). Preferência: <strong>Home com os 2 caminhos</strong> (6 de 10 votos).
         </div>
         <div class="vbox vbox--red">
-          <b>2. O padrão escondido nos votos</b>
-          Todo mundo que começou pela V2 votou na V1. Todo mundo que começou pela V1 votou na V2 ou na V3. Ou seja: depois de entender a empresa, a pessoa quer simplicidade; sem entender, ela quer explicação. A V1 tem a melhor arquitetura de escolha e a pior explicação. A V2 é o contrário.
+          <b>2. Por que os votos foram para a Home com os 2 caminhos</b>
+          Porque ela tem menos coisa na tela e a pessoa escolhe logo o que quer: "bato o olho e sei o que fazer". O problema: ela não explica o que o Bom Gourmet é. Quem viu a Híbrida primeiro entendeu a empresa e depois votou na Home com os 2 caminhos. Quem viu a Home com os 2 caminhos primeiro não entendeu e votou nas outras.
         </div>
         <div class="vbox">
-          <b>3. A recomendação</b>
-          Uma home nova que junta as duas: a explicação concreta da V2 no topo, as duas portas grandes da V1 logo abaixo, e nada mais na primeira dobra. Cada porta leva a uma home focada, com a lógica de projetos da V3 dentro da home de negócios. A régua foi útil, mas a resposta certa não estava entre as três opções.
+          <b>3. O que fazer</b>
+          Ficar com a Home com os 2 caminhos e colocar em cima das duas portas o texto de explicação da Híbrida. Nada mais na primeira tela. Atrás da porta de empresas, usar o conteúdo da Home de produto (projetos com data e prazo). Atrás da porta do público, a home de conteúdo.
         </div>
       </div>
     </section>
@@ -153,29 +153,29 @@
     <section class="r-sec container">
       <span class="tag tag--red">Fase 1 · Entrevistas</span>
       <h2 style="margin-top:12px">Clareza, navegação e preferência, por versão</h2>
-      <p class="sub">As duas primeiras medidas consideram a versão em que a pessoa começou (3 começaram na V1, 3 na V2, 4 na V3). A preferência é o voto de todos depois de ver as três.</p>
+      <p class="sub">As duas primeiras medidas consideram a versão em que a pessoa começou (3 começaram na Home com os 2 caminhos, 3 na Híbrida, 4 na de Produto). A preferência é o voto de todos depois de ver as três.</p>
 
       <div class="charts">
         <div class="chart">
           <h4>Entendeu a empresa em 5 segundos</h4>
           <div class="hint">Resposta completa ("sim"), por versão inicial</div>
-          <div class="bar" title="V1: nenhuma das 3 pessoas que começaram aqui entendeu por completo"><span class="lbl">V1</span><div class="track"><div class="fill zero"></div></div><span class="val"><b>0</b> de 3</span></div>
-          <div class="bar" title="V2: 2 das 3 entenderam por completo"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:67%"></div></div><span class="val"><b>2</b> de 3</span></div>
-          <div class="bar" title="V3: 1 das 4 entendeu por completo"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val"><b>1</b> de 4</span></div>
+          <div class="bar" title="2 Caminhos: nenhuma das 3 pessoas que começaram aqui entendeu por completo"><span class="lbl">2 Caminhos</span><div class="track"><div class="fill zero"></div></div><span class="val"><b>0</b> de 3</span></div>
+          <div class="bar" title="Híbrida: 2 das 3 entenderam por completo"><span class="lbl">Híbrida</span><div class="track"><div class="fill" style="width:67%"></div></div><span class="val"><b>2</b> de 3</span></div>
+          <div class="bar" title="Produto: 1 das 4 entendeu por completo"><span class="lbl">Produto</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val"><b>1</b> de 4</span></div>
         </div>
         <div class="chart">
           <h4>Entendeu ou chegou perto</h4>
           <div class="hint">"Sim" mais "parcial", por versão inicial</div>
-          <div class="bar" title="V1: 1 de 3"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
-          <div class="bar" title="V2: 3 de 3"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
-          <div class="bar" title="V3: 4 de 4"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>4</b> de 4</span></div>
+          <div class="bar" title="2 Caminhos: 1 de 3"><span class="lbl">2 Caminhos</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
+          <div class="bar" title="Híbrida: 3 de 3"><span class="lbl">Híbrida</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
+          <div class="bar" title="Produto: 4 de 4"><span class="lbl">Produto</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>4</b> de 4</span></div>
         </div>
         <div class="chart">
           <h4>Completou a tarefa sozinho</h4>
           <div class="hint">Sem ajuda do entrevistador, por versão inicial</div>
-          <div class="bar" title="V1: 1 de 3 (duas pessoas precisaram de ajuda)"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
-          <div class="bar" title="V2: 3 de 3"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
-          <div class="bar" title="V3: 2 de 4 (uma com ajuda, uma não completou)"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val"><b>2</b> de 4</span></div>
+          <div class="bar" title="2 Caminhos: 1 de 3 (duas pessoas precisaram de ajuda)"><span class="lbl">2 Caminhos</span><div class="track"><div class="fill" style="width:33%"></div></div><span class="val"><b>1</b> de 3</span></div>
+          <div class="bar" title="Híbrida: 3 de 3"><span class="lbl">Híbrida</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val"><b>3</b> de 3</span></div>
+          <div class="bar" title="Produto: 2 de 4 (uma com ajuda, uma não completou)"><span class="lbl">Produto</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val"><b>2</b> de 4</span></div>
         </div>
       </div>
 
@@ -183,35 +183,35 @@
         <div class="chart">
           <h4>Versão preferida depois de ver as três</h4>
           <div class="hint">Voto de todos os 10 entrevistados</div>
-          <div class="bar" title="V1: 6 votos (3 consumidores, 2 restaurantes, 1 marca)"><span class="lbl">V1</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>6</b> de 10</span></div>
-          <div class="bar" title="V2: 3 votos (3 consumidores)"><span class="lbl">V2</span><div class="track"><div class="fill" style="width:30%"></div></div><span class="val"><b>3</b> de 10</span></div>
-          <div class="bar" title="V3: 1 voto (1 marca)"><span class="lbl">V3</span><div class="track"><div class="fill" style="width:10%"></div></div><span class="val"><b>1</b> de 10</span></div>
+          <div class="bar" title="2 Caminhos: 6 votos (3 consumidores, 2 restaurantes, 1 marca)"><span class="lbl">2 Caminhos</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val"><b>6</b> de 10</span></div>
+          <div class="bar" title="Híbrida: 3 votos (3 consumidores)"><span class="lbl">Híbrida</span><div class="track"><div class="fill" style="width:30%"></div></div><span class="val"><b>3</b> de 10</span></div>
+          <div class="bar" title="Produto: 1 voto (1 marca)"><span class="lbl">Produto</span><div class="track"><div class="fill" style="width:10%"></div></div><span class="val"><b>1</b> de 10</span></div>
           <details class="tbl">
             <summary>Ver a tabela completa das entrevistas</summary>
             <table>
               <tr><th>#</th><th>Perfil</th><th>Começou na</th><th>5 segundos</th><th>Tarefa</th><th>Preferiu</th></tr>
-              <tr><td>P1</td><td>Consumidor, não conhecia</td><td>V1</td><td>Parcial</td><td>Sim</td><td>V2</td></tr>
-              <tr><td>P2</td><td>Consumidor, não conhecia</td><td>V2</td><td>Sim</td><td>Sim</td><td>V1</td></tr>
-              <tr><td>P3</td><td>Consumidor, não conhecia</td><td>V3</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
-              <tr><td>P4</td><td>Consumidor, não conhecia</td><td>V1</td><td>Não</td><td>Com ajuda</td><td>V2</td></tr>
-              <tr><td>P5</td><td>Consumidor, conhecia</td><td>V2</td><td>Sim</td><td>Sim</td><td>V1</td></tr>
-              <tr><td>P6</td><td>Consumidor, conhecia</td><td>V3</td><td>Sim</td><td>Com ajuda</td><td>V2</td></tr>
-              <tr><td>P7</td><td>Restaurante</td><td>V2</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
-              <tr><td>P8</td><td>Restaurante</td><td>V3</td><td>Parcial</td><td>Sim</td><td>V1</td></tr>
-              <tr><td>P9</td><td>Marca ou indústria</td><td>V3</td><td>Parcial</td><td>Não</td><td>V1</td></tr>
-              <tr><td>P10</td><td>Marca ou indústria</td><td>V1</td><td>Não</td><td>Com ajuda</td><td>V3</td></tr>
+              <tr><td>P1</td><td>Consumidor, não conhecia</td><td>2 Caminhos</td><td>Parcial</td><td>Sim</td><td>Híbrida</td></tr>
+              <tr><td>P2</td><td>Consumidor, não conhecia</td><td>Híbrida</td><td>Sim</td><td>Sim</td><td>2 Caminhos</td></tr>
+              <tr><td>P3</td><td>Consumidor, não conhecia</td><td>Produto</td><td>Parcial</td><td>Sim</td><td>2 Caminhos</td></tr>
+              <tr><td>P4</td><td>Consumidor, não conhecia</td><td>2 Caminhos</td><td>Não</td><td>Com ajuda</td><td>Híbrida</td></tr>
+              <tr><td>P5</td><td>Consumidor, conhecia</td><td>Híbrida</td><td>Sim</td><td>Sim</td><td>2 Caminhos</td></tr>
+              <tr><td>P6</td><td>Consumidor, conhecia</td><td>Produto</td><td>Sim</td><td>Com ajuda</td><td>Híbrida</td></tr>
+              <tr><td>P7</td><td>Restaurante</td><td>Híbrida</td><td>Parcial</td><td>Sim</td><td>2 Caminhos</td></tr>
+              <tr><td>P8</td><td>Restaurante</td><td>Produto</td><td>Parcial</td><td>Sim</td><td>2 Caminhos</td></tr>
+              <tr><td>P9</td><td>Marca ou indústria</td><td>Produto</td><td>Parcial</td><td>Não</td><td>2 Caminhos</td></tr>
+              <tr><td>P10</td><td>Marca ou indústria</td><td>2 Caminhos</td><td>Não</td><td>Com ajuda</td><td>Produto</td></tr>
             </table>
           </details>
         </div>
       </div>
 
       <h3 style="margin-top:30px">Onde a pessoa começou × o que ela preferiu</h3>
-      <p class="sub">É aqui que a história aparece. Ninguém que começou na V2 ficou na V2. Ninguém que começou na V1 ficou na V1.</p>
+      <p class="sub">Ninguém votou na versão em que começou. Quem viu a Híbrida primeiro escolheu a Home com os 2 caminhos. Quem viu a Home com os 2 caminhos primeiro escolheu as outras.</p>
       <table class="matrix">
-        <tr><th></th><th>Preferiu V1</th><th>Preferiu V2</th><th>Preferiu V3</th></tr>
-        <tr><th>Começou na V1</th><td>0</td><td class="hot">2<span class="who">P1, P4</span></td><td class="warm">1<span class="who">P10</span></td></tr>
-        <tr><th>Começou na V2</th><td class="hot">3<span class="who">P2, P5, P7</span></td><td>0</td><td>0</td></tr>
-        <tr><th>Começou na V3</th><td class="hot">3<span class="who">P3, P8, P9</span></td><td class="warm">1<span class="who">P6</span></td><td>0</td></tr>
+        <tr><th></th><th>Preferiu 2 Caminhos</th><th>Preferiu Híbrida</th><th>Preferiu Produto</th></tr>
+        <tr><th>Começou na Home com os 2 caminhos</th><td>0</td><td class="hot">2<span class="who">P1, P4</span></td><td class="warm">1<span class="who">P10</span></td></tr>
+        <tr><th>Começou na Híbrida</th><td class="hot">3<span class="who">P2, P5, P7</span></td><td>0</td><td>0</td></tr>
+        <tr><th>Começou na de Produto</th><td class="hot">3<span class="who">P3, P8, P9</span></td><td class="warm">1<span class="who">P6</span></td><td>0</td></tr>
       </table>
     </section>
 
@@ -221,8 +221,8 @@
       <p class="sub">Leitura de UX e de marketing junto: não basta a pessoa achar o botão, ela precisa sair sabendo o que o Bom Gourmet é e onde ela entra nisso.</p>
       <div class="vcards">
         <div class="vc">
-          <span class="tag">Versão 1 · Dois caminhos</span>
-          <h3>A arquitetura certa, mal explicada</h3>
+          <span class="tag">Home com os 2 caminhos</span>
+          <h3>A estrutura que as pessoas querem, mas não explica a empresa</h3>
           <div class="score"><span>Clareza <b>0/3</b></span><span>Navegação <b>1/3</b></span><span>Votos <b>6/10</b></span></div>
           <h4>Funcionou</h4>
           <ul class="ok">
@@ -236,12 +236,12 @@
             <li>Dentro da home de conteúdo, os roteiros somem: "parece que só tem quatro, eu fecharia e sairia"</li>
           </ul>
           <div class="quote">"O conceito da um eu achei o mais interessante. A ideia de abrir o site e ter a opção de me guiar, eu gostei bastante. Só que ela tá mal executada."<small>P3, consumidor que não conhecia a marca</small></div>
-          <div class="verdict"><b>Veredito:</b> é a estrutura vencedora, mas a porta de entrada precisa explicar antes de pedir escolha.</div>
+          <div class="verdict"><b>Veredito:</b> é a estrutura que fica. Só precisa explicar o que o Bom Gourmet é antes de pedir a escolha.</div>
         </div>
 
         <div class="vc">
-          <span class="tag">Versão 2 · Equilibrada</span>
-          <h3>Explica melhor, cansa mais</h3>
+          <span class="tag">Home híbrida</span>
+          <h3>Explica melhor, mas tem coisa demais</h3>
           <div class="score"><span>Clareza <b>2/3</b></span><span>Navegação <b>3/3</b></span><span>Votos <b>3/10</b></span></div>
           <h4>Funcionou</h4>
           <ul class="ok">
@@ -255,12 +255,12 @@
             <li>No Clarity, 68% dos cliques foram em setas de carrossel e zero em qualquer chamada comercial</li>
           </ul>
           <div class="quote">"Aqui tem muita informação. A das duas caixas ficou bem clara, as duas principais frentes. Não é tão poluído, eu só bato o olho e sei o que eu quero fazer."<small>P9, marca ou indústria</small></div>
-          <div class="verdict"><b>Veredito:</b> o topo dela é o melhor texto de explicação que temos. O resto da página trabalha contra ele.</div>
+          <div class="verdict"><b>Veredito:</b> o texto do topo é o que melhor explica a empresa. Ele vai para a Home com os 2 caminhos.</div>
         </div>
 
         <div class="vc">
-          <span class="tag">Versão 3 · Maioria produto</span>
-          <h3>Fala com o mercado, exclui o resto</h3>
+          <span class="tag">Home de produto</span>
+          <h3>Boa para empresas, deixa o público de fora</h3>
           <div class="score"><span>Clareza <b>1/4</b></span><span>Navegação <b>2/4</b></span><span>Votos <b>1/10</b></span></div>
           <h4>Funcionou</h4>
           <ul class="ok">
@@ -274,7 +274,7 @@
             <li>Uma marca não completou a tarefa nela, justamente a home feita pra marcas</li>
           </ul>
           <div class="quote">"Eu só consegui focar no live marketing ali. É algo que fala sobre gastronomia, mas eu acho que não dá pra ser muito específico."<small>P8, restaurante</small></div>
-          <div class="verdict"><b>Veredito:</b> não é uma home. É o miolo certo para a home de negócios: projetos, prazos e onde cada perfil entra.</div>
+          <div class="verdict"><b>Veredito:</b> não serve como home principal. Serve como a página de empresas: projetos, prazos e onde cada perfil entra.</div>
         </div>
       </div>
     </section>
@@ -316,7 +316,7 @@
 
       <div class="charts">
         <div class="chart chart--wide">
-          <h4>V2 · onde caíram os 19 cliques</h4>
+          <h4>Híbrida · onde caíram os 19 cliques</h4>
           <div class="hint">20 visualizações da página</div>
           <div class="bar" title="Setas dos carrosséis: painéis do topo 6, colunistas 5, ecossistema 2"><span class="lbl">68%</span><div class="track"><div class="fill" style="width:68%"></div></div><span class="val">setas dos carrosséis</span></div>
           <div class="bar" title="Menu Roteiros 1, menu Calendário 1, Ver agenda completa 1"><span class="lbl">16%</span><div class="track"><div class="fill" style="width:16%"></div></div><span class="val">roteiros e agenda</span></div>
@@ -324,7 +324,7 @@
           <div class="bar" title="Para empresas, Fale com o comercial e os três cards finais: nenhum clique"><span class="lbl">0%</span><div class="track"><div class="fill zero"></div></div><span class="val">qualquer chamada comercial</span></div>
         </div>
         <div class="chart chart--wide">
-          <h4>V1 · a página das portas, 8 cliques</h4>
+          <h4>Home com os 2 caminhos · a página das portas, 8 cliques</h4>
           <div class="hint">12 visualizações da página</div>
           <div class="bar" title="Porta e botão Quero viver a cidade: 4 cliques"><span class="lbl">50%</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val">porta do público</span></div>
           <div class="bar" title="2 cliques no texto da definição, que não é link"><span class="lbl">25%</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val">texto "quem somos" (não é link)</span></div>
@@ -332,7 +332,7 @@
           <div class="bar" title="Rodapé: 1 clique"><span class="lbl">13%</span><div class="track"><div class="fill" style="width:13%"></div></div><span class="val">rodapé</span></div>
         </div>
         <div class="chart chart--wide">
-          <h4>V1 · home de conteúdo, 4 cliques</h4>
+          <h4>Home com os 2 caminhos · a home de conteúdo, 4 cliques</h4>
           <div class="hint">5 visualizações da página</div>
           <div class="bar" title="Botão Para empresas no cabeçalho: 2 cliques"><span class="lbl">50%</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="val">"Para empresas" no topo</span></div>
           <div class="bar" title="Menu Notícias: 1 clique"><span class="lbl">25%</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="val">notícias</span></div>
@@ -341,7 +341,7 @@
       </div>
 
       <div class="verd" style="margin-top:18px">
-        <div class="vbox"><b>Sinal 1: as pessoas exploram, não convertem</b>Na V2, dois em cada três cliques foram para ver mais fotos. É bom sinal de atenção e péssimo sinal de ação: a página entretém e não conduz a lugar nenhum. Zero cliques comerciais em vinte visualizações.</div>
+        <div class="vbox"><b>Sinal 1: as pessoas exploram, não convertem</b>Na Híbrida, dois em cada três cliques foram para ver mais fotos. É bom sinal de atenção e péssimo sinal de ação: a página entretém e não conduz a lugar nenhum. Zero cliques comerciais em vinte visualizações.</div>
         <div class="vbox"><b>Sinal 2: a definição foi clicada como se fosse link</b>Na página das portas, um quarto dos cliques caiu no texto de "quem somos". A pessoa quis saber mais e não tinha para onde ir. É o mesmo pedido das entrevistas dito com o mouse: explique antes de pedir escolha.</div>
         <div class="vbox"><b>Sinal 3: o público de negócio procura a própria porta</b>Metade dos cliques dentro da home de conteúdo foi para sair dela rumo a "Para empresas". Quem é do mercado quer o caminho dele separado, e acha.</div>
       </div>
@@ -349,12 +349,12 @@
 
     <!-- RECOMENDAÇÃO -->
     <section class="r-sec container" style="padding-bottom:80px">
-      <h2>Recomendação: a home que nenhuma das três era</h2>
-      <p class="sub">Seis decisões concretas, na ordem em que valem mais. As três primeiras resolvem oitenta por cento do que foi dito.</p>
+      <h2>Recomendação: Home com os 2 caminhos, com a explicação da Híbrida</h2>
+      <p class="sub">Seis decisões, na ordem de importância.</p>
       <ol class="reco">
-        <li><b>Estrutura da V1, porta de entrada refeita.</b> A primeira dobra tem duas coisas apenas: o texto de explicação do topo da V2 (título grande e a frase concreta) e as duas portas grandes logo abaixo, com tratamento visual bem distinto entre elas. Nada de carrossel, número ou card antes da escolha.</li>
+        <li><b>Manter a Home com os 2 caminhos e refazer a primeira tela.</b> Em cima: o título e o texto de explicação que hoje estão no topo da Híbrida. Embaixo: as duas portas grandes, com visual bem diferente uma da outra. Nada de carrossel, número ou card antes da escolha.</li>
         <li><b>Explicar com as palavras que os entrevistados usaram.</b> As frases que provaram funcionar foram "empresa de projetos gastronômicos" e "parceria pra fazer os restaurantes crescerem". Começar por aí. "Live marketing" e "ecossistema" só depois, como rótulo, nunca na primeira linha.</li>
-        <li><b>Home de negócios com a lógica da V3.</b> Atrás da porta de empresas: projetos primeiro, cada um com data, prazo de inscrição e "onde eu entro" por perfil (restaurante, marca, indústria). Foi o pedido unânime de quem participa ou patrocina, e o que fez a única marca votar na V3.</li>
+        <li><b>Atrás da porta de empresas, usar a Home de produto.</b> Projetos primeiro, cada um com data, prazo de inscrição e "onde eu entro" por perfil (restaurante, marca, indústria). Foi o pedido de todo mundo que participa ou patrocina.</li>
         <li><b>Matar a cara de portal.</b> Três pessoas ainda leram "site de notícias". Nas portas e no topo, fotos de evento, gente, ativação e premiação. O prato bonito fica para dentro da home de conteúdo, que é onde ele pertence.</li>
         <li><b>Home de conteúdo mais generosa.</b> Oito ou mais notícias, roteiros que não "somem" (grade visível, não carrossel), calendário maior e um espaço claro para quem visita a cidade. Logo maior em todas as páginas.</li>
         <li><b>Testar de novo, agora no celular.</b> Cinco pessoas novas, teste dos 5 segundos só na nova porta de entrada, sempre no telefone. Se quatro de cinco completarem a frase "o Bom Gourmet é uma empresa que...", está pronto para construir. E o disparo do Clarity precisa de dono e data para valer alguma coisa.</li>
