@@ -457,3 +457,8 @@ body[data-frente="gate"] .vheader { display: none; }
 /* V5: notícia fixada */
 .vcard--pin { position: relative; outline: 2px solid var(--vermelho); outline-offset: -2px; }
 .vcard--pin .pin { position: absolute; top: 10px; left: 10px; z-index: 2; background: var(--vermelho); color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; box-shadow: var(--sombra-sutil); }
+
+.tl { display: flex; flex-direction: column; }
+.tl__link { display: inline-block; margin-top: 8px; font-size: .8rem; font-weight: 700; color: var(--vermelho); text-decoration: underline; text-underline-offset: 3px; }
+.tl__breve { display: inline-block; margin-top: 8px; font-size: .76rem; color: var(--cinza); }
+.tl .so-b2b { order: 10; }
