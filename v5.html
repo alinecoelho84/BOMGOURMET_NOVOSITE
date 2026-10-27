@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V5 · Home com duas frentes · Bom Gourmet</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/versoes.css?v=16" />
+  <!-- Microsoft Clarity: medição do teste das versões -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y5xkg91zdt");
+  </script>
+  <script>
+    // aplica a frente salva antes de pintar a tela, para não piscar
+    (function () { try { var f = localStorage.getItem("bg_frente"); if (f === "b2c" || f === "b2b") document.documentElement.setAttribute("data-frente-inicial", f); } catch (e) {} })();
+  </script>
+</head>
+<body data-v="v5" data-frente="gate">
+
+  <div class="proto-bar"><b>Protótipo · Versão 5</b> · Uma home, duas frentes: Para você e Para sua marca · <a href="versoes.html">todas as versões</a></div>
+
+  <header class="vheader">
+    <div class="container vheader__inner">
+      <a class="vlogo vlogo--lg" href="v5.html"><i></i><b>bom</b><b>Gourmet</b></a>
+      <nav class="vnav">
+        <a href="#quem-somos">Quem somos</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#negocios" class="so-b2c">Negócios</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#" class="nav-guia">Guia dos melhores restaurantes</a>
+      </nav>
+      <a class="vbtn vbtn--red vbtn--sm so-b2b" href="#participar">Fale com o comercial</a>
+      <a class="vbtn vbtn--red vbtn--sm guia-mobile" href="#">Guia</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 0. Abertura obrigatória: só os dois botões -->
+    <section class="v5gate">
+      <div class="v5gate__bar"><span class="vlogo vlogo--lg"><i></i><b>bom</b><b>Gourmet</b></span></div>
+      <div class="v5gate__grid">
+        <button type="button" class="v5gate__btn v5gate__btn--b2c" data-frente="b2c" style="--bg:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=75')">
+          <span><small>Para você</small><b>Quero viver a cidade</b><i>Entrar →</i></span>
+        </button>
+        <button type="button" class="v5gate__btn v5gate__btn--b2b" data-frente="b2b" style="--bg:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=75')">
+          <span><small>Para sua marca</small><b>Quero participar ou patrocinar</b><i>Entrar →</i></span>
+        </button>
+      </div>
+    </section>
+
+    <div class="v5home">
+    <!-- 1. Topo da home: quem somos + troca de frente -->
+    <section class="v5top" id="quem-somos">
+      <div class="container v5top__grid">
+        <div>
+          <span class="vchip">Bom Gourmet · 33 anos no Sul</span>
+          <h1>A empresa que <em>movimenta a gastronomia</em> do Sul com festivais, prêmios e projetos.</h1>
+          <p>Festival Bom Gourmet, Prêmio Bom Gourmet, circuitos, FoodCo. e Casa Bom Gourmet. Criamos as experiências onde restaurantes, marcas e quem ama comer bem se encontram, e contamos tudo com conteúdo próprio e colunistas.</p>
+        </div>
+        <div>
+          <div class="frentes" data-frentes>
+            <button type="button" class="frente frente--b2c" data-frente="b2c"><small>Para você</small><b>Quero viver a cidade</b></button>
+            <button type="button" class="frente frente--b2b" data-frente="b2b"><small>Para sua marca</small><b>Quero participar ou patrocinar</b></button>
+          </div>
+          <label class="lembrar"><input type="checkbox" data-lembrar /> Lembrar minha escolha neste navegador</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Destaque fixo: um bloco só, com o projeto em andamento -->
+    <section class="vsec" style="padding:28px 0 20px">
+      <div class="container">
+        <div class="fixo" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=75')">
+          <div class="fixo__prazo so-b2b"><b>Cotas até</b>30 de maio</div>
+          <div class="fixo__prazo so-b2c"><b>Em cartaz</b>12 jul a 9 ago</div>
+          <div class="fixo__in">
+            <span class="vchip">Projeto em andamento</span>
+            <h2>Festival Bom Gourmet 2026</h2>
+            <p class="so-b2c">Um mês de menus exclusivos em mais de 500 restaurantes do Paraná, de Santa Catarina e do Rio Grande do Sul.</p>
+            <p class="so-b2b">Mais de 500 restaurantes, 300 mil menus vendidos e a cidade inteira falando de comida durante um mês. Cotas e inscrições abertas.</p>
+            <div class="fixo__ctas">
+              <a class="vbtn vbtn--light so-b2c" href="#">Ver os menus e restaurantes</a>
+              <a class="vbtn vbtn--light so-b2b" href="#participar">Quero entrar no Festival</a>
+              <a class="vbtn vbtn--ghost so-b2b" style="border-color:rgba(255,255,255,.4); color:#fff" href="#projetos">Ver todos os projetos e prazos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Últimas notícias: o conteúdo principal, com filtro por estado -->
+    <section class="vsec" id="noticias" style="padding-top:20px">
+      <div class="container">
+        <div class="sechead">
+          <h2><span class="kicker">Agora</span>Últimas notícias</h2>
+          <div class="ufs" data-ufs>
+            <button type="button" class="is-on" data-uf="todos">Todos</button>
+            <button type="button" data-uf="PR">Paraná</button>
+            <button type="button" data-uf="SC">Santa Catarina</button>
+            <button type="button" data-uf="RS">Rio Grande do Sul</button>
+          </div>
+        </div>
+        <div class="grid4" data-newsgrid>
+          <a class="vcard" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Restaurantes <i class="uf-tag">PR</i></span><h3>Casa nova no Batel aposta em massas de fermentação longa</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Vinhos</span><h3>Como escolher vinho sem medo da carta</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Alexandre Soares</b><small>Colunista Bom Gourmet</small></span></span></span></a>
+          <a class="vcard" href="#" data-uf="SC"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Gastronomia <i class="uf-tag">SC</i></span><h3>Florianópolis ganha festival de frutos do mar com 40 casas</h3><span class="vmeta">3 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="RS"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Churrasco <i class="uf-tag">RS</i></span><h3>As churrascarias de Porto Alegre que valem a viagem</h3><span class="vmeta">5 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard so-b2b" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Negócios · FoodCo. <i class="uf-tag">PR</i></span><h3>O que o food service precisa saber para crescer agora</h3><span class="vmeta">6 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna so-b2b" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Empreendedorismo</span><h3>O que aprendi abrindo (e fechando) um restaurante</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Luiz Gama</b><small>Colunista Bom Gourmet</small></span></span></span></a>
+          <a class="vcard" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1470158499416-75be9aa0c4db?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Cafés <i class="uf-tag">PR</i></span><h3>O café que virou ponto de encontro no Centro Cívico</h3><span class="vmeta">3 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="SC"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Vinhos <i class="uf-tag">SC</i></span><h3>A nova cena de vinhos do planalto catarinense</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna" href="#" data-uf="RS"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Viagens</span><h3>Comer bem na Serra Gaúcha fora da rota óbvia</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=70')"></i><span><b>Claudia Krauspenhar</b><small>Colunista Bom Gourmet</small></span></span></span></a>
+          <a class="vcard" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Eventos <i class="uf-tag">PR</i></span><h3>Vinada Cultural confirma nova edição na Praça Afonso Botelho</h3><span class="vmeta">2 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="RS"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Roteiro <i class="uf-tag">RS</i></span><h3>Onde comer em Porto Alegre: o roteiro essencial</h3><span class="vmeta">5 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Gastronomia <i class="uf-tag">PR</i></span><h3>Chef curitibano leva prêmio nacional com menu de inverno</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+        </div>
+        <p class="pnote" data-vazio hidden>Ainda não temos notícias deste estado nesta semana.</p>
+        <p style="margin-top:22px"><a class="vbtn vbtn--ghost" href="#">Ver todas as notícias</a></p>
+      </div>
+    </section>
+
+    <!-- 4. Colunistas: carrossel logo abaixo das notícias -->
+    <section class="vsec vsec--creme2" id="colunistas" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Nossos parceiros de conteúdo</span>Colunistas</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver todas as colunas</a>
+        </div>
+        <div class="hslider" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="colrow colrow--v5 hs-track">
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=70')"></span><b>Patrícia Melo</b><span>Restaurantes</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=70')"></span><b>Alexandre Soares</b><span>Vinhos</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=70')"></span><b>Claudia Krauspenhar</b><span>Viagens</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=70')"></span><b>Luiz Américo</b><span>Gastronomia</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=70')"></span><b>Luiz Gama</b><span>Empreendedorismo</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=70')"></span><b>Fernanda Meneguetti</b><span>Mercado</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=70')"></span><b>Marina Costa</b><span>Queijos</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=70')"></span><b>Helena Dias</b><span>Arquitetura</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=70')"></span><b>João Pedro Lima</b><span>Famílias</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=300&q=70')"></span><b>Bruno Almeida</b><span>Churrasco</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=70')"></span><b>Sofia Ramos</b><span>Cozinha do Mundo</span><em class="colu__link">Ler coluna →</em></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=300&q=70')"></span><b>Ricardo Tavares</b><span>Boteco</span><em class="colu__link">Ler coluna →</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Negócios: na frente B2C é uma faixa curta; na B2B o conteúdo já subiu para as notícias -->
+    <section class="vsec so-b2c" id="negocios" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Para quem tem restaurante</span>Negócios</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#" data-ir-b2b>Ver tudo de negócios</a>
+        </div>
+        <div class="grid4">
+          <a class="vcard" href="#"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">FoodCo.</span><h3>O que o food service precisa saber para crescer agora</h3><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna" href="#"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Empreendedorismo</span><h3>O que aprendi abrindo (e fechando) um restaurante</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Luiz Gama</b><small>Colunista Bom Gourmet</small></span></span></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Projetos internos: a agenda só do que é nosso -->
+    <section class="vsec" id="projetos" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Festivais e circuitos</span><span class="so-b2c">Os projetos do Bom Gourmet</span><span class="so-b2b">Projetos com data e prazo de inscrição</span></h2>
+          <a class="vbtn vbtn--ghost vbtn--sm so-b2b" href="v4-negocios.html">Ver todos com prazos</a>
+        </div>
+        <div class="projrow">
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=300&q=70')"></i><span><b>Festival Bom Gourmet</b><small>12 jul a 9 ago · PR, SC e RS</small><em class="so-b2b">Cotas até 30 mai</em></span></a>
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=300&q=70')"></i><span><b>Circuito de Inverno</b><small>3 a 31 ago · Paraná</small><em class="so-b2b">Inscrições até 10 jul</em></span></a>
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=300&q=70')"></i><span><b>Prêmio Bom Gourmet</b><small>15 out · Curitiba</small><em class="so-b2b">Cotas até 15 set</em></span></a>
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=70')"></i><span><b>Circuito de Verão</b><small>jan e fev · litoral</small><em class="so-b2b">Inscrições até 20 nov</em></span></a>
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=300&q=70')"></i><span><b>Vinada Cultural</b><small>9 nov · Praça Afonso Botelho</small><em class="so-b2b">Vagas até 10 out</em></span></a>
+          <a class="proj" href="#"><i style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=300&q=70')"></i><span><b>CWBurguer Fest</b><small>março · Curitiba</small><em class="so-b2b">Inscrições até 31 jan</em></span></a>
+        </div>
+        <p class="pnote">Datas e prazos são ilustrativos neste protótipo.</p>
+      </div>
+    </section>
+
+    <!-- 7. Saídas por frente -->
+    <section class="vsec vsec--creme2 so-b2c" style="padding:40px 0">
+      <div class="container">
+        <div class="desconto-band">
+          <div>
+            <small>Gourmet Lovers · grátis</small>
+            <h3>Descontos e benefícios em restaurantes, toda semana no seu e-mail</h3>
+            <p>Mais acesso antecipado aos menus do Festival e às experiências do Bom Gourmet.</p>
+          </div>
+          <a class="vbtn vbtn--light" href="#">Quero os descontos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="vsec vsec--creme2 so-b2b" id="participar" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="justify-content:center; text-align:center">
+          <h2><span class="kicker">Fale com o comercial</span>Qual é o seu perfil?</h2>
+        </div>
+        <div class="joingrid joingrid--3">
+          <div class="joincard joincard--red"><span class="kicker">Restaurantes e operações</span><h3>Sou restaurante</h3><p>Quero colocar a minha casa nos festivais, circuitos e encontros.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
+          <div class="joincard joincard--dark"><span class="kicker">Marcas</span><h3>Sou marca</h3><p>Quero patrocinar um projeto e chegar ao público certo, ao vivo.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
+          <div class="joincard joincard--gold"><span class="kicker">Indústria e fornecedores</span><h3>Sou indústria</h3><p>Quero chegar a quem decide nos restaurantes do Sul.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
+        </div>
+      </div>
+    </section>
+    </div><!-- /v5home -->
+  </main>
+
+  <div data-vfooter></div>
+  <script src="js/versoes.js?v=5"></script>
+  <script>
+    (function () {
+      var body = document.body, lembrar = document.querySelector("[data-lembrar]");
+      var botoes = document.querySelectorAll("[data-frentes] .frente, .v5gate__btn");
+      function aplicar(f, salvar) {
+        body.setAttribute("data-frente", f);
+        document.querySelectorAll("[data-frentes] .frente").forEach(function (b) { b.classList.toggle("is-on", b.dataset.frente === f); });
+        try { if (salvar) localStorage.setItem("bg_frente", f); } catch (e) {}
+        window.scrollTo(0, 0);
+      }
+      var salva = document.documentElement.getAttribute("data-frente-inicial");
+      if (salva) { aplicar(salva, false); lembrar.checked = true; }
+      botoes.forEach(function (b) { b.addEventListener("click", function () { aplicar(b.dataset.frente, lembrar.checked); }); });
+      lembrar.addEventListener("change", function () {
+        try { lembrar.checked ? localStorage.setItem("bg_frente", body.getAttribute("data-frente")) : localStorage.removeItem("bg_frente"); } catch (e) {}
+      });
+      document.querySelector("[data-ir-b2b]").addEventListener("click", function (e) { e.preventDefault(); aplicar("b2b", lembrar.checked); document.querySelector("#noticias").scrollIntoView(); });
+
+      // filtro por estado nas notícias
+      var ufBtns = document.querySelectorAll("[data-ufs] button"), cards = document.querySelectorAll("[data-newsgrid] .vcard"), vazio = document.querySelector("[data-vazio]");
+      ufBtns.forEach(function (b) { b.addEventListener("click", function () {
+        ufBtns.forEach(function (x) { x.classList.toggle("is-on", x === b); });
+        var uf = b.dataset.uf, n = 0;
+        cards.forEach(function (c) { var mostra = uf === "todos" || c.dataset.uf === uf; c.classList.toggle("is-hidden", !mostra); if (mostra) n++; });
+        vazio.hidden = n > 0;
+      }); });
+    })();
+  </script>
+</body>
+</html>
