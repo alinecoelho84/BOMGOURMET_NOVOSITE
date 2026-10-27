@@ -437,3 +437,4 @@ body[data-frente="gate"] .vheader { display: none; }
 .v5gate__bar .vlogo b { font-size: 1.9rem; }
 .v5gate__bar .vlogo i { width: 20px; height: 20px; }
 @media (max-width: 640px) { body[data-v="v5"] .vheader .so-b2b.vbtn { display: none !important; } }
+.v5gate__btn em { font-style: normal; font-size: .98rem; line-height: 1.45; max-width: 380px; color: #f3ece2; }
