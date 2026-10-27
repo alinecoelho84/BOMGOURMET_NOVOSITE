@@ -441,3 +441,19 @@ body[data-frente="gate"] .vheader { display: none; }
 .v5gate__bar .vlogo i { width: 20px; height: 20px; }
 @media (max-width: 640px) { body[data-v="v5"] .vheader .so-b2b.vbtn { display: none !important; } }
 .v5gate__btn em { font-style: normal; font-size: .98rem; line-height: 1.45; max-width: 380px; color: #f3ece2; }
+
+/* V5: agenda como linha do tempo dos projetos */
+.tline { list-style: none; position: relative; padding-top: 18px !important; }
+.tline::before { content: ""; position: absolute; left: 0; right: 0; top: 24px; height: 2px; background: var(--areia); }
+.tl { position: relative; width: 210px; padding-top: 22px; }
+.tl::before { content: ""; position: absolute; left: 0; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 3px solid var(--vermelho); }
+.tl.is-now::before { background: var(--vermelho); box-shadow: 0 0 0 5px rgba(204,1,36,.18); }
+.tl__mes { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--vermelho); margin-bottom: 8px; }
+.tl i { display: block; width: 100%; height: 118px; border-radius: 12px; background: center/cover; margin-bottom: 10px; }
+.tl b { display: block; font-family: var(--display); font-size: 1rem; }
+.tl small { display: block; font-size: .78rem; color: var(--cinza); margin-top: 2px; }
+.tl em { display: inline-block; font-style: normal; font-size: .7rem; font-weight: 700; color: var(--vermelho); margin-top: 6px; }
+
+/* V5: notícia fixada */
+.vcard--pin { position: relative; outline: 2px solid var(--vermelho); outline-offset: -2px; }
+.vcard--pin .pin { position: absolute; top: 10px; left: 10px; z-index: 2; background: var(--vermelho); color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; box-shadow: var(--sombra-sutil); }
