@@ -418,7 +418,10 @@ body[data-frente="b2c"] .so-b2b, body[data-frente="b2b"] .so-b2c { display: none
 
 /* V5: abertura obrigatória, só os dois botões */
 .v5gate { min-height: calc(100vh - 44px); display: grid; grid-template-rows: auto 1fr; background: var(--creme); }
-.v5gate__bar { display: flex; justify-content: center; padding: 26px 0 8px; }
+.v5gate__bar { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; padding: 26px 24px 22px; }
+.v5gate__bar h1 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); max-width: 820px; letter-spacing: -.03em; margin-top: 6px; }
+.v5gate__bar h1 em { font-style: normal; color: var(--vermelho); }
+.v5gate__bar p { color: var(--cinza); font-size: .98rem; line-height: 1.55; max-width: 720px; }
 .v5gate__grid { display: grid; grid-template-columns: 1fr; }
 @media (min-width: 760px) { .v5gate__grid { grid-template-columns: 1fr 1fr; } }
 .v5gate__btn { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 300px; padding: 40px 28px; color: #fff; }
