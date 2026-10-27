@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Home com duas frentes · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=21" />
+  <link rel="stylesheet" href="css/versoes.css?v=22" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -81,9 +81,9 @@
       <div class="container">
         <div class="fixo" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=75')">
           <div class="fixo__prazo so-b2b"><b>Cotas até</b>30 de maio</div>
-          <div class="fixo__prazo so-b2c"><b>Em cartaz</b>12 jul a 9 ago</div>
+          <div class="fixo__prazo so-b2c"><b class="ativo-txt">Acontecendo agora</b>12 jul a 9 ago</div>
           <div class="fixo__in">
-            <span class="vchip">Projeto em andamento</span>
+            <span class="vchip vchip--verde">Acontecendo agora</span>
             <h2>Festival Bom Gourmet 2026</h2>
             <p class="so-b2c">Um mês de menus exclusivos em mais de 500 restaurantes do Paraná, de Santa Catarina e do Rio Grande do Sul.</p>
             <p class="so-b2b">Mais de 500 restaurantes, 300 mil menus vendidos e a cidade inteira falando de comida durante um mês. Cotas e inscrições abertas.</p>
@@ -170,7 +170,7 @@
             <li class="tl"><span class="tl__mes">10 jan a 28 fev</span><i style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=70')"></i><b>Circuito de Verão</b><small>Litoral do Paraná</small><em class="so-b2b">Inscrições até 20 nov</em><span class="tl__breve">Em breve mais informações</span></li>
             <li class="tl"><span class="tl__mes">6 a 29 mar</span><i style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=70')"></i><b>CWBurguer Fest</b><small>Curitiba</small><em class="so-b2b">Inscrições até 31 jan</em><span class="tl__breve">Em breve mais informações</span></li>
             <li class="tl"><span class="tl__mes">17 mai</span><i style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=70')"></i><b>Vinada Cultural</b><small>Praça Afonso Botelho · Curitiba</small><em class="so-b2b">Vagas até 10 abr</em><span class="tl__breve">Em breve mais informações</span></li>
-            <li class="tl is-now"><span class="tl__mes">12 jul a 9 ago</span><i style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=70')"></i><b>Festival Bom Gourmet</b><small>PR, SC e RS</small><em class="so-b2b">Cotas até 30 mai</em><a class="tl__link" href="#">Em cartaz · ver menus e restaurantes →</a></li>
+            <li class="tl is-now"><span class="tl__mes">12 jul a 9 ago</span><i style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=70')"></i><b>Festival Bom Gourmet</b><small>PR, SC e RS</small><em class="so-b2b">Cotas até 30 mai</em><a class="tl__link" href="#"><span class="ativo">Ativo</span> Ver menus e restaurantes →</a></li>
             <li class="tl"><span class="tl__mes">3 a 31 ago</span><i style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=70')"></i><b>Circuito de Inverno</b><small>Paraná</small><em class="so-b2b">Inscrições até 10 jul</em><span class="tl__breve">Em breve mais informações</span></li>
             <li class="tl"><span class="tl__mes">20 set</span><i style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=400&q=70')"></i><b>FoodCo. Experience</b><small>Londrina</small><em class="so-b2b">Inscrições até 5 set</em><span class="tl__breve">Em breve mais informações</span></li>
             <li class="tl"><span class="tl__mes">15 out</span><i style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=400&q=70')"></i><b>Prêmio Bom Gourmet</b><small>Curitiba</small><em class="so-b2b">Cotas até 15 set</em><span class="tl__breve">Em breve mais informações</span></li>
@@ -187,10 +187,13 @@
         <div class="desconto-band">
           <div>
             <small>Gourmet Lovers · grátis</small>
-            <h3>Descontos e benefícios em restaurantes, toda semana no seu e-mail</h3>
-            <p>Mais acesso antecipado aos menus do Festival e às experiências do Bom Gourmet.</p>
+            <h3>Assine a nossa news</h3>
+            <p>Descontos em restaurantes, roteiros e acesso antecipado aos menus do Festival, toda semana no seu e-mail.</p>
           </div>
-          <a class="vbtn vbtn--light" href="#">Quero os descontos</a>
+          <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Pronto, você está na lista!';">
+            <input type="email" placeholder="Seu melhor e-mail" required />
+            <button type="submit" class="vbtn vbtn--light">Assinar</button>
+          </form>
         </div>
       </div>
     </section>
