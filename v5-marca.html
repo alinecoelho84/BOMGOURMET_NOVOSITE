@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Para sua marca · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=24" />
+  <link rel="stylesheet" href="css/versoes.css?v=27" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -46,6 +46,7 @@
           <a class="vbtn vbtn--light" href="#projetos">Ver os projetos</a>
           <a class="vbtn vbtn--ghost" style="border-color:rgba(255,255,255,.4); color:#fff" href="#plano2027">Planeje seu 2027</a>
         </div>
+        <a class="trocar-link" href="v5.html" data-trocar-b2c>Para você: quero viver a cidade →</a>
       </div>
     </section>
 
@@ -298,6 +299,7 @@
 
   <div data-vfooter></div>
   <script src="js/versoes.js?v=6"></script>
+  <script>document.querySelector("[data-trocar-b2c]").addEventListener("click", function () { try { sessionStorage.setItem("bg_frente_vez", "b2c"); } catch (e) {} });</script>
   <script>
     document.querySelectorAll("[data-pubfilter] button").forEach(function (b) { b.addEventListener("click", function () {
       document.querySelectorAll("[data-pubfilter] button").forEach(function (x) { x.classList.toggle("is-on", x === b); });

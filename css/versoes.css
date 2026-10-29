@@ -643,3 +643,11 @@ body[data-frente="gate"] .vheader { display: none; }
 .gente a { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; background: center/cover; display: block; }
 .gente a span { position: absolute; left: 8px; bottom: 8px; font-size: .64rem; font-weight: 700; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
 .gente a:hover { transform: scale(1.03); transition: .15s; }
+
+/* V5: trocar de frente é um link discreto, não um botão grande */
+.trocar .frente { display: inline-flex !important; flex-direction: row !important; align-items: baseline; gap: 6px; border: 0 !important; background: transparent !important; padding: 0 !important; min-height: 0; font-size: .92rem; color: var(--cinza); border-radius: 0; box-shadow: none; }
+.trocar .frente b { display: inline; font-family: var(--texto); font-size: .92rem; font-weight: 700; color: var(--vermelho); letter-spacing: 0; text-decoration: underline; text-underline-offset: 3px; }
+.trocar .frente:hover { border: 0; background: transparent; color: var(--tinta); }
+.trocar .frente:hover b { color: var(--vermelho-escuro); }
+.trocar-link { display: inline-block; margin-top: 16px; font-size: .9rem; color: #efe9e2; text-decoration: underline; text-underline-offset: 3px; }
+.trocar-link:hover { color: #fff; }

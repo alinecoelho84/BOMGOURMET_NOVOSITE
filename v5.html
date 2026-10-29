@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Home com duas frentes · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=24" />
+  <link rel="stylesheet" href="css/versoes.css?v=27" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -68,9 +68,9 @@
           <p>Festival Bom Gourmet, Prêmio Bom Gourmet, circuitos, FoodCo. e Casa Bom Gourmet. Criamos as experiências onde restaurantes, marcas e quem ama comer bem se encontram, e contamos tudo com conteúdo próprio e colunistas.</p>
         </div>
         <div>
-          <div class="frentes" data-frentes>
-            <button type="button" class="frente frente--b2c so-b2b" data-frente="b2c"><small>Trocar para</small><b>Quero viver a cidade</b></button>
-            <a class="frente frente--b2b so-b2c" href="v5-marca.html"><small>Para sua marca</small><b>Quero patrocinar</b></a>
+          <div class="trocar" data-frentes>
+            <button type="button" class="frente frente--b2c so-b2b" data-frente="b2c">Para você: <b>quero viver a cidade →</b></button>
+            <a class="frente frente--b2b so-b2c" href="v5-marca.html">Para sua marca: <b>quero patrocinar →</b></a>
           </div>
           <label class="lembrar"><input type="checkbox" data-lembrar /> Lembrar minha escolha neste navegador</label>
         </div>
@@ -316,6 +316,7 @@
       }
       var salva = document.documentElement.getAttribute("data-frente-inicial");
       if (salva) { aplicar(salva, false); lembrar.checked = true; }
+      try { var vez = sessionStorage.getItem("bg_frente_vez"); if (vez) { sessionStorage.removeItem("bg_frente_vez"); aplicar(vez, false); } } catch (e) {}
       botoes.forEach(function (b) { b.addEventListener("click", function () { aplicar(b.dataset.frente, lembrar.checked); }); });
       lembrar.addEventListener("change", function () {
         try { lembrar.checked ? localStorage.setItem("bg_frente", body.getAttribute("data-frente")) : localStorage.removeItem("bg_frente"); } catch (e) {}
