@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Home com duas frentes · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=23" />
+  <link rel="stylesheet" href="css/versoes.css?v=24" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -131,6 +131,14 @@
       <div class="container">
         <div class="sechead">
           <h2><span class="kicker">Agora</span><span data-titulo-noticias>Últimas notícias</span></h2>
+          <div class="b2c-filter so-b2c" data-programa>
+            <button type="button" class="is-on" data-prog="todos">Tudo</button>
+            <button type="button" data-prog="jantar">Jantar</button>
+            <button type="button" data-prog="bar">Bar e drinks</button>
+            <button type="button" data-prog="cafe">Café e brunch</button>
+            <button type="button" data-prog="viagem">Bate-volta</button>
+            <button type="button" data-prog="familia">Com crianças</button>
+          </div>
           <div class="ufs" data-ufs>
             <button type="button" class="is-on" data-uf="todos">Todos</button>
             <button type="button" data-uf="PR">Paraná</button>
@@ -139,16 +147,16 @@
           </div>
         </div>
         <div class="grid4" data-newsgrid>
-          <a class="vcard vcard--pin" href="#" data-uf="PR" data-tipo="noticia" data-fixa><span class="pin" title="Notícia fixada pela equipe">📌 Fixada</span><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Restaurantes <i class="uf-tag">PR</i></span><h3>Casa nova no Batel aposta em massas de fermentação longa</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
-          <a class="vcard vcard--coluna" href="#" data-uf="PR" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Garrafas e Taças</span><h3>Os cinco rótulos da Serra que entram em qualquer carta sem susto no preço</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Alexandre Soares Albuquerque</b><small>Colunista Bom Gourmet · Vinhos</small></span></span></span></a>
-          <a class="vcard" href="#" data-uf="SC" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Roteiro <i class="uf-tag">SC</i></span><h3>Florianópolis em 48 horas: onde comer frutos do mar sem cair em armadilha</h3><span class="vmeta">6 min de leitura</span><span class="vcard__link">Ler roteiro →</span></span></a>
-          <a class="vcard" href="#" data-uf="RS" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Roteiro <i class="uf-tag">RS</i></span><h3>As churrascarias de Porto Alegre que valem a viagem</h3><span class="vmeta">5 min de leitura</span><span class="vcard__link">Ler roteiro →</span></span></a>
+          <a class="vcard vcard--pin" href="#" data-uf="PR" data-prog="jantar" data-tipo="noticia" data-fixa><span class="pin" title="Notícia fixada pela equipe">📌 Fixada</span><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Restaurantes <i class="uf-tag">PR</i></span><h3>Casa nova no Batel aposta em massas de fermentação longa</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna" href="#" data-uf="PR" data-prog="jantar" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Garrafas e Taças</span><h3>Os cinco rótulos da Serra que entram em qualquer carta sem susto no preço</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Alexandre Soares Albuquerque</b><small>Colunista Bom Gourmet · Vinhos</small></span></span></span></a>
+          <a class="vcard" href="#" data-uf="SC" data-prog="viagem" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Roteiro <i class="uf-tag">SC</i></span><h3>Florianópolis em 48 horas: onde comer frutos do mar sem cair em armadilha</h3><span class="vmeta">6 min de leitura</span><span class="vcard__link">Ler roteiro →</span></span></a>
+          <a class="vcard" href="#" data-uf="RS" data-prog="viagem" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Roteiro <i class="uf-tag">RS</i></span><h3>As churrascarias de Porto Alegre que valem a viagem</h3><span class="vmeta">5 min de leitura</span><span class="vcard__link">Ler roteiro →</span></span></a>
           <a class="vcard so-b2b" href="#" data-uf="PR" data-tipo="negocio"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Negócios · FoodCo. <i class="uf-tag">PR</i></span><h3>O que o food service precisa saber para crescer agora</h3><span class="vmeta">6 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
           <a class="vcard vcard--coluna so-b2b" href="#" data-uf="PR" data-tipo="negocio"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Mesa de Negócios</span><h3>O que aprendi abrindo (e fechando) um restaurante em Curitiba</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=70')"></i><span><b>Luiz Gama</b><small>Colunista Bom Gourmet · Empreendedorismo</small></span></span></span></a>
-          <a class="vcard so-b2c" href="#" data-uf="PR" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1470158499416-75be9aa0c4db?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Cafés <i class="uf-tag">PR</i></span><h3>O café que virou ponto de encontro no Centro Cívico</h3><span class="vmeta">3 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
-          <a class="vcard vcard--coluna so-b2c" href="#" data-uf="RS" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Pé na Estrada</span><h3>Comer bem na Serra Gaúcha fora da rota óbvia de Gramado</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=70')"></i><span><b>Claudia Krauspenhar</b><small>Colunista Bom Gourmet · Viagens</small></span></span></span></a>
-          <a class="vcard" href="#" data-uf="PR" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Eventos <i class="uf-tag">PR</i></span><h3>Vinada Cultural confirma nova edição na Praça Afonso Botelho</h3><span class="vmeta">2 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
-          <a class="vcard" href="#" data-uf="SC" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Vinhos <i class="uf-tag">SC</i></span><h3>A nova cena de vinhos do planalto catarinense</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard so-b2c" href="#" data-uf="PR" data-prog="cafe" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1470158499416-75be9aa0c4db?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Cafés <i class="uf-tag">PR</i></span><h3>O café que virou ponto de encontro no Centro Cívico</h3><span class="vmeta">3 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard vcard--coluna so-b2c" href="#" data-uf="RS" data-prog="viagem" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Coluna · Pé na Estrada</span><h3>Comer bem na Serra Gaúcha fora da rota óbvia de Gramado</h3><span class="autor"><i style="background-image:url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=70')"></i><span><b>Claudia Krauspenhar</b><small>Colunista Bom Gourmet · Viagens</small></span></span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="familia" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Eventos <i class="uf-tag">PR</i></span><h3>Vinada Cultural confirma nova edição na Praça Afonso Botelho</h3><span class="vmeta">2 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="SC" data-prog="bar" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Vinhos <i class="uf-tag">SC</i></span><h3>A nova cena de vinhos do planalto catarinense</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
         </div>
         <p class="pnote" data-vazio hidden>Ainda não temos notícias deste estado nesta semana.</p>
         <p style="margin-top:22px"><a class="vbtn vbtn--ghost" href="#">Ver todas</a></p>
@@ -207,6 +215,57 @@
           </div>
         </div>
         <p class="pnote">No site final, este bloco puxa automaticamente os últimos reels e shorts das contas do Bom Gourmet.</p>
+      </div>
+    </section>
+
+    <!-- 6c. Prova social para o público: falaram da gente, podcast, gente real -->
+    <section class="vsec vsec--creme2 so-b2c" id="falaram" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Falaram da gente</span>O que a imprensa e as redes disseram</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver tudo</a>
+        </div>
+        <div class="midia-grid">
+          <div class="midia"><small>Gazeta do Povo · há 2 dias</small><p>"O Festival Bom Gourmet é o momento em que Curitiba inteira sai para comer. Este ano, com 500 casas, bateu recorde."</p><b>Ler a matéria →</b></div>
+          <div class="midia"><small>@curitibacult · Instagram</small><p>"Fui em 6 restaurantes do Festival em duas semanas e o melhor custo-benefício da minha vida foi o menu de R$ 89 do..."</p><b>Ver o post →</b></div>
+          <div class="midia"><small>Band Paraná · TV</small><p>"A Vinada lotou a Praça Afonso Botelho: 20 mil pessoas, 20 operações de comida e música até o fim da tarde."</p><b>Assistir →</b></div>
+          <div class="midia"><small>Podcast Mesa de Bar · Spotify</small><p>"A gente convidou o jurado do Prêmio Bom Gourmet para contar como se escolhe o melhor restaurante do ano."</p><b>Ouvir →</b></div>
+          <div class="midia"><small>@foodie.cwb · TikTok</small><p>"Ranking dos 5 pratos do Circuito de Inverno que valem a pena, sem patrocínio, só opinião."</p><b>Ver o vídeo →</b></div>
+          <div class="midia"><small>Folha de Londrina</small><p>"FoodCo. Experience reúne 2.500 operadores e vira o maior encontro do food service do interior."</p><b>Ler a matéria →</b></div>
+        </div>
+        <p class="pnote">No site final, este bloco agrega automaticamente menções na imprensa e nas redes, com link para a origem.</p>
+      </div>
+    </section>
+
+    <section class="vsec so-b2c" id="podcast" style="padding:40px 0">
+      <div class="container">
+        <div class="podcast">
+          <i style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=300&q=70')"></i>
+          <div>
+            <small>Podcast · toda quinta no Spotify</small>
+            <h3>Bom Gourmet na Mesa</h3>
+            <p>Os colunistas, os chefs e as histórias por trás dos restaurantes da cidade, em 30 minutos. Episódio da semana: "O que faz um restaurante ganhar o Prêmio?"</p>
+          </div>
+          <a class="vbtn vbtn--light" href="#">Ouvir no Spotify</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="vsec vsec--creme2 so-b2c" id="gente" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Quem viveu</span>Gente que estava lá</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Marque @gpbomgourmet e apareça aqui</a>
+        </div>
+        <div class="gente">
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=70')"><span>@mari.souza · Festival</span></a>
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=400&q=70')"><span>@carlos_eats · Vinada</span></a>
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=400&q=70')"><span>@turmadobatel · Prêmio</span></a>
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=400&q=70')"><span>@ju.ramos · Circuito</span></a>
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=400&q=70')"><span>@pedro.h · Casa BG</span></a>
+          <a href="#" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=70')"><span>@fernanda.m · Festival</span></a>
+        </div>
+        <p class="pnote">Fotos de quem marcou o Bom Gourmet nos eventos, com autorização. No site final, puxa das redes.</p>
       </div>
     </section>
 
@@ -271,7 +330,8 @@
         cards.forEach(function (c) {
           var okUf = uf === "todos" || c.dataset.uf === uf || c.hasAttribute("data-fixa");
           var okTipo = tipo === "todos" || c.dataset.tipo === tipo;
-          var mostra = okUf && okTipo;
+          var okProg = prog === "todos" || c.dataset.prog === prog || c.hasAttribute("data-fixa");
+          var mostra = okUf && okTipo && okProg;
           c.classList.toggle("is-hidden", !mostra); if (mostra) n++;
         });
         vazio.hidden = n > 0;
@@ -279,6 +339,10 @@
         document.querySelector("[data-titulo-noticias]").textContent = titulo;
       }
       ufBtns.forEach(function (b) { b.addEventListener("click", function () { ufBtns.forEach(function (x) { x.classList.toggle("is-on", x === b); }); uf = b.dataset.uf; filtrar(); }); });
+      var prog = "todos";
+      document.querySelectorAll("[data-programa] button").forEach(function (b) { b.addEventListener("click", function () {
+        document.querySelectorAll("[data-programa] button").forEach(function (x) { x.classList.toggle("is-on", x === b); }); prog = b.dataset.prog; filtrar();
+      }); });
       document.querySelectorAll("[data-filtro]").forEach(function (a) { a.addEventListener("click", function () {
         tipo = a.dataset.filtro;
         if (tipo === "negocio" && body.getAttribute("data-frente") !== "b2b") aplicar("b2b", lembrar.checked);
