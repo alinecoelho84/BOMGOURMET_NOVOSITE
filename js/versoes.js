@@ -74,7 +74,7 @@
         <span class="vlogo"><i></i><b>bom</b><b>Gourmet</b></span>
         <div class="vfooter__ctas">
           <a class="vbtn vbtn--red vbtn--sm" href="#">Contato comercial</a>
-          <a class="vbtn vbtn--ghost vbtn--sm" href="#" style="border-color:rgba(255,255,255,.25); color:#fff">Sugestão de pauta</a>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#" style="border-color:rgba(255,255,255,.25); color:#fff">Fale conosco</a>
         </div>
         <div class="vfooter__cols">
           <div>
@@ -87,16 +87,16 @@
           </div>
           <div>
             <h4>Institucional</h4>
-            <a href="#">Manifesto</a><a href="#">Cases</a><a href="#">Trabalhe conosco</a><a href="#">Contato comercial</a>
+            <a href="#">Quem somos</a><a href="#">Cases</a><a href="#">Trabalhe conosco</a><a href="#">Contato comercial</a>
           </div>
           <div>
             <h4>Comunidades &amp; Regiões</h4>
-            <a href="#">Gourmet Lovers</a><a href="#">Comunidade FoodCo.</a><a href="#">Curitiba</a><a href="#">Rio Grande do Sul</a>
+            <a href="#">Gourmet Lovers</a><a href="#">Comunidade FoodCo.</a><a href="#">Paraná</a><a href="#">Santa Catarina</a><a href="#">Rio Grande do Sul</a>
           </div>
         </div>
         <div class="vfooter__base">
           <span>© Bom Gourmet · protótipo de estudo, sem valor comercial.</span>
-          <span>Paraná &amp; Rio Grande do Sul</span>
+          <span>Paraná, Santa Catarina &amp; Rio Grande do Sul</span>
         </div>
       </div>
     </footer>`;
