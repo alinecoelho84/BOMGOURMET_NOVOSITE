@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Home com duas portas · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=33" />
+  <link rel="stylesheet" href="css/versoes.css?v=34" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -138,10 +138,13 @@
     </section>
 
     <!-- 5. Notícias, com filtro por programa e por estado -->
-    <section class="vsec" id="noticias" style="padding-top:20px">
+    <section class="vsec" id="noticias" style="padding:40px 0">
       <div class="container">
-        <div class="sechead">
+        <div class="sechead" style="margin-bottom:16px">
           <h2><span class="kicker">Agora</span><span data-titulo-noticias>Últimas notícias</span></h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver todas</a>
+        </div>
+        <div class="filtros">
           <div class="b2c-filter" data-programa>
             <button type="button" class="is-on" data-prog="todos">Tudo</button>
             <button type="button" data-prog="jantar">Jantar</button>
@@ -169,7 +172,6 @@
         </div>
         <p class="pnote" data-vazio hidden>Ainda não temos notícias com esse filtro nesta semana.</p>
         <p class="nota-dev">Títulos reais do site atual para testar o tamanho. Título com mais de 70 caracteres ganha fonte menor, sem cortar. A tag do programa vem da categoria da matéria.</p>
-        <p style="margin-top:18px"><a class="vbtn vbtn--ghost" href="#">Ver todas</a></p>
       </div>
     </section>
 
@@ -305,7 +307,7 @@
   </main>
 
   <div data-vfooter></div>
-  <script src="js/versoes.js?v=9"></script>
+  <script src="js/versoes.js?v=10"></script>
   <script>
     (function () {
       var body = document.body, lembrar = document.querySelector("[data-lembrar]");

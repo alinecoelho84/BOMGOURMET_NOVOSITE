@@ -65,6 +65,28 @@
     btn.addEventListener("click", () => { menu.hidden = !menu.hidden; });
   });
 
+  /* ---- Menu no celular: botão que abre os links do topo ---- */
+  document.querySelectorAll(".vheader__inner").forEach((inner) => {
+    const nav = inner.querySelector(".vnav");
+    if (!nav || inner.querySelector(".vmenu-btn")) return;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "vmenu-btn";
+    btn.setAttribute("aria-label", "Abrir menu");
+    btn.setAttribute("aria-expanded", "false");
+    btn.innerHTML = "<span></span><span></span><span></span>";
+    inner.appendChild(btn);
+    const marcar = (aberto) => {
+      nav.classList.toggle("is-open", aberto);
+      btn.classList.toggle("is-open", aberto);
+      btn.setAttribute("aria-expanded", String(aberto));
+      btn.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+    };
+    btn.addEventListener("click", () => marcar(!nav.classList.contains("is-open")));
+    nav.addEventListener("click", (e) => { if (e.target.closest("a")) marcar(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") marcar(false); });
+  });
+
   /* ---- Rodapé compartilhado (igual nas 3 versões, conforme briefing) ---- */
   const footer = document.querySelector("[data-vfooter]");
   if (footer) {
