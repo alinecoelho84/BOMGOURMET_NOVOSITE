@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Quem somos · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=27" />
+  <link rel="stylesheet" href="css/versoes.css?v=28" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -25,8 +25,8 @@
       <nav class="vnav">
         <a href="v5-quem-somos.html">Quem somos</a>
         <a href="v5.html#noticias">Notícias</a>
-        <a href="v5.html#projetos">Agenda</a>
-        <a href="v5-marca.html">Para sua marca</a>
+        <a href="v5.html#agenda">Agenda</a>
+        <a href="v5-marca.html">Para o food service</a>
         <a href="v5.html#contato">Fale conosco</a>
         <a href="#" class="nav-guia">Guia dos melhores da gastronomia</a>
       </nav>
@@ -98,6 +98,10 @@
   </main>
 
   <div data-vfooter></div>
-  <script src="js/versoes.js?v=6"></script>
+  <script src="js/versoes.js?v=7"></script>
+  <script>
+    // links para a home do público abrem direto nela, sem passar pelas portas
+    document.querySelectorAll('a[href^="v5.html#"]').forEach(function (a) { a.addEventListener("click", function () { try { sessionStorage.setItem("bg_frente_vez", "b2c"); } catch (e) {} }); });
+  </script>
 </body>
 </html>

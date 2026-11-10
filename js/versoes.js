@@ -102,6 +102,11 @@
     </footer>`;
   }
 
+  /* ---- Títulos longos nos cards: fonte menor, sem cortar o texto ---- */
+  document.querySelectorAll(".vcard__body h3").forEach((h) => {
+    if (h.textContent.trim().length > 70) h.classList.add("titulo-longo");
+  });
+
   /* ---- Seletor fixo de versões (não aparece no modo teste cego) ---- */
   if (MODO_TESTE) return;
   const cur = document.body.dataset.v || "";

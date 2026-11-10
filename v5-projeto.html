@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V5 · Projeto · Bom Gourmet</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/versoes.css?v=28" />
+  <!-- Microsoft Clarity: medição do teste das versões -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y5xkg91zdt");
+  </script>
+</head>
+<body data-v="v5">
+
+  <div class="proto-bar"><b>Protótipo · Versão 5</b> · Página de projeto com o conteúdo do mídia kit · <a href="v5-marca.html#projetos">todos os projetos</a></div>
+
+  <header class="vheader">
+    <div class="container vheader__inner">
+      <a class="vlogo vlogo--lg" href="v5-marca.html"><i></i><b>bom</b><b>Gourmet</b></a>
+      <nav class="vnav">
+        <a href="v5-marca.html#projetos">Projetos</a>
+        <a href="v5-marca.html#calendario">Calendário</a>
+        <a href="v5-marca.html#negocios">Para o seu negócio</a>
+        <a href="v5-marca.html#cases">Cases</a>
+        <a href="v5-quem-somos.html">Quem somos</a>
+      </nav>
+      <a class="vbtn vbtn--red vbtn--sm" href="v5-marca.html#contato">Fale com o comercial</a>
+    </div>
+  </header>
+
+  <main id="pj"></main>
+
+  <div data-vfooter></div>
+  <script src="js/projetos-v5.js?v=2"></script>
+  <script src="js/versoes.js?v=7"></script>
+  <script>
+    (function () {
+      var lista = window.BG_PROJETOS, slug = new URLSearchParams(location.search).get("p") || "festival";
+      var p = lista.find(function (x) { return x.slug === slug; }) || lista[0];
+      document.title = p.nome + " · Bom Gourmet";
+      document.body.style.setProperty("--pj-cor", p.cor);
+      var img = function (id, w) { return "https://images.unsplash.com/photo-" + id + "?auto=format&fit=crop&w=" + (w || 900) + "&q=70"; };
+      var nums = function (arr) { return arr.map(function (n) { return '<div><b>' + n[0] + '</b><span>' + n[1] + '</span></div>'; }).join(""); };
+      var outros = lista.filter(function (x) { return x.slug !== p.slug; }).map(function (x) { return '<a href="v5-projeto.html?p=' + x.slug + '">' + x.nome + '</a>'; }).join("");
+      document.getElementById("pj").innerHTML =
+        '<section class="pj-hero" style="background:linear-gradient(135deg,' + p.cor + ',' + p.tinta + ')"><div class="container pj-hero__grid">' +
+          '<div class="pj-hero__logo"' + (p.fundoLogo ? ' style="background:' + p.fundoLogo + '"' : '') + '><img src="assets/logos-produtos/' + p.logo + '" alt="' + p.nome + '"></div>' +
+          '<div><span class="vchip" style="background:rgba(255,255,255,.18)">' + p.tagline + '</span><h1>' + p.nome + '</h1><p>' + p.oque + '</p>' +
+          '<div class="pj-chips"><span><b>Quando:</b> ' + p.quando + '</span><span><b>Onde:</b> ' + p.onde + '</span></div>' +
+          '<div class="vhero2__ctas"><a class="vbtn vbtn--light" href="#restaurante">Sou restaurante</a><a class="vbtn vbtn--ghost" style="border-color:rgba(255,255,255,.5);color:#fff" href="#marca">Quero patrocinar</a></div></div>' +
+        '</div></section>' +
+        '<section class="vsec pj-sec" id="restaurante"><div class="container">' +
+          '<h2><span class="kicker">Para o seu restaurante</span>Como participar</h2>' +
+          '<div class="pj-nums">' + nums(p.restaurante.numeros) + '</div>' +
+          '<ul class="pj-como">' + p.restaurante.como.map(function (c) { return '<li>' + c + '</li>'; }).join("") + '</ul>' +
+          '<p style="margin-top:20px"><a class="vbtn vbtn--red" href="v5-marca.html#contato">' + p.restaurante.cta + '</a></p>' +
+        '</div></section>' +
+        '<section class="vsec vsec--creme2" style="padding:30px 0"><div class="container"><div class="shorts" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px">' +
+          [p.foto, "1552566626-52f8b828add9", "1517248135467-4c7edcad34c4", "1556910103-1c02745aae4d"].map(function (f) { return '<span style="display:block;aspect-ratio:4/3;border-radius:12px;background:url(' + img(f, 600) + ') center/cover"></span>'; }).join("") +
+        '</div><p class="nota-dev">Fotos reais do projeto entram aqui, só dentro da página do projeto.</p></div></section>' +
+        '<section class="vsec pj-sec" id="marca"><div class="container">' +
+          '<h2><span class="kicker">Para a sua marca</span>Como patrocinar</h2>' +
+          '<div class="pj-nums">' + nums(p.marca.numeros) + '</div>' +
+          '<p style="color:var(--cinza)">' + p.marca.publico + '</p>' +
+          '<div class="cotas">' + p.marca.cotas.map(function (c) { return '<div class="cota"><small>' + c[1] + '</small><h3>' + c[0] + '</h3><ul>' + c[2].map(function (i) { return '<li>' + i + '</li>'; }).join("") + '</ul></div>'; }).join("") + '</div>' +
+          '<p style="margin-top:20px"><a class="vbtn vbtn--dark" href="v5-marca.html#contato">Quero patrocinar</a></p>' +
+        '</div></section>' +
+        '<section class="vsec vsec--creme2" style="padding:34px 0"><div class="container">' +
+          '<div class="aviso"><b>Para atualizar antes de publicar</b>O conteúdo veio do mídia kit 2026. Pontos em aberto:<ul>' + p.atualizar.map(function (a) { return '<li>' + a + '</li>'; }).join("") + '</ul></div>' +
+          '<h3 style="margin:26px 0 12px">Outros projetos</h3><div class="outros">' + outros + '</div>' +
+        '</div></section>';
+    })();
+  </script>
+</body>
+</html>
