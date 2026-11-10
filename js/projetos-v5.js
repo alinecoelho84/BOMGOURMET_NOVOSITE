@@ -1,5 +1,6 @@
 /* Projetos do Bom Gourmet para a V5.
    Fonte: mídia kit 2026 (midiakit.oiclara.com.br). Números lidos do código das páginas.
+   Datas de 2026 conferidas em 10/11/2026 nas matérias do Bom Gourmet, no site do Festival e na imprensa.
    "atualizar" lista o que está datado ou em conflito no mídia kit e precisa ser revisto pela equipe. */
 window.BG_PROJETOS = [
   {
@@ -8,12 +9,12 @@ window.BG_PROJETOS = [
     tagline: "O festival que movimenta o prato e o mercado.",
     resumo: "Menus exclusivos a preço fixo em centenas de restaurantes, por 30 dias.",
     oque: "Durante 30 dias, a cidade entra em modo descoberta: os restaurantes oferecem menus exclusivos a preço fixo, com entrada, prato principal e sobremesa. Há mais de uma década o Festival é motor de negócios e vitrine para o setor de alimentação fora do lar.",
-    quando: "Duas edições por ano: fevereiro e novembro", quandoCurto: "Fev e nov",
+    quando: "Duas edições por ano em Curitiba: março e outubro", quandoCurto: "Mar e out",
     onde: "7 praças: Curitiba, Londrina, Maringá, Foz do Iguaçu, Cascavel, Litoral e Campos Gerais",
     estados: ["PR"], destaque: { n: "300+", t: "restaurantes participantes" },
     restaurante: {
       numeros: [["300+", "restaurantes participantes"], ["+150 mil", "menus vendidos por ano"], ["R$ 40 mi", "movimentados na economia fora do lar"]],
-      como: ["Menu a preço fixo: R$ 49, R$ 69, R$ 89 ou R$ 109, conforme a cidade", "Entrada, prato principal e sobremesa", "30 dias de festival, duas vezes por ano", "Reuniões técnicas em todas as edições", "Cocriação de pratos e ativações com as marcas"],
+      como: ["Menu completo a preço fixo, com entrada, prato principal e sobremesa. Em Curitiba, em 2026: R$ 84, R$ 104 ou R$ 124", "Pratos individuais no almoço de dias úteis: R$ 44, R$ 54, R$ 64 ou R$ 74", "Quatro semanas de festival, duas vezes por ano", "O público não precisa de reserva, cadastro nem ingresso", "Reuniões técnicas em todas as edições", "Cocriação de pratos e ativações com as marcas"],
       cta: "Quero colocar meu restaurante"
     },
     marca: {
@@ -26,7 +27,7 @@ window.BG_PROJETOS = [
       ]
     },
     site: "festivalbomgourmet.com.br", insta: "@festivalbomgourmet",
-    atualizar: ["A página diz fevereiro e novembro; o cronograma do mídia kit diz março e outubro.", "O texto fala em expectativa 2026 de +500 restaurantes, +500 mil menus, R$ 75 mi e 50 mi de impactos, mas os contadores mostram 300+, 150 mil, R$ 40 mi e 20 mi. Qual vale?"]
+    atualizar: ["Datas corrigidas: em 2026, Curitiba teve o Festival de 6/3 a 5/4 e de 2/10 a 1/11. A página do mídia kit que fala em fevereiro e novembro está errada. Faltam as datas das outras 6 cidades.", "Preços: o mídia kit fala em R$ 49 a R$ 109, mas Curitiba cobrou R$ 84 a R$ 124 em 2026. Confirmar se o preço muda por cidade.", "Números: o mídia kit diz 300+ restaurantes e +150 mil menus por ano. O site do Festival diz +300 mil menus por ano. A edição de outubro em Curitiba teve 71 restaurantes. Qual número vale?", "O texto do mídia kit fala em expectativa 2026 de +500 restaurantes, +500 mil menus, R$ 75 mi e 50 mi de impactos, diferente dos contadores."]
   },
   {
     slug: "premio", nome: "Prêmio Bom Gourmet", logo: "premio.png", cor: "#b10027", tinta: "#8e0020",
@@ -34,7 +35,7 @@ window.BG_PROJETOS = [
     tagline: "O maior palco da gastronomia paranaense.",
     resumo: "A premiação que elege os melhores restaurantes, chefs, bares e confeitarias.",
     oque: "Uma plataforma de reconhecimento e um guia de prestígio que destaca os melhores restaurantes, chefs, bares e confeitarias do Paraná, com votação popular e júri técnico especializado.",
-    quando: "Ciclo de abril a agosto, com a cerimônia em agosto", quandoCurto: "Abr a ago",
+    quando: "Indicações e votação de abril a agosto. Cerimônia no Paraná em agosto e no Rio Grande do Sul em setembro", quandoCurto: "Abr a set",
     onde: "Paraná (Curitiba, Londrina, Maringá, Foz do Iguaçu, Ponta Grossa, Campos Gerais e Litoral) e Rio Grande do Sul",
     estados: ["PR", "RS"], destaque: { n: "72", t: "categorias premiadas" },
     restaurante: {
@@ -53,7 +54,7 @@ window.BG_PROJETOS = [
     },
     fundoLogo: "#f6efe4",
     site: "premiobomgourmet.com.br", insta: "@premiobomgourmet",
-    atualizar: ["O mídia kit traz a cerimônia de 2026 (4 de agosto, Centro de Eventos Positivo) e o tema 2026 \"O sabor é o destino\". Falta a data e o tema de 2027.", "A forma de indicação (quem indica e quando) não está no mídia kit; escrevi a partir da reunião."]
+    atualizar: ["Em 2026: 16ª edição, cerimônia do Paraná em 4/8 no Centro de Eventos Positivo, tema \"O sabor é o destino\" e guia com 440 estabelecimentos. No Rio Grande do Sul, a cerimônia foi em setembro, no Encouraçado Butikin. Faltam data e tema de 2027.", "A forma de indicação (quem indica e quando) não está no mídia kit; escrevi a partir da reunião."]
   },
   {
     slug: "inverno", nome: "Circuito de Inverno", logo: "inverno.png", cor: "#0096b2", tinta: "#07788e",
@@ -77,15 +78,15 @@ window.BG_PROJETOS = [
       ]
     },
     site: "festivalbomgourmet.com.br", insta: "@bomgourmet",
-    atualizar: ["As novidades citam a sinergia com a Copa do Mundo de 2026, que já passou."]
+    atualizar: ["Em 2026 foi de 11/6 a 26/7. A imprensa falou em mais de 100 operações e o mídia kit fala em 150+. Qual número vale?", "As novidades do mídia kit citam a Copa do Mundo de 2026, que já passou."]
   },
   {
     slug: "verao", nome: "Circuito de Verão", logo: "verao.png", cor: "#f2a900", tinta: "#a86f00",
     foto: "1504674900247-0877df9cc836",
     tagline: "O sabor não tem estação. Mas o consumo, sim.",
-    resumo: "Seis semanas de experiências com desconto real em dezembro e janeiro.",
+    resumo: "Experiências com desconto real do fim de novembro a janeiro.",
     oque: "Uma plataforma de ativação gastronômica que transforma Curitiba num grande roteiro de experiências acessíveis. Durante seis semanas, os estabelecimentos se conectam a um público com desconto real.",
-    quando: "Dezembro e janeiro, por seis semanas", quandoCurto: "Dez e jan",
+    quando: "Do fim de novembro a meados de janeiro, por cerca de sete semanas", quandoCurto: "Nov a jan",
     onde: "Curitiba e região metropolitana", estados: ["PR"], destaque: { n: "150+", t: "estabelecimentos" },
     restaurante: {
       numeros: [["150+", "estabelecimentos"], ["6 semanas", "de operação contínua"], ["até 90%", "em descontos diretos"]],
@@ -101,7 +102,7 @@ window.BG_PROJETOS = [
       ]
     },
     site: "festivalbomgourmet.com.br", insta: "@bomgourmet",
-    atualizar: ["O período aparece de três jeitos: novembro a fevereiro (home), dezembro e janeiro (página) e janeiro mais novembro a dezembro (cronograma)."]
+    atualizar: ["A edição 2025/26 foi de 28/11 a 18/1, com 67 estabelecimentos e descontos de até 80%. O mídia kit fala em 150+ estabelecimentos e até 90%. Qual número vale?", "Falta a data da edição 2026/27. Pelo histórico, começa no fim deste mês.", "O mídia kit traz o período de três jeitos diferentes: novembro a fevereiro, dezembro e janeiro, e janeiro mais novembro a dezembro."]
   },
   {
     slug: "cwburguer", nome: "CW Burguer Fest", logo: "cwburguer.png", cor: "#c2381f", tinta: "#9c2c16",
@@ -109,11 +110,11 @@ window.BG_PROJETOS = [
     tagline: "O festival que transforma hambúrguer em cultura.",
     resumo: "O festival da categoria mais votada do Prêmio, duas vezes por ano.",
     oque: "Uma plataforma de marca que movimenta Curitiba e reúne casas, marcas e operadores em torno do hambúrguer, a categoria mais votada do Prêmio Bom Gourmet.",
-    quando: "Duas edições: abril e novembro", quandoCurto: "Abr e nov",
-    onde: "Curitiba", estados: ["PR"], destaque: { n: "1ª", t: "categoria mais votada do Prêmio" },
+    quando: "Duas edições por ano, de um mês cada: abril a maio e novembro a dezembro", quandoCurto: "Abr e nov",
+    onde: "Curitiba", estados: ["PR"], destaque: { n: "42", t: "hamburguerias na edição de abril" },
     restaurante: {
-      numeros: [["2 edições", "por ano"], ["1ª", "categoria mais votada do Prêmio"], ["100%", "Curitiba"]],
-      como: ["Para hamburguerias de Curitiba", "Reúne casas, fornecedores e parceiros estratégicos", "Duas edições por ano: abril e novembro"],
+      numeros: [["42", "hamburguerias na edição de abril de 2026"], ["R$ 19 a R$ 39", "burgers a preço fixo"], ["1 mês", "de festival por edição"]],
+      como: ["Para hamburguerias de Curitiba", "Cada casa cria um burger para o festival, a preço fixo de R$ 19, R$ 29 ou R$ 39", "Duas edições por ano, de um mês cada", "Reúne casas, fornecedores e parceiros estratégicos"],
       cta: "Quero colocar minha hamburgueria"
     },
     marca: {
@@ -125,7 +126,7 @@ window.BG_PROJETOS = [
       ]
     },
     site: "cwburguer.com.br", insta: "@cwburguer_fest",
-    atualizar: ["O mídia kit não tem o número de casas participantes nem o público de cada edição."]
+    atualizar: ["Em 2026: de 17/4 a 17/5, com 42 hamburguerias, e de 13/11 a 13/12, com 39 casas no site. Faltam as datas de 2027 e o público de cada edição."]
   },
   {
     slug: "foodco", nome: "FoodCo. Experience", logo: "foodco.png", cor: "#c9bf00", tinta: "#6f6800",
@@ -148,17 +149,17 @@ window.BG_PROJETOS = [
         ["Ativação de edição", "Experiência no encontro", ["Espaço de marca dentro da Casa Bom Gourmet", "Sampling e demonstração de produto", "Contato direto com decisores", "Captura de leads qualificados"]]
       ]
     },
-    site: "foodco.com.br", insta: "@foodco.experience",
-    atualizar: ["Faltam as datas das 6 edições e o link de venda de ingressos."]
+    site: "", insta: "@foodco.experience",
+    atualizar: ["Faltam as datas das 6 edições e o link de venda de ingressos.", "Atenção: o endereço foodco.com.br é de outra empresa, uma plataforma de gestão para restaurantes. Não usar como link do FoodCo. Experience."]
   },
   {
     slug: "vinada", nome: "Vinada Cultural", logo: "vinada.png", cor: "#e0a800", tinta: "#9a7905",
     foto: "1492684223066-81342ee5ff30",
     tagline: "O maior festival de cachorro-quente do Brasil.",
-    resumo: "Dogueiros, música e família inteira na Praça Afonso Botelho.",
-    oque: "Uma celebração da cultura curitibana, da família e do sabor democrático: 10 dogueiros com receitas exclusivas apadrinhadas por chefs premiados do Bom Gourmet, comida de boteco, música e arte na Praça Afonso Botelho.",
-    quando: "Duas edições: 23 e 24 de maio, 14 e 15 de novembro", quandoCurto: "Mai e nov",
-    onde: "Praça Afonso Botelho, Curitiba", estados: ["PR"], destaque: { n: "+15 mil", t: "pessoas por edição" },
+    resumo: "Dogueiros, música e família inteira numa praça de Curitiba.",
+    oque: "Uma celebração da cultura curitibana, da família e do sabor democrático: 10 dogueiros com receitas exclusivas apadrinhadas por chefs premiados do Bom Gourmet, comida de boteco, música e arte numa praça de Curitiba.",
+    quando: "Duas edições por ano, em maio e novembro, sempre num fim de semana", quandoCurto: "Mai e nov",
+    onde: "Curitiba: Praça Afonso Botelho em maio de 2026 e Praça da Espanha em novembro de 2026", estados: ["PR"], destaque: { n: "+15 mil", t: "pessoas por edição" },
     restaurante: {
       numeros: [["10", "dogueiros apadrinhados por chefs"], ["2 dias", "por edição"], ["+15 mil", "pessoas por edição"]],
       como: ["Para dogueiros e operações de comida de rua de Curitiba", "Cada dogueiro cria uma receita exclusiva com um chef premiado do Bom Gourmet", "Os dogueiros, símbolo do empreendedorismo curitibano, ocupam o palco central"],
@@ -173,7 +174,7 @@ window.BG_PROJETOS = [
       ]
     },
     site: "vinadacultural.com.br", insta: "@gpbomgourmet",
-    atualizar: ["As datas são de 2026 (a edição de novembro é agora, 14 e 15). Faltam as datas de 2027."]
+    atualizar: ["Em 2026: 9ª edição em 23 e 24/5 na Praça Afonso Botelho e 10ª edição em 7 e 8/11 na Praça da Espanha. Faltam datas e local de 2027."]
   },
   {
     slug: "casa", nome: "Casa Bom Gourmet", logo: "casa.png", cor: "#cf0023", tinta: "#a4001c",
