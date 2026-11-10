@@ -797,3 +797,40 @@ a.midia:hover { transform: translateY(-3px); }
 .pj-sec h2 .kicker { display: block; font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--vermelho); margin-bottom: 8px; }
 .colu__ph--sem { display: flex !important; align-items: center; justify-content: center; background: var(--creme2); color: var(--tinta); font-family: var(--display); font-weight: 900; font-size: 1.3rem; }
 .ver-mais-colu[hidden] { display: none !important; }
+
+/* V5 B2C: "Assine a nossa news" dentro da primeira dobra */
+.v5news { background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro)); color: #fff; border-radius: var(--radius); padding: 20px 22px; margin-bottom: 14px; }
+.v5news small { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #ffd9dd; margin-bottom: 4px; }
+.v5news h3 { font-size: 1.35rem; letter-spacing: -.02em; }
+.v5top .v5news p { color: #ffe9eb; font-size: .88rem; line-height: 1.45; margin: 4px 0 12px; }
+.v5news .news-form input { min-width: 0; }
+
+/* V5 B2B: videocases das marcas (um destaque + quatro menores) */
+.vcases { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.vcases__lado { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.vcase { position: relative; display: block; aspect-ratio: 4/3; border-radius: var(--radius-sm, 14px); overflow: hidden; background-color: var(--tinta); background-size: cover; background-position: center; color: #fff; }
+.vcase::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.08) 25%, rgba(0,0,0,.8)); transition: background .2s; }
+.vcase:hover::before { background: linear-gradient(180deg, rgba(0,0,0,.2) 15%, rgba(0,0,0,.88)); }
+.vcase__play { position: absolute; left: 50%; top: 36%; transform: translate(-50%, -50%); width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,.95); box-shadow: 0 6px 20px rgba(0,0,0,.3); transition: transform .2s; }
+.vcase__play::after { content: ""; position: absolute; left: 54%; top: 50%; transform: translate(-50%, -50%); border-left: 12px solid var(--vermelho); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.vcase:hover .vcase__play { transform: translate(-50%, -50%) scale(1.08); }
+.vcase__dur { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,.65); font-size: .7rem; font-weight: 700; padding: 3px 7px; border-radius: 6px; }
+.vcase__txt { position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 14px; display: block; }
+.vcase__txt small { display: block; font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ouro-claro); margin-bottom: 3px; }
+.vcase__txt b { display: block; font-family: var(--display); font-size: .92rem; line-height: 1.2; }
+.vcase--big .vcase__play { width: 60px; height: 60px; top: 40%; }
+.vcase--big .vcase__play::after { border-left-width: 18px; border-top-width: 11px; border-bottom-width: 11px; }
+.vcase--big .vcase__txt { padding: 18px 20px; }
+.vcase--big .vcase__txt small { font-size: .7rem; }
+.vcase--big .vcase__txt b { font-size: clamp(1.15rem, 2vw, 1.55rem); max-width: 560px; }
+@media (min-width: 641px) { .vcase--big { aspect-ratio: 16/9; } }
+@media (min-width: 900px) {
+  .vcases { grid-template-columns: 1.4fr 1fr; }
+  .vcase--big { aspect-ratio: auto; height: 100%; min-height: 300px; }
+}
+@media (max-width: 640px) {
+  .vcases__lado { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 24px; gap: 12px; margin: 0 -24px; padding: 0 24px 6px; scrollbar-width: none; }
+  .vcases__lado::-webkit-scrollbar { display: none; }
+  .vcases__lado .vcase { flex: 0 0 72%; scroll-snap-align: start; }
+}
+.vcases__quem { margin: 34px 0 14px; font-size: 1.15rem; }

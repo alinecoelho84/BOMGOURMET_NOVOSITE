@@ -74,7 +74,7 @@
         <span class="vlogo"><i></i><b>bom</b><b>Gourmet</b></span>
         <div class="vfooter__ctas">
           <a class="vbtn vbtn--red vbtn--sm" href="#">Contato comercial</a>
-          <a class="vbtn vbtn--ghost vbtn--sm" href="#" style="border-color:rgba(255,255,255,.25); color:#fff">Fale conosco</a>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#" style="border-color:rgba(255,255,255,.25); color:#fff">Fale com a gente</a>
         </div>
         <div class="vfooter__cols">
           <div>

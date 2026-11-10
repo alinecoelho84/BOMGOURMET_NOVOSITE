@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Home com duas portas · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=30" />
+  <link rel="stylesheet" href="css/versoes.css?v=31" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -38,7 +38,7 @@
         <a href="#noticias" data-filtro="roteiro">Roteiros</a>
         <a href="v5-marca.html#negocios">Negócios</a>
         <a href="#agenda">Agenda</a>
-        <a href="#contato">Fale conosco</a>
+        <a href="#contato">Fale com a gente</a>
         <a href="#" class="nav-guia">Guia dos melhores da gastronomia</a>
       </nav>
       <a class="vbtn vbtn--red vbtn--sm guia-mobile" href="#">Guia</a>
@@ -73,6 +73,15 @@
           <p>Festival Bom Gourmet, Prêmio Bom Gourmet, circuitos, FoodCo. e Casa Bom Gourmet. Criamos as experiências onde restaurantes, marcas e quem ama comer bem se encontram, e contamos tudo com conteúdo próprio e colunistas.</p>
         </div>
         <div>
+          <div class="v5news">
+            <small>Grátis, uma vez por semana</small>
+            <h3>Assine a nossa news</h3>
+            <p>As casas que abriram, onde comer bem no fim de semana e os menus do Festival antes de todo mundo.</p>
+            <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Pronto, você está na lista!';">
+              <input type="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" required />
+              <button type="submit" class="vbtn vbtn--light">Quero receber</button>
+            </form>
+          </div>
           <div class="trocar">
             <a class="frente frente--b2b" href="v5-marca.html">Para o food service: <b>quero fazer parte →</b></a>
           </div>
@@ -91,22 +100,6 @@
       </div>
     </section>
 
-    <!-- 3. Newsletter no alto, com a promessa clara -->
-    <section class="news-top">
-      <div class="container">
-        <div class="desconto-band">
-          <div>
-            <small>Gourmet Lovers · grátis, uma vez por semana</small>
-            <h3>Saiba antes de todo mundo onde comer bem</h3>
-            <p>As casas que abriram, onde ir no fim de semana e os descontos dos Gourmet Lovers. Quem assina recebe os menus do Festival antes de abrirem para o público.</p>
-          </div>
-          <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Pronto, você está na lista!';">
-            <input type="email" placeholder="Seu melhor e-mail" required />
-            <button type="submit" class="vbtn vbtn--light">Quero receber</button>
-          </form>
-        </div>
-      </div>
-    </section>
 
     <!-- 4. Colunistas reais, em ordem de quem publicou por último -->
     <section class="vsec vsec--creme2" id="colunistas" style="padding:40px 0">
@@ -291,16 +284,15 @@
       </div>
     </section>
 
-    <!-- 11. Fale conosco -->
+    <!-- 11. Fale com a gente -->
     <section class="vsec" id="contato" style="padding:40px 0">
       <div class="container">
         <div class="sechead" style="margin-bottom:18px">
-          <h2><span class="kicker">Fale conosco</span>Quer falar com a gente?</h2>
+          <h2><span class="kicker">Contato</span>Fale com a gente</h2>
         </div>
-        <div class="joingrid joingrid--3">
+        <div class="joingrid joingrid--2">
+          <div class="joincard joincard--red"><span class="kicker">Fale com a gente</span><h3>Uma dúvida, uma casa nova, uma história pra contar?</h3><p>Imprensa, parcerias, Casa Bom Gourmet ou qualquer outro assunto. A gente responde por aqui.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
           <div class="joincard joincard--dark"><span class="kicker">Restaurantes e marcas</span><h3>Quero fazer parte dos projetos</h3><p>Para restaurantes que querem participar e marcas que querem patrocinar.</p><a class="vbtn vbtn--light" href="v5-marca.html#contato">Ir para o food service</a></div>
-          <div class="joincard joincard--gold"><span class="kicker">Redação</span><h3>Sugestão de pauta</h3><p>Abriu uma casa, lançou um menu, tem uma história? Conta pra gente.</p><a class="vbtn vbtn--light" href="#">Enviar sugestão</a></div>
-          <div class="joincard joincard--red"><span class="kicker">Geral</span><h3>Outros assuntos</h3><p>Imprensa, parcerias, Casa Bom Gourmet e tudo o mais.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
         </div>
       </div>
     </section>
@@ -309,7 +301,7 @@
   </main>
 
   <div data-vfooter></div>
-  <script src="js/versoes.js?v=7"></script>
+  <script src="js/versoes.js?v=8"></script>
   <script>
     (function () {
       var body = document.body, lembrar = document.querySelector("[data-lembrar]");
