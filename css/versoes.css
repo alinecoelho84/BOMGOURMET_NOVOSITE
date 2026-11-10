@@ -261,7 +261,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 800; letter-spacing: 
 
 /* ---------- Rodapé ---------- */
 .vfooter { background: var(--tinta); color: #cfc6bc; margin-top: 0; border-radius: 28px 28px 0 0; }
-.vfooter__inner { padding: 56px 0 30px; }
+.vfooter__inner { padding: 56px 24px 30px; }
 .vfooter .vlogo b { color: #fff; }
 .vfooter .vlogo b + b { color: var(--vermelho); }
 .vfooter__ctas { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 40px; }
@@ -834,3 +834,13 @@ a.midia:hover { transform: translateY(-3px); }
   .vcases__lado .vcase { flex: 0 0 72%; scroll-snap-align: start; }
 }
 .vcases__quem { margin: 34px 0 14px; font-size: 1.15rem; }
+
+/* V5: "Fale com a gente", o mesmo bloco nas duas páginas */
+.falecom { background: linear-gradient(135deg, var(--vermelho), var(--vermelho-escuro)); color: #fff; border-radius: var(--radius); padding: 34px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; }
+.falecom__kicker { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #ffd9dd; }
+.falecom h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -.03em; margin: 4px 0 6px; }
+.falecom p { color: #ffe9eb; max-width: 520px; line-height: 1.5; }
+.falecom__btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.falecom .vbtn--ghost { color: #fff; border-color: rgba(255,255,255,.55); }
+.falecom .vbtn--ghost:hover { color: #fff; border-color: #fff; background: rgba(255,255,255,.12); }
+@media (max-width: 640px) { .falecom { padding: 28px 22px; } .falecom__btns { width: 100%; } .falecom__btns .vbtn { flex: 1 1 100%; justify-content: center; } }

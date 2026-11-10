@@ -73,8 +73,7 @@
       <div class="container vfooter__inner">
         <span class="vlogo"><i></i><b>bom</b><b>Gourmet</b></span>
         <div class="vfooter__ctas">
-          <a class="vbtn vbtn--red vbtn--sm" href="#">Contato comercial</a>
-          <a class="vbtn vbtn--ghost vbtn--sm" href="#" style="border-color:rgba(255,255,255,.25); color:#fff">Fale com a gente</a>
+          <a class="vbtn vbtn--red vbtn--sm" href="#contato">Fale com a gente</a>
         </div>
         <div class="vfooter__cols">
           <div>
@@ -87,7 +86,7 @@
           </div>
           <div>
             <h4>Institucional</h4>
-            <a href="#">Quem somos</a><a href="#">Cases</a><a href="#">Trabalhe conosco</a><a href="#">Contato comercial</a>
+            <a href="#">Quem somos</a><a href="#">Videocases</a><a href="#">Trabalhe conosco</a><a href="#contato">Fale com a gente</a>
           </div>
           <div>
             <h4>Comunidades &amp; Regiões</h4>

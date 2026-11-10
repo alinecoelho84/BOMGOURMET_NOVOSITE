@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>V5 · Para o food service · Bom Gourmet</title>
   <meta name="robots" content="noindex" />
-  <link rel="stylesheet" href="css/versoes.css?v=31" />
+  <link rel="stylesheet" href="css/versoes.css?v=32" />
   <!-- Microsoft Clarity: medição do teste das versões -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -29,7 +29,7 @@
         <a href="#videocases">Videocases</a>
         <a href="v5-quem-somos.html">Quem somos</a>
       </nav>
-      <a class="vbtn vbtn--red vbtn--sm" href="#contato">Fale com o comercial</a>
+      <a class="vbtn vbtn--red vbtn--sm" href="#contato">Fale com a gente</a>
     </div>
   </header>
 
@@ -42,7 +42,7 @@
         <p>São oito projetos ao longo do ano, do Festival ao FoodCo. O restaurante ganha movimento e cliente novo na porta. A marca aparece para quem come fora e para quem decide no food service.</p>
         <div class="vhero2__ctas">
           <a class="vbtn vbtn--red" href="#projetos">Ver os projetos</a>
-          <a class="vbtn vbtn--light" href="#contato">Fale com o comercial</a>
+          <a class="vbtn vbtn--light" href="#contato">Fale com a gente</a>
         </div>
         <label class="lembrar" style="color:#efe9e2"><input type="checkbox" data-lembrar-b2b /> Lembrar minha escolha neste navegador</label>
         <a class="trocar-link" href="v5.html" data-trocar-b2c>Para você: quero viver a cidade →</a>
@@ -166,13 +166,19 @@
       </div>
     </section>
 
-    <!-- 9. Contato: dois caminhos -->
-    <section class="vsec" id="contato">
+    <!-- Fale com a gente: o mesmo bloco nas duas páginas -->
+    <section class="vsec" id="contato" style="padding:40px 0">
       <div class="container">
-        <div class="sechead" style="justify-content:center; text-align:center"><h2><span class="kicker">Fale com o comercial</span>Como você quer participar?</h2></div>
-        <div class="joingrid joingrid--2">
-          <div class="joincard joincard--red"><span class="kicker">Restaurantes e operações</span><h3>Sou restaurante e quero participar</h3><p>Festival, circuitos, Vinada, CW Burguer Fest e FoodCo.: a gente te mostra como entrar e quando. No Prêmio não tem inscrição, quem indica é o público.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
-          <div class="joincard joincard--dark"><span class="kicker">Marcas</span><h3>Quero patrocinar</h3><p>Cotas, ativações e conteúdo nos projetos certos para a sua marca chegar ao público e a quem decide.</p><a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a></div>
+        <div class="falecom">
+          <div>
+            <span class="falecom__kicker">Contato</span>
+            <h2>Fale com a gente</h2>
+            <p>Restaurante, marca, imprensa ou qualquer outro assunto. Manda uma mensagem que a gente responde.</p>
+          </div>
+          <div class="falecom__btns">
+            <a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a>
+            <a class="vbtn vbtn--ghost" href="#">Mandar um e-mail</a>
+          </div>
         </div>
       </div>
     </section>
@@ -188,7 +194,7 @@
 
   <div data-vfooter></div>
   <script src="js/projetos-v5.js?v=3"></script>
-  <script src="js/versoes.js?v=8"></script>
+  <script src="js/versoes.js?v=9"></script>
   <script>
     (function () {
       document.querySelector("[data-nums]").innerHTML = window.BG_NUMEROS.map(function (n) { return '<div><b>' + n[0] + '</b><span>' + n[1] + '</span></div>'; }).join("");
