@@ -844,3 +844,21 @@ a.midia:hover { transform: translateY(-3px); }
 .falecom .vbtn--ghost { color: #fff; border-color: rgba(255,255,255,.55); }
 .falecom .vbtn--ghost:hover { color: #fff; border-color: #fff; background: rgba(255,255,255,.12); }
 @media (max-width: 640px) { .falecom { padding: 28px 22px; } .falecom__btns { width: 100%; } .falecom__btns .vbtn { flex: 1 1 100%; justify-content: center; } }
+
+/* V5 B2C: "Gente que estava lá" com moldura de foto revelada */
+.gente--moldura { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 14px; padding: 8px 4px 4px; }
+@media (min-width: 900px) { .gente--moldura { grid-template-columns: repeat(8, 1fr); } }
+.gente--moldura a { aspect-ratio: auto; overflow: visible; border-radius: 3px; background: #fff; padding: 7px 7px 0; box-shadow: 0 8px 20px rgba(28,24,23,.14), 0 1px 3px rgba(28,24,23,.1); transform: rotate(-2deg); transition: transform .2s, box-shadow .2s; }
+.gente--moldura a:nth-child(2n) { transform: rotate(1.8deg); }
+.gente--moldura a:nth-child(3n) { transform: rotate(-.8deg); }
+.gente--moldura a:nth-child(5n) { transform: rotate(2.4deg); }
+.gente--moldura a:hover { transform: rotate(0) scale(1.05); box-shadow: 0 14px 30px rgba(28,24,23,.2); z-index: 1; }
+.gente--moldura a i { display: block; aspect-ratio: 1; background: var(--creme2) center/cover; border-radius: 2px; }
+.gente--moldura a span { position: static; display: block; padding: 7px 2px 9px; color: var(--tinta); text-shadow: none; line-height: 1.25; }
+.gente--moldura a span b { display: block; font-size: .68rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gente--moldura a span small { display: block; font-size: .62rem; font-weight: 600; color: var(--vermelho); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 640px) {
+  .gente--moldura { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding: 0 24px; margin: 0 -24px; padding: 12px 24px 16px; gap: 14px; scrollbar-width: none; }
+  .gente--moldura::-webkit-scrollbar { display: none; }
+  .gente--moldura a { flex: 0 0 40%; scroll-snap-align: start; }
+}
