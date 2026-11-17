@@ -105,7 +105,7 @@
     <section class="vsec" id="noticias" style="padding:40px 0">
       <div class="container">
         <div class="sechead" style="margin-bottom:16px">
-          <h2><span class="kicker">Agora</span><span data-titulo-noticias>Últimas notícias</span></h2>
+          <h2><span class="kicker">Agora</span><span data-titulo-noticias>Como viver a cidade</span></h2>
           <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver todas</a>
         </div>
         <div class="filtros">
@@ -363,7 +363,7 @@
           c.classList.toggle("is-hidden", !ok); if (ok) n++;
         });
         vazio.hidden = n > 0;
-        document.querySelector("[data-titulo-noticias]").textContent = { todos: "Últimas notícias", noticia: "Notícias", roteiro: "Roteiros" }[tipo];
+        document.querySelector("[data-titulo-noticias]").textContent = { todos: "Como viver a cidade", noticia: "Notícias", roteiro: "Roteiros" }[tipo];
       }
       function grupo(sel, cb) { var bs = document.querySelectorAll(sel); bs.forEach(function (b) { b.addEventListener("click", function () { bs.forEach(function (x) { x.classList.toggle("is-on", x === b); }); cb(b); filtrar(); }); }); }
       grupo("[data-ufs] button", function (b) { uf = b.dataset.uf; });
