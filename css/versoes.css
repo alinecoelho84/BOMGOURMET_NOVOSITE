@@ -950,3 +950,5 @@ a.midia:hover { transform: translateY(-3px); }
 .vcard--patro { border-top: 4px solid var(--ouro); }
 .patro-selo { display: flex; align-items: center; gap: 8px; font-size: .74rem; font-weight: 700; color: var(--tinta); }
 .patro-selo i { font-style: normal; font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--cinza); border: 1px solid var(--areia); border-radius: 4px; padding: 2px 6px; background: var(--creme); }
+
+.patro-lead { color: var(--cinza); max-width: 640px; line-height: 1.5; margin-bottom: 20px; }
