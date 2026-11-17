@@ -4,7 +4,7 @@
    "atualizar" lista o que está datado ou em conflito no mídia kit e precisa ser revisto pela equipe. */
 window.BG_PROJETOS = [
   {
-    slug: "festival", nome: "Festival Bom Gourmet", logo: "festival.png", cor: "#f15a04", tinta: "#c2490a",
+    slug: "festival", nome: "Festival Bom Gourmet", logo: "v5/festival.png", cor: "#f15a04", tinta: "#c2490a",
     foto: "1414235077428-338989a2e8c0",
     tagline: "O festival que movimenta o prato e o mercado.",
     resumo: "Menus exclusivos a preço fixo em centenas de restaurantes, por 30 dias.",
@@ -30,7 +30,7 @@ window.BG_PROJETOS = [
     atualizar: ["Datas corrigidas: em 2026, Curitiba teve o Festival de 6/3 a 5/4 e de 2/10 a 1/11. A página do mídia kit que fala em fevereiro e novembro está errada. Faltam as datas das outras 6 cidades.", "Preços: o mídia kit fala em R$ 49 a R$ 109, mas Curitiba cobrou R$ 84 a R$ 124 em 2026. Confirmar se o preço muda por cidade.", "Números: o mídia kit diz 300+ restaurantes e +150 mil menus por ano. O site do Festival diz +300 mil menus por ano. A edição de outubro em Curitiba teve 71 restaurantes. Qual número vale?", "O texto do mídia kit fala em expectativa 2026 de +500 restaurantes, +500 mil menus, R$ 75 mi e 50 mi de impactos, diferente dos contadores."]
   },
   {
-    slug: "premio", nome: "Prêmio Bom Gourmet", logo: "premio.png", cor: "#b10027", tinta: "#8e0020",
+    slug: "premio", nome: "Prêmio Bom Gourmet", logo: "v5/premio.png", cor: "#b10027", tinta: "#8e0020",
     foto: "1543007630-9710e4a00a20",
     tagline: "O maior palco da gastronomia paranaense.",
     resumo: "A premiação que elege os melhores restaurantes, chefs, bares e confeitarias.",
@@ -52,12 +52,11 @@ window.BG_PROJETOS = [
         ["Ativação", "Experiência de marca", ["Espaço de ativação no evento", "Sampling e experimentação", "Contato direto com o público decisor", "Captura de leads qualificados"]]
       ]
     },
-    fundoLogo: "#f6efe4",
     site: "premiobomgourmet.com.br", insta: "@premiobomgourmet",
     atualizar: ["Em 2026: 16ª edição, cerimônia do Paraná em 4/8 no Centro de Eventos Positivo, tema \"O sabor é o destino\" e guia com 440 estabelecimentos. No Rio Grande do Sul, a cerimônia foi em setembro, no Encouraçado Butikin. Faltam data e tema de 2027.", "A forma de indicação (quem indica e quando) não está no mídia kit; escrevi a partir da reunião."]
   },
   {
-    slug: "inverno", nome: "Circuito de Inverno", logo: "inverno.png", cor: "#0096b2", tinta: "#07788e",
+    slug: "inverno", nome: "Circuito de Inverno", logo: "v5/inverno.png", cor: "#0096b2", tinta: "#07788e",
     foto: "1467003909585-2f8a72700288",
     tagline: "O inverno virou destino. O Circuito virou consumo.",
     resumo: "Seis semanas de roteiro com descontos de 10% a 90% em junho e julho.",
@@ -129,7 +128,7 @@ window.BG_PROJETOS = [
     atualizar: ["Em 2026: de 17/4 a 17/5, com 42 hamburguerias, e de 13/11 a 13/12, com 39 casas no site. Faltam as datas de 2027 e o público de cada edição."]
   },
   {
-    slug: "foodco", nome: "FoodCo. Experience", logo: "foodco.png", cor: "#c9bf00", tinta: "#6f6800",
+    slug: "foodco", nome: "FoodCo. Experience", logo: "v5/foodco.png", cor: "#c9bf00", tinta: "#6f6800",
     foto: "1556761175-b413da4baf72",
     tagline: "O lugar onde a decisão acontece.",
     resumo: "Um dia de conteúdo e negócios para quem decide no food service.",
@@ -177,7 +176,7 @@ window.BG_PROJETOS = [
     atualizar: ["Em 2026: 9ª edição em 23 e 24/5 na Praça Afonso Botelho e 10ª edição em 7 e 8/11 na Praça da Espanha. Faltam datas e local de 2027."]
   },
   {
-    slug: "casa", nome: "Casa Bom Gourmet", logo: "casa.png", cor: "#cf0023", tinta: "#a4001c",
+    slug: "casa", nome: "Casa Bom Gourmet", logo: "v5/casa.png", cor: "#cf0023", tinta: "#a4001c", fundoLogo: "#1f1a17",
     foto: "1552566626-52f8b828add9",
     tagline: "O epicentro da inovação gastronômica.",
     resumo: "O hub do ecossistema em Curitiba, com 100+ eventos por ano.",
