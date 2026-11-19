@@ -960,3 +960,13 @@ a.midia:hover { transform: translateY(-3px); }
 .podcast--bora p { color: #ffe9eb; }
 .podcast--bora .vbtn--light { color: #cb0023; }
 .podcast .vbtn { justify-content: center; text-align: center; }
+
+/* V5 food service: topo curto igual ao do público, news de negócios no azul do FoodCo */
+.v5top--b2b .vchip { background: #e7e9f3; color: #000a41; }
+.v5top .vhero2__ctas { margin-top: 18px; }
+.v5news--b2b { background: linear-gradient(135deg, #12256e, #000a41); }
+.v5news--b2b small { color: #e3dc4b; }
+.v5top .v5news--b2b p { color: #d5daef; }
+.v5news--b2b .vbtn--light { color: #000a41; }
+/* botões dos projetos: "Sou operador de food service" é longo, então um embaixo do outro */
+.pjcard__btns { grid-template-columns: 1fr; }
