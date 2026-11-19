@@ -108,7 +108,7 @@
           </div>
           <div>
             <h4>Institucional</h4>
-            <a href="#">Quem somos</a><a href="#">Videocases</a><a href="#">Trabalhe conosco</a><a href="#contato">Fale com a gente</a>
+            <a href="quem-somos.html">Quem somos</a><a href="food-service.html#entregas">Entregas em vídeo</a><a href="#">Trabalhe conosco</a><a href="#contato">Fale com a gente</a>
           </div>
           <div>
             <h4>Comunidades &amp; Regiões</h4>
@@ -128,21 +128,4 @@
     if (h.textContent.trim().length > 70) h.classList.add("titulo-longo");
   });
 
-  /* ---- Seletor fixo de versões (não aparece no modo teste cego) ---- */
-  if (MODO_TESTE) return;
-  const cur = document.body.dataset.v || "";
-  const sw = document.createElement("nav");
-  sw.className = "vswitch";
-  sw.setAttribute("aria-label", "Alternar versão do protótipo");
-  sw.innerHTML = [
-    ["hub", "versoes.html", "☰ Versões"],
-    ["v1", "v1.html", "V1"],
-    ["v2", "v2.html", "V2"],
-    ["v3", "v3.html", "V3"],
-    ["v4", "v4.html", "V4"],
-    ["v5", "v5.html", "V5"],
-  ].map(([id, href, label]) =>
-    `<a href="${href}" class="${cur === id ? "is-on" : ""}">${label}</a>`
-  ).join("");
-  document.body.appendChild(sw);
 })();

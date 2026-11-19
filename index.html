@@ -3,634 +3,358 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bom Gourmet — O ecossistema que movimenta a gastronomia</title>
-  <meta name="description" content="O Bom Gourmet é o ecossistema que conecta consumidores, operadores, marcas e destinos por meio da gastronomia — gerando experiências, negócios e desenvolvimento para o setor." />
-  <link rel="stylesheet" href="css/styles.css?v=31" />
+  <title>Bom Gourmet</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/versoes.css?v=38" />
+  <!-- Microsoft Clarity: medição do teste das versões -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y5xkg91zdt");
+  </script>
+  <script>
+    // porta lembrada: quem escolheu o food service vai direto para a página dele; ?entrada mostra as portas de novo
+    (function () { try {
+      if (/[?&]entrada/.test(location.search)) return;
+      if (sessionStorage.getItem("bg_frente_vez")) return;
+      var f = localStorage.getItem("bg_frente");
+      if (f === "b2b") { location.replace("food-service.html"); return; }
+      if (f === "b2c") document.documentElement.setAttribute("data-frente-inicial", "b2c");
+    } catch (e) {} })();
+  </script>
 </head>
-<body>
+<body data-v="v5" data-frente="gate">
 
-  <div data-component="header"></div>
+
+  <header class="vheader">
+    <div class="container vheader__inner">
+      <a class="vlogo vlogo--lg" href="index.html?entrada=1"><i></i><b>bom</b><b>Gourmet</b></a>
+      <nav class="vnav">
+        <a href="quem-somos.html">Quem somos</a>
+        <a href="#noticias" data-filtro="noticia">Notícias</a>
+        <a href="#noticias" data-filtro="roteiro">Roteiros</a>
+        <a href="food-service.html#negocios">Negócios</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contato">Fale com a gente</a>
+        <a href="#" class="nav-guia">Guia dos melhores da gastronomia</a>
+      </nav>
+      <a class="vbtn vbtn--red vbtn--sm guia-mobile" href="#">Guia</a>
+    </div>
+  </header>
 
   <main>
-
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__copy reveal">
-          <span class="eyebrow">Plataforma de live marketing</span>
-          <h1>O ecossistema que <em>movimenta</em> a gastronomia paranaense.</h1>
-          <p class="hero__lead">Conectamos consumidores, operadores, marcas e destinos por meio da gastronomia — gerando experiências, negócios e desenvolvimento para o setor.</p>
-          <div class="hero__ctas">
-            <a href="#portfolio" class="btn btn--primary">Conheça nossos projetos
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-            <a href="#comercial" class="btn btn--dark">Seja um parceiro</a>
-            <a href="#manifesto" class="btn btn--ghost">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              Assista ao vídeo
-            </a>
-          </div>
-        </div>
-
-        <div class="hero__showcase reveal">
-          <div class="showcase" data-showcase>
-            <div class="showcase__viewport">
-              <div class="showcase__track">
-                <a class="panel" href="festival.html" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Experiências</span><h3 class="panel__title">Festival Bom Gourmet</h3></a>
-                <a class="panel" href="#destaque" style="background-image:url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Conteúdo</span><h3 class="panel__title">Reportagens Especiais</h3></a>
-                <a class="panel" href="#destaque" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Conteúdo</span><h3 class="panel__title">Guias Gastronômicos</h3></a>
-                <a class="panel" href="#portfolio" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Experiências</span><h3 class="panel__title">FoodCo Experience</h3></a>
-                <a class="panel" href="#portfolio" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Negócios</span><h3 class="panel__title">Prêmio Bom Gourmet</h3></a>
-                <a class="panel" href="#calendario" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=72')"><span class="panel__cat">Experiências</span><h3 class="panel__title">Circuito de Inverno</h3></a>
-              </div>
-            </div>
-            <div class="showcase__nav">
-              <button class="sc-btn sc-prev" type="button" aria-label="Destaque anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-              <div class="showcase__bar"><i></i></div>
-              <button class="sc-btn sc-next" type="button" aria-label="Próximo destaque"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-            </div>
-          </div>
-        </div>
+    <!-- 0. Abertura: só as duas portas -->
+    <section class="v5gate">
+      <div class="v5gate__bar">
+        <span class="vlogo vlogo--lg"><i></i><b>bom</b><b>Gourmet</b></span>
+        <h1>Por onde você quer <em>entrar</em>?</h1>
+        <p>O Bom Gourmet tem dois lados: o de quem sai para comer bem e o de quem faz a gastronomia acontecer. Escolha o seu.</p>
+      </div>
+      <div class="v5gate__grid">
+        <button type="button" class="v5gate__btn v5gate__btn--b2c" data-frente="b2c" style="--bg:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=70')">
+          <span><small>Para você</small><b>Quero viver a cidade</b><em>Onde comer hoje, o que vem aí e os descontos de quem ama comer fora</em><i>Entrar →</i></span>
+        </button>
+        <a class="v5gate__btn v5gate__btn--b2b" href="food-service.html" style="--bg:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=70')">
+          <span><small>Para o food service</small><b>Quero fazer parte</b><em>Restaurantes que querem entrar nos projetos e marcas que querem patrocinar</em><i>Entrar →</i></span>
+        </a>
       </div>
     </section>
 
-    <!-- ================= BIG NUMBERS (logo após o hero) ================= -->
-    <section class="section">
-      <div class="container">
-        <div class="center reveal" style="margin-bottom:28px">
-          <span class="eyebrow">Números que nos representam</span>
-          <h2 class="h-section">A força de um ecossistema completo</h2>
-        </div>
-        <div class="numbers__grid">
-          <div class="num"><b data-count="33" data-prefix="">0</b><span>Anos de história</span></div>
-          <div class="num"><b data-count="300" data-prefix="+" data-suffix=" mil">0</b><span>Menus vendidos/ano</span></div>
-          <div class="num"><b data-count="2500" data-prefix="+">0</b><span>Restaurantes impactados</span></div>
-          <div class="num"><b data-count="1" data-prefix="+" data-suffix=" mi">0</b><span>Pessoas impactadas/ano</span></div>
-          <div class="num"><b data-count="50" data-prefix="+">0</b><span>Eventos e projetos</span></div>
-          <div class="num"><b data-count="80" data-prefix="+" data-suffix=" mi">0</b><span>Movimentados na economia</span></div>
-        </div>
-        <p class="center muted reveal" style="margin-top:16px; font-size:.82rem">* Números atualizáveis conforme o planejamento e o mídia kit do Bom Gourmet.</p>
-      </div>
-    </section>
-
-    <!-- ================= EM DESTAQUE (notícias) ================= -->
-    <section class="section section--creme2" id="destaque">
-      <div class="container">
-        <div class="reveal" style="margin-bottom:22px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px">
-          <span class="eyebrow">Em destaque</span>
-          <a href="noticias.html" class="btn btn--ghost">Ver todas as matérias</a>
-        </div>
-        <div class="carousel reveal" data-carousel>
-          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <div class="carousel__track">
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Reportagem"></div></div>
-              <div class="post__body"><span class="post__cat">Reportagem</span><h3>A nova criatividade da cozinha brasileira</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Tendências"></div></div>
-              <div class="post__body"><span class="post__cat">Mercado</span><h3>Tendências que vão mover a gastronomia nos próximos anos</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Guia"></div></div>
-              <div class="post__body"><span class="post__cat">Guia</span><h3>Guia de Inverno: 20 lugares para conhecer agora</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Festival Bom Gourmet"></div></div>
-              <div class="post__body"><span class="post__cat">Festival</span><h3>Os menus mais comentados do Festival deste ano</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Prêmio Bom Gourmet"></div></div>
-              <div class="post__body"><span class="post__cat">Prêmio</span><h3>Quem são os indicados ao Prêmio Bom Gourmet</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Reels drink"></div></div>
-              <div class="post__body"><span class="post__cat">Bar</span><h3>Os drinks autorais que dominaram a temporada</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="CWBurguer Fest"></div></div>
-              <div class="post__body"><span class="post__cat">CWBurguer</span><h3>O ranking dos hambúrgueres mais pedidos de Curitiba</h3></div>
-            </article>
-            <article class="post">
-              <div class="post__media"><div class="ph" data-ph="Post FoodCo"></div></div>
-              <div class="post__body"><span class="post__cat">FoodCo</span><h3>O que o food service precisa saber para crescer agora</h3></div>
-            </article>
-          </div>
-          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PORTFÓLIO ================= -->
-    <section class="section section--creme2" id="portfolio">
-      <div class="container">
-        <div class="center reveal" style="margin-bottom:40px">
-          <span class="eyebrow">Nosso portfólio</span>
-          <h2 class="h-section">O Ecossistema Bom Gourmet</h2>
-          <p class="lead" style="margin:14px auto 0">Cada projeto funciona como uma frente de negócio — e como uma mini landing page pronta para patrocínio e participação.</p>
-        </div>
-
-        <div class="cards cards--portfolio">
-          <!-- Festival (linkado para a landing modelo) -->
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Festival Bom Gourmet"></div><span class="card__tag">Experiência</span><span class="card__status card__status--live"><i></i>Vendendo agora</span></div>
-            <div class="card__body">
-              <h3>Festival Bom Gourmet</h3>
-              <p>O maior festival gastronômico do estado: menus exclusivos e experiências únicas conectando restaurantes e consumidores.</p>
-              <a href="premio.html" class="card__link">Ver projeto
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Prêmio Bom Gourmet"></div><span class="card__tag">Premiação</span><span class="card__status card__status--plan"><i></i>Em planejamento</span></div>
-            <div class="card__body">
-              <h3>Prêmio Bom Gourmet</h3>
-              <p>A mais importante premiação da gastronomia paranaense, eleita por especialistas e pelo público.</p>
-              <a href="circuito-inverno.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Circuito de Inverno"></div><span class="card__tag">Circuito</span><span class="card__status card__status--live"><i></i>Em cartaz</span></div>
-            <div class="card__body">
-              <h3>Circuito de Inverno</h3>
-              <p>Roteiro sazonal que aquece a economia gastronômica nos meses mais frios do ano.</p>
-              <a href="festival.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Circuito de Verão"></div><span class="card__tag">Circuito</span><span class="card__status card__status--soon"><i></i>Em breve</span></div>
-            <div class="card__body">
-              <h3>Circuito de Verão</h3>
-              <p>A versão quente do circuito, levando experiências ao litoral e aos destinos de verão.</p>
-              <a href="circuito-verao.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="CWBurguer Fest"></div><span class="card__tag">Festival</span><span class="card__status card__status--plan"><i></i>Em planejamento</span></div>
-            <div class="card__body">
-              <h3>CWBurguer Fest</h3>
-              <p>O festival que celebra o hambúrguer de Curitiba e movimenta dezenas de operações.</p>
-              <a href="cwburguer.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="FoodCo"></div><span class="card__tag">Comunidade B2B</span><span class="card__status card__status--live"><i></i>Inscrições abertas</span></div>
-            <div class="card__body">
-              <h3>FoodCo</h3>
-              <p>Hub de desenvolvimento para operadores de food service: eventos, mentorias e conteúdo.</p>
-              <a href="foodco.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Vinada Cultural"></div><span class="card__tag">Novo</span><span class="card__status card__status--live"><i></i>Em cartaz</span></div>
-            <div class="card__body">
-              <h3>Vinada Cultural</h3>
-              <p>Cultura curitibana, gastronomia democrática e música ao vivo na Praça Afonso Botelho — duas edições por ano.</p>
-              <a href="vinada.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Casa Bom Gourmet"></div><span class="card__tag">Espaço</span><span class="card__status card__status--soon"><i></i>Em breve</span></div>
-            <div class="card__body">
-              <h3>Casa Bom Gourmet</h3>
-              <p>O ponto de encontro físico do ecossistema: eventos, ativações de marca e experiências.</p>
-              <a href="casa.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__media"><div class="ph" data-ph="Bom Gourmet RS"></div><span class="card__tag">Expansão</span><span class="card__status card__status--live"><i></i>Expansão ativa</span></div>
-            <div class="card__body">
-              <h3>Bom Gourmet RS</h3>
-              <p>A chegada do ecossistema ao Rio Grande do Sul, levando o modelo para novos destinos.</p>
-              <a href="bom-gourmet-rs.html" class="card__link">Ver projeto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-          </article>
-        </div>
-
-        <div class="center reveal" style="margin-top:36px">
-          <a href="portfolio.html" class="btn btn--dark">Ver portfólio completo</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CASES ================= -->
-    <section class="section" id="cases">
-      <div class="container">
-        <div class="center reveal" style="margin-bottom:8px">
-          <span class="eyebrow">Cases de sucesso</span>
-          <h2 class="h-section">Resultados para marcas. Memórias para pessoas.</h2>
-        </div>
-
-        <div class="center" data-tabs>
-          <div class="cases__tabs reveal" role="tablist">
-            <button class="cases__tab is-active" data-tab="marcas">Para marcas</button>
-            <button class="cases__tab" data-tab="consumidores">Para consumidores</button>
-          </div>
-
-          <!-- Painel marcas -->
-          <div class="case-panel is-active" data-panel="marcas" style="text-align:left">
-            <div class="reveal">
-              <div class="quote">
-                <p>“Levar nossa marca para o Festival Bom Gourmet foi entrar de verdade na rotina do público gastronômico. O retorno em exposição e em negócio superou o que esperávamos.”</p>
-                <footer>
-                  <div class="ph avatar" data-ph=""></div>
-                  <div><cite>Marca Patrocinadora</cite><small>Categoria bebidas · Patrocínio Festival</small></div>
-                </footer>
-              </div>
-            </div>
-            <div class="reveal" style="display:grid; gap:16px">
-              <div class="stat-card"><b>+300%</b><span>de alcance qualificado durante a ativação</span></div>
-              <div class="stat-card" style="background:var(--tinta)"><b>+2.500</b><span>operadores conectados à marca</span></div>
-            </div>
-          </div>
-
-          <!-- Painel consumidores -->
-          <div class="case-panel" data-panel="consumidores" style="text-align:left">
-            <div class="reveal" style="display:grid; gap:16px">
-              <div class="quote">
-                <p>“Eu espero o Festival todos os anos para conhecer novos restaurantes. Virou parte do meu calendário.”</p>
-                <footer><div class="ph avatar" data-ph=""></div><div><cite>Gourmet Lover</cite><small>Curitiba · PR</small></div></footer>
-              </div>
-            </div>
-            <div class="reveal">
-              <div class="quote">
-                <p>“Conheci dezenas de lugares através do Bom Gourmet. Hoje confio nas indicações de olhos fechados.”</p>
-                <footer><div class="ph avatar" data-ph=""></div><div><cite>Gourmet Lover</cite><small>Comunidade Bom Gourmet</small></div></footer>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= COLUNISTAS ================= -->
-    <section class="section" id="colunistas">
-      <div class="container">
-        <div class="center reveal" style="margin-bottom:22px">
-          <span class="eyebrow">Colunistas</span>
-          <h2 class="h-section">Nosso time de Colunistas</h2>
-        </div>
-        <div class="carousel reveal" data-carousel>
-          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <div class="carousel__track">
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/andre-bezerra.jpg')"></div><b>André Bezerra</b><span>A Xepa</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/sarah-guilhermo.jpg')"></div><b>Sarah Guilhermo</b><span>Cool Kids</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/dani-machado.jpg')"></div><b>Dani Machado</b><span>Mesa Afora</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/giovana-e-mario-torquato.jpg')"></div><b>Giovana e Mario Torquato</b><span>Curitibando em Família</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/cissa-mariah.jpg')"></div><b>Cissa Mariah</b><span>Drink ou Cocktail?</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/jussara-voss.jpg')"></div><b>Jussara Voss</b><span>Vosso Blog de Comida</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/guilherme-rodrigues.jpg')"></div><b>Guilherme Rodrigues</b><span>Notas Báquicas: O melhor dos vinhos</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/ledinara-batista.jpg')"></div><b>Ledinara Batista</b><span>O Mundo Doce</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/ale-mocellim.jpg')"></div><b>Alê Mocellim</b><span>Bom Churrasco</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/thiago-paes.jpg')"></div><b>Thiago Paes</b><span>Soft – Destinos Gastronômicos</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/guilhermo-spindola.jpg')"></div><b>Guilhermo Spindola</b><span>Na mesa do cervejeiro</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/flavia-rogoski.jpg')"></div><b>Flavia Rogoski</b><span>Queijo e tal</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/ana-argenta.jpg')"></div><b>Ana Argenta</b><span>Grão em grão</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/jacir-bergmann-ii.jpg')"></div><b>Jacir Bergmann II</b><span>Explorador de Sabores</span></div>
-            <div class="columnist"><div class="ph" data-ph="RM"></div><b>Rui Morschel</b><span>Comida de Verdade</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/aline-moser.jpg')"></div><b>Aline Moser</b><span>Comer Bem com Aline Moser</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/maria-luisa-repula.jpg')"></div><b>Maria Luísa Repula</b><span>Conversas que nutrem</span></div>
-            <div class="columnist"><div class="ph" style="background-image:url('assets/colunistas/anacreon-de-teos.jpg')"></div><b>Anacreon de Téos</b><span>Panela do Anacreon</span></div>
-          </div>
-          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CONTEÚDO QUE INSPIRA E CONECTA (atemporal) ================= -->
-    <section class="section section--creme2" id="inspira">
-      <div class="container">
-        <div class="reveal" style="margin-bottom:24px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px">
-          <span class="eyebrow">Conteúdo que inspira e conecta</span>
-          <a href="noticias.html" class="btn btn--ghost">Acessar conteúdo</a>
-        </div>
-        <div class="inspira-grid">
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">📜</span><div><span class="post__cat">Cultura</span><h3>A história da gastronomia paranaense</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🔪</span><div><span class="post__cat">Cozinha</span><h3>Técnicas que todo apaixonado deveria saber</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🌱</span><div><span class="post__cat">Sustentabilidade</span><h3>O novo ingrediente do sucesso no food service</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🍷</span><div><span class="post__cat">Vinhos</span><h3>Como montar uma harmonização sem erro</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">👩‍🍳</span><div><span class="post__cat">Bastidores</span><h3>Os chefs que estão moldando a cena local</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🥘</span><div><span class="post__cat">Receitas</span><h3>Pratos afetivos para fazer em casa</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">📈</span><div><span class="post__cat">Mercado</span><h3>O que move o food service em 2026</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🍸</span><div><span class="post__cat">Bar</span><h3>A nova coquetelaria autoral do Paraná</h3></div></a>
-          <a class="inspira-item reveal" href="#"><span class="inspira-ico">🗺️</span><div><span class="post__cat">Roteiros</span><h3>Onde comer bem em cada canto da cidade</h3></div></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- (Marcas movidas para o final — ver seção "Marcas" antes do comercial) -->
-
-    <!-- ================= CALENDÁRIO ================= -->
-    <section class="section" id="calendario">
-      <div class="container content-split">
+    <div class="v5home">
+    <!-- 1. Quem somos + troca discreta para a outra porta -->
+    <section class="v5top" id="quem-somos">
+      <div class="container v5top__grid">
         <div>
-          <div class="reveal" style="margin-bottom:28px">
-            <span class="eyebrow">Agenda gastronômica</span>
-            <h2 class="h-section">O que vai rolar pra viver a cidade pela mesa</h2>
-            <p class="lead" style="margin-top:14px">Festivais, roteiros e experiências pra você não perder nada da cena gastronômica — em Curitiba e por todo o Paraná.</p>
-            <button class="btn btn--ghost" type="button" data-share-agenda style="margin-top:18px">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
-              Compartilhar agenda
-            </button>
-          </div>
-          <div class="filterbar reveal" data-filter>
-            <button class="filter-btn is-active" data-region="all">Todas</button>
-            <button class="filter-btn" data-region="curitiba">Curitiba</button>
-            <button class="filter-btn" data-region="londrina">Londrina</button>
-            <button class="filter-btn" data-region="maringa">Maringá</button>
-            <button class="filter-btn" data-region="parana">Paraná</button>
-            <button class="filter-btn" data-region="rs">Rio Grande do Sul</button>
-          </div>
-
-          <div class="agenda" data-agenda>
-            <a class="event reveal cat-festival" href="festival.html" data-region="curitiba">
-              <div class="event__date"><b>12</b><span>Jul</span></div>
-              <div class="event__info"><h3>Festival Bom Gourmet 2026</h3><p>Um mês de menus especiais em dezenas de restaurantes</p><div class="event__meta"><span class="event__tag">Festival</span><span class="event__city">Curitiba · PR</span></div></div>
-            </a>
-            <a class="event reveal cat-roteiro" href="#" data-region="parana">
-              <div class="event__date"><b>03</b><span>Ago</span></div>
-              <div class="event__info"><h3>Circuito de Inverno</h3><p>Roteiro pra aquecer os dias frios com pratos especiais</p><div class="event__meta"><span class="event__tag">Roteiro</span><span class="event__city">Paraná</span></div></div>
-            </a>
-            <a class="event reveal cat-experiencia" href="#" data-region="londrina">
-              <div class="event__date"><b>20</b><span>Set</span></div>
-              <div class="event__info"><h3>FoodCo Experience</h3><p>O encontro que movimenta o food service paranaense</p><div class="event__meta"><span class="event__tag">FoodCo</span><span class="event__city">Londrina · PR</span></div></div>
-            </a>
-            <a class="event reveal cat-roteiro" href="#" data-region="maringa">
-              <div class="event__date"><b>28</b><span>Set</span></div>
-              <div class="event__info"><h3>Circuito Bom Gourmet</h3><p>Um roteiro pra descobrir novos sabores pela cidade</p><div class="event__meta"><span class="event__tag">Roteiro</span><span class="event__city">Maringá · PR</span></div></div>
-            </a>
-            <a class="event reveal cat-premio" href="#" data-region="curitiba">
-              <div class="event__date"><b>15</b><span>Out</span></div>
-              <div class="event__info"><h3>Prêmio Bom Gourmet</h3><p>A noite que celebra os melhores da gastronomia</p><div class="event__meta"><span class="event__tag">Premiação</span><span class="event__city">Curitiba · PR</span></div></div>
-            </a>
-            <a class="event reveal cat-expansao" href="#" data-region="rs">
-              <div class="event__date"><b>09</b><span>Nov</span></div>
-              <div class="event__info"><h3>Bom Gourmet RS</h3><p>A gastronomia paranaense estreia no Sul</p><div class="event__meta"><span class="event__tag">Expansão</span><span class="event__city">Porto Alegre · RS</span></div></div>
-            </a>
-          </div>
+          <span class="vchip">Bom Gourmet · 33 anos no Sul</span>
+          <h1>Fome de <em>viver a cidade</em>? A gente sabe onde ir.</h1>
+          <p>Do pão quentinho da manhã ao drink de sexta à noite, a gente garimpa o que tem de mais gostoso por aqui. A casa que acabou de abrir, o prato que vale a fila e os festivais que deixam a cidade inteira com água na boca.</p>
         </div>
-
-        <aside class="reveal">
-          <div class="community__card community__card--gl" style="min-height:auto">
-            <span class="eyebrow" style="color:#ffd9dd">Não perca nada</span>
-            <h3>Receba a agenda na newsletter</h3>
-            <p>Entre na comunidade Gourmet Lovers e receba no seu e-mail tudo que vai rolar na cidade.</p>
-            <a href="#comunidades" class="btn btn--light">Quero participar</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ================= COMUNIDADES ================= -->
-    <section class="section section--creme2" id="comunidades">
-      <div class="container">
-        <div class="center reveal" style="margin-bottom:36px">
-          <span class="eyebrow">Comunidades</span>
-          <h2 class="h-section">Faça parte do ecossistema</h2>
-        </div>
-        <div class="community">
-          <div class="community__card community__card--gl reveal">
-            <span class="eyebrow" style="color:#ffd9dd">Para o público</span>
-            <h3>Gourmet Lovers</h3>
-            <p>A comunidade de quem ama comer bem. Newsletter, benefícios exclusivos e acesso antecipado às experiências do ecossistema.</p>
-            <a href="#" class="btn btn--light">Seja um Gourmet Lover</a>
-          </div>
-          <div class="community__card community__card--fc reveal">
-            <span class="eyebrow" style="color:var(--ouro-claro)">Para operadores</span>
-            <h3>Comunidade FoodCo</h3>
-            <p>Para quem opera no food service: grupos de WhatsApp, eventos, mentorias, conteúdo de gestão e conexões para impulsionar o seu negócio.</p>
-            <a href="#" class="btn btn--primary">Entrar na FoodCo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= MANIFESTO (vídeo) — movido para baixo ================= -->
-    <section class="manifesto section" id="manifesto">
-      <div class="container manifesto__grid">
-        <div class="reveal">
-          <div class="ph ph--dark" data-ph="Vídeo manifesto (YouTube)">
-            <button class="play" aria-label="Assistir"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
-          </div>
-        </div>
-        <div class="reveal">
-          <span class="eyebrow">Manifesto · Videocase</span>
-          <h2>Não somos um portal. Somos uma plataforma de <span class="text-vermelho">live marketing</span>.</h2>
-          <p>Há 33 anos o Bom Gourmet conecta pessoas, operações, destinos e marcas. Produzimos eventos, desenvolvemos comunidades, geramos negócios e impulsionamos o food service paranaense — usando o conteúdo como ferramenta de relacionamento e autoridade.</p>
-          <p style="margin-top:24px">
-            <a href="#" class="btn btn--ghost">Conheça nossa história
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SOCIAL / DISTRIBUIÇÃO (contas + reels) ================= -->
-    <section class="section section--creme2" id="social">
-      <div class="container">
-        <div class="social-head reveal">
-          <div>
-            <span class="eyebrow">Distribuição &amp; comunidade</span>
-            <h2 class="h-section">O Bom Gourmet em movimento</h2>
-            <p class="lead" style="margin-top:8px">Reels e Shorts de todas as nossas contas num só lugar — conteúdo novo o tempo todo.</p>
-          </div>
-          <div class="social-icons">
-            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.3-8.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></a>
-            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
-            <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4 0-.6.3a3.2 3.2 0 0 0-1 2.4c0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg></a>
-          </div>
-        </div>
-
-        <div class="accounts reveal" data-accounts>
-          <button class="acct-chip is-active" type="button" data-acct="all">Todas</button>
-          <button class="acct-chip" type="button" data-acct="gp">@gpbomgourmet</button>
-          <button class="acct-chip" type="button" data-acct="festival">@festivalbomgourmet</button>
-          <button class="acct-chip" type="button" data-acct="festivalcwb">@festivalbomgourmetcuritiba</button>
-          <button class="acct-chip" type="button" data-acct="foodco">@foodcobrasil</button>
-          <button class="acct-chip" type="button" data-acct="cwburguer">@cwburguer</button>
-        </div>
-
-        <div class="reels reveal" data-reels>
-          <a class="reel" href="#" data-acct="gp"><div class="ph" data-ph="Reels Festival"></div><span class="reel__acct">@gpbomgourmet</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Bastidores Bom Gourmet</span></a>
-          <a class="reel" href="#" data-acct="festival"><div class="ph" data-ph="Post guia"></div><span class="reel__acct">@festivalbomgourmet</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Festival 2026 vem aí</span></a>
-          <a class="reel" href="#" data-acct="cwburguer"><div class="ph" data-ph="CWBurguer Fest"></div><span class="reel__acct">@cwburguer</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">O melhor burger de CWB</span></a>
-          <a class="reel" href="#" data-acct="foodco"><div class="ph" data-ph="Post FoodCo"></div><span class="reel__acct">@foodcobrasil</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Mentoria FoodCo</span></a>
-          <a class="reel" href="#" data-acct="festivalcwb"><div class="ph" data-ph="Post novo restaurante"></div><span class="reel__acct">@festivalbomgourmetcuritiba</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Roteiro Curitiba</span></a>
-          <a class="reel" href="#" data-acct="gp"><div class="ph" data-ph="Reels receita"></div><span class="reel__acct">@gpbomgourmet</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Receita da semana</span></a>
-          <a class="reel" href="#" data-acct="foodco"><div class="ph" data-ph="Tendências"></div><span class="reel__acct">@foodcobrasil</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Tendências do food service</span></a>
-          <a class="reel" href="#" data-acct="festival"><div class="ph" data-ph="Reels drink"></div><span class="reel__acct">@festivalbomgourmet</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Harmonização do Festival</span></a>
-          <a class="reel" href="#" data-acct="cwburguer"><div class="ph" data-ph="Reels receita"></div><span class="reel__acct">@cwburguer</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Combo do dia</span></a>
-          <a class="reel" href="#" data-acct="gp"><div class="ph" data-ph="Inspira tecnicas"></div><span class="reel__acct">@gpbomgourmet</span><span class="reel__play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span class="reel__cap">Técnica na cozinha</span></a>
-        </div>
-
-        <div class="social-cta reveal">
-          <a href="#" class="btn btn--primary">Seguir o Bom Gourmet</a>
-          <a href="#comunidades" class="btn btn--ghost">Entrar na Comunidade FoodCo</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- (Relacionamento movido para antes do rodapé) -->
-
-    <!-- ================= MARCAS (carrossel de logos) ================= -->
-    <section class="section" id="marcas">
-      <div class="container center reveal" style="margin-bottom:40px">
-        <span class="eyebrow">Prova social</span>
-        <h2 class="h-section">Marcas que fazem parte da nossa história</h2>
-        <p class="lead" style="margin:14px auto 0">Grandes empresas já confiaram no Bom Gourmet para se conectar com o universo da gastronomia.</p>
-      </div>
-      <!-- Trocar cada .logo-word por <img src="assets/logos/marca.svg" alt="Marca"> com o logo real -->
-      <div class="logos reveal">
-        <div class="logos__track">
-          <!-- conjunto A -->
-          <div class="logo-item"><span class="logo-word">Santander</span></div>
-          <div class="logo-item"><span class="logo-word">BRF</span></div>
-          <div class="logo-item"><span class="logo-word">Coca-Cola</span></div>
-          <div class="logo-item"><span class="logo-word">Stella Artois</span></div>
-          <div class="logo-item"><span class="logo-word">Sebrae</span></div>
-          <div class="logo-item"><span class="logo-word">Electrolux</span></div>
-          <div class="logo-item"><span class="logo-word">Sicredi</span></div>
-          <div class="logo-item"><span class="logo-word">Seara</span></div>
-          <div class="logo-item"><span class="logo-word">Heineken</span></div>
-          <div class="logo-item"><span class="logo-word">Nestlé</span></div>
-          <div class="logo-item"><span class="logo-word">Unilever</span></div>
-          <!-- conjunto B (duplicado para o loop contínuo) -->
-          <div class="logo-item"><span class="logo-word">Santander</span></div>
-          <div class="logo-item"><span class="logo-word">BRF</span></div>
-          <div class="logo-item"><span class="logo-word">Coca-Cola</span></div>
-          <div class="logo-item"><span class="logo-word">Stella Artois</span></div>
-          <div class="logo-item"><span class="logo-word">Sebrae</span></div>
-          <div class="logo-item"><span class="logo-word">Electrolux</span></div>
-          <div class="logo-item"><span class="logo-word">Sicredi</span></div>
-          <div class="logo-item"><span class="logo-word">Seara</span></div>
-          <div class="logo-item"><span class="logo-word">Heineken</span></div>
-          <div class="logo-item"><span class="logo-word">Nestlé</span></div>
-          <div class="logo-item"><span class="logo-word">Unilever</span></div>
-        </div>
-      </div>
-      <div class="center reveal" style="margin-top:36px">
-        <a href="#comercial" class="btn btn--dark">Sua marca aqui também</a>
-      </div>
-    </section>
-
-    <!-- ================= CTA COMERCIAL + FORMULÁRIO ================= -->
-    <section class="section cta-band" id="comercial">
-      <div class="container commercial-grid">
-        <div class="reveal">
-          <span class="eyebrow" style="color:#ffd9dd">Vamos criar algo extraordinário juntos</span>
-          <h2>Leve sua marca para o Bom Gourmet</h2>
-          <p>Patrocine um projeto, ative sua marca ou desenvolva uma experiência sob medida. Conte pra gente o seu objetivo e nosso time monta a proposta ideal.</p>
-          <ul style="margin-top:24px; display:grid; gap:12px">
-            <li style="display:flex; gap:10px; align-items:center"><span style="font-size:1.1rem">✓</span> Resposta em até 1 dia útil</li>
-            <li style="display:flex; gap:10px; align-items:center"><span style="font-size:1.1rem">✓</span> Mídia kit completo com números atualizados</li>
-            <li style="display:flex; gap:10px; align-items:center"><span style="font-size:1.1rem">✓</span> Cotas flexíveis para cada objetivo</li>
-          </ul>
-          <p style="margin-top:24px; font-size:.9rem; opacity:.9">Prefere falar direto? <a href="#" style="color:#fff; text-decoration:underline; text-underline-offset:3px; font-weight:600">comercial@bomgourmet.com.br</a></p>
-        </div>
-
-        <div class="reveal">
-          <div class="lead-form">
-            <form id="commercialForm" novalidate>
-              <div class="field-row">
-                <div class="field">
-                  <label for="cf-nome">Nome*</label>
-                  <input type="text" id="cf-nome" name="nome" required />
-                </div>
-                <div class="field">
-                  <label for="cf-empresa">Empresa / marca*</label>
-                  <input type="text" id="cf-empresa" name="empresa" required />
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field">
-                  <label for="cf-email">E-mail*</label>
-                  <input type="email" id="cf-email" name="email" required />
-                </div>
-                <div class="field">
-                  <label for="cf-tel">Telefone / WhatsApp</label>
-                  <input type="tel" id="cf-tel" name="telefone" />
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field">
-                  <label for="cf-objetivo">Objetivo</label>
-                  <select id="cf-objetivo" name="objetivo">
-                    <option value="">Selecione…</option>
-                    <option>Patrocinar um projeto</option>
-                    <option>Ativação de marca</option>
-                    <option>Experiência sob medida</option>
-                    <option>Anunciar / mídia</option>
-                    <option>Outro</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="cf-verba">Verba estimada</label>
-                  <select id="cf-verba" name="verba">
-                    <option value="">Selecione…</option>
-                    <option>Até R$ 20 mil</option>
-                    <option>R$ 20 mil – R$ 50 mil</option>
-                    <option>R$ 50 mil – R$ 150 mil</option>
-                    <option>Acima de R$ 150 mil</option>
-                    <option>A definir</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label for="cf-msg">Conte sobre o seu projeto</label>
-                <textarea id="cf-msg" name="mensagem" placeholder="Qual projeto te interessa? Qual o objetivo da sua marca?"></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary btn--block">Enviar para o comercial</button>
-              <p class="form-privacy">Ao enviar, você concorda em ser contatado pelo time do Bom Gourmet.</p>
+        <div>
+          <div class="v5news">
+            <small>Grátis, uma vez por semana</small>
+            <h3>Assine a nossa news</h3>
+            <p>As casas que abriram, onde comer bem no fim de semana e os menus do Festival antes de todo mundo.</p>
+            <form class="news-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Pronto, você está na lista!';">
+              <input type="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" required />
+              <button type="submit" class="vbtn vbtn--light">Quero receber</button>
             </form>
+          </div>
+          <div class="trocar">
+            <a class="frente frente--b2b" href="food-service.html">Para o food service: <b>quero fazer parte →</b></a>
+          </div>
+          <label class="lembrar"><input type="checkbox" data-lembrar /> Lembrar minha escolha neste navegador</label>
+        </div>
+      </div>
+    </section>
 
-            <div class="form-success" id="commercialSuccess">
-              <div class="check">✓</div>
-              <h3>Recebemos seu contato!</h3>
-              <p class="muted">Nosso time comercial responde em até 1 dia útil. Enquanto isso, que tal conhecer o portfólio completo?</p>
-            </div>
+    <!-- 2. Destaque fixo: uma imagem só, clicável -->
+    <section class="vsec" style="padding:28px 0 18px">
+      <div class="container">
+        <a class="fixo fixo--img" href="#" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1800&q=70')">
+          <span class="arte"><small>● Começa dia 13 de novembro</small><b>CW Burguer Fest</b><span>39 hamburguerias de Curitiba com burgers a R$ 19, R$ 29 e R$ 39, até 13 de dezembro.</span></span>
+        </a>
+        <p class="nota-dev">O banner é uma imagem só, feita pela equipe, com o link cadastrado à parte. Texto, selo e botão já vêm na arte. Duas medidas: computador (1600 x 500) e celular (1080 x 810).</p>
+      </div>
+    </section>
+
+
+    <!-- 3. Notícias da redação: só viver a cidade, com filtro por programa e por estado -->
+    <section class="vsec" id="noticias" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:16px">
+          <h2><span class="kicker">Agora</span><span data-titulo-noticias>Como viver a cidade</span></h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver todas</a>
+        </div>
+        <div class="filtros">
+          <div class="b2c-filter" data-programa>
+            <button type="button" class="is-on" data-prog="todos">Tudo</button>
+            <button type="button" data-prog="jantar">Jantar</button>
+            <button type="button" data-prog="bar">Bar e drinks</button>
+            <button type="button" data-prog="cafe">Café e brunch</button>
+            <button type="button" data-prog="viagem">Bate-volta</button>
+            <button type="button" data-prog="familia">Com crianças</button>
+          </div>
+          <div class="ufs" data-ufs>
+            <button type="button" class="is-on" data-uf="todos">Todos</button>
+            <button type="button" data-uf="PR">Paraná</button>
+            <button type="button" data-uf="SC">Santa Catarina</button>
+            <button type="button" data-uf="RS">Rio Grande do Sul</button>
+          </div>
+        </div>
+        <div class="grid4 lista-mobile" data-newsgrid>
+          <a class="vcard vcard--pin" href="#" data-uf="PR" data-prog="jantar" data-tipo="roteiro" data-fixa><span class="pin" title="Notícia fixada pela equipe">📌 Fixada</span><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Jantar · Roteiro <i class="uf-tag">PR</i></span><h3>Novos lugares em Curitiba para conhecer antes que fiquem cheios</h3><span class="vmeta">4 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="cafe" data-tipo="noticia"><span class="vcard__media" style="background-image:url('assets/capas/bolo-nuvem.jpg')"></span><span class="vcard__body"><span class="vcat">Café e brunch <i class="uf-tag">PR</i></span><h3>Bolo Nuvem é a nova tendência viral da confeitaria; e já tem onde provar em Curitiba</h3><span class="vmeta">por Bom Gourmet</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="bar" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Bar e drinks · Roteiro <i class="uf-tag">PR</i></span><h3>Guia para beber bem em Curitiba: onde encontrar os melhores vinhos, cervejas artesanais e coquetéis para o final de semana</h3><span class="vmeta">7 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="SC" data-prog="viagem" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Bate-volta · Roteiro <i class="uf-tag">SC</i></span><h3>Florianópolis em 48 horas: onde comer frutos do mar sem cair em armadilha</h3><span class="vmeta">6 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="jantar" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('assets/capas/o-que-fazer-12-a-18-nov.jpg')"></span><span class="vcard__body"><span class="vcat">Jantar · Roteiro <i class="uf-tag">PR</i></span><h3>O que fazer em Curitiba: festival de hambúrguer a R$ 19, rock ao vivo, jantares e novidades de Natal</h3><span class="vmeta">por Larissa Moraes</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="cafe" data-tipo="noticia"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Café e brunch <i class="uf-tag">PR</i></span><h3>Dia Mundial do Pão: conheça os lugares que fazem os melhores pães de Curitiba</h3><span class="vmeta">3 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="PR" data-prog="jantar" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('assets/capas/confraternizacao-fim-de-ano.jpg')"></span><span class="vcard__body"><span class="vcat">Jantar · Roteiro <i class="uf-tag">PR</i></span><h3>Fim de ano em Curitiba: um roteiro completo para acertar na confraternização</h3><span class="vmeta">por Larissa Moraes</span><span class="vcard__link">Ler matéria →</span></span></a>
+          <a class="vcard" href="#" data-uf="RS" data-prog="viagem" data-tipo="roteiro"><span class="vcard__media" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=70')"></span><span class="vcard__body"><span class="vcat">Bate-volta · Roteiro <i class="uf-tag">RS</i></span><h3>As churrascarias de Porto Alegre que valem a viagem</h3><span class="vmeta">5 min de leitura</span><span class="vcard__link">Ler matéria →</span></span></a>
+        </div>
+        <p class="pnote" data-vazio hidden>Ainda não temos notícias com esse filtro nesta semana.</p>
+        <p class="nota-dev">Só matérias da redação sobre viver a cidade. As colunas têm bloco próprio logo abaixo, para não misturar opinião com a notícia. Títulos reais do site atual. Título com mais de 70 caracteres ganha fonte menor, sem cortar. A tag do programa vem da categoria da matéria.</p>
+      </div>
+    </section>
+
+    <!-- 4. Colunistas: bloco só deles, separado das notícias da redação -->
+    <section class="vsec vsec--creme2" id="colunistas" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Quem escreve pra você</span>Colunistas</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="#">Ver todas as colunas</a>
+        </div>
+        <div class="grid4 lista-mobile">
+          <a class="vcard vcard--coluna" href="#"><span class="vcard__media" style="background-image:url('assets/capas/ipanema-inn.jpg')"></span><span class="vcard__body"><span class="vcat">Vosso Blog de Comida</span><h3>Ipanema Inn: 50 anos no ritmo de um bairro</h3><span class="autor"><i style="background-image:url('assets/colunistas/jussara-voss.jpg')"></i><span><b>Jussara Voss</b><small>há 4 dias</small></span></span></span></a>
+          <a class="vcard vcard--coluna" href="#"><span class="vcard__media" style="background-image:url('assets/capas/paladar-coquetelaria.jpg')"></span><span class="vcard__body"><span class="vcat">Cool Kids + Drink ou Cocktail?</span><h3>Jovens não sabem o que pedir no bar? Aqui está um tutorial de como melhorar o seu paladar na coquetelaria e se arriscar mais</h3><span class="autor"><i style="background-image:url('assets/colunistas/sarah-guilhermo.jpg')"></i><span><b>Sarah Guilhermo e Cissa Mariah</b><small>há 5 dias</small></span></span></span></a>
+          <a class="vcard vcard--coluna" href="#"><span class="vcard__media" style="background-image:url('assets/capas/troisgros-ksa.jpg')"></span><span class="vcard__body"><span class="vcat">Panela do Anacreon</span><h3>Claudia Krauspenhar recebe Thomas Troisgros na cozinha do K.sa</h3><span class="autor"><i style="background-image:url('assets/colunistas/anacreon-de-teos.jpg')"></i><span><b>Anacreon de Téos</b><small>há 1 semana</small></span></span></span></a>
+          <a class="vcard vcard--coluna" href="#"><span class="vcard__media" style="background-image:url('assets/capas/frescor-acidez.jpg')"></span><span class="vcard__body"><span class="vcat">Comer Bem com Aline Moser</span><h3>Frescor, acidez e sabor muito além da sobremesa!</h3><span class="autor"><i style="background-image:url('assets/colunistas/aline-moser.jpg')"></i><span><b>Aline Moser</b><small>há 1 semana</small></span></span></span></a>
+        </div>
+        <h3 class="colu-todos">Todos os colunistas</h3>
+        <div class="hslider" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="colrow colrow--v5 recolhido hs-track" data-colunas>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/jussara-voss.jpg')"></span><b>Jussara Voss</b><span>Vosso Blog de Comida</span><small class="colu__quando">há 4 dias</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/sarah-guilhermo.jpg')"></span><b>Sarah Guilhermo</b><span>Cool Kids</span><small class="colu__quando">há 5 dias</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/cissa-mariah.jpg')"></span><b>Cissa Mariah</b><span>Drink ou Cocktail?</span><small class="colu__quando">há 5 dias</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/anacreon-de-teos.jpg')"></span><b>Anacreon de Téos</b><span>Panela do Anacreon</span><small class="colu__quando">há 1 semana</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/aline-moser.jpg')"></span><b>Aline Moser</b><span>Comer Bem com Aline Moser</span><small class="colu__quando">há 1 semana</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/guilherme-rodrigues.jpg')"></span><b>Guilherme Rodrigues</b><span>Notas Báquicas: O melhor dos vinhos</span><small class="colu__quando">há 1 semana</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/maria-luisa-repula.jpg')"></span><b>Maria Luísa Repula</b><span>Conversas que nutrem</span><small class="colu__quando">há 2 semanas</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/ale-mocellim.jpg')"></span><b>Alê Mocellim</b><span>Bom Churrasco</span><small class="colu__quando">há 2 semanas</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/thiago-paes.jpg')"></span><b>Thiago Paes</b><span>Soft – Destinos Gastronômicos</span><small class="colu__quando">há 3 semanas</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/dani-machado.jpg')"></span><b>Dani Machado</b><span>Mesa Afora</span><small class="colu__quando">há 3 semanas</small></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/andre-bezerra.jpg')"></span><b>André Bezerra</b><span>A Xepa</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/giovana-e-mario-torquato.jpg')"></span><b>Giovana e Mario Torquato</b><span>Curitibando em Família</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/ledinara-batista.jpg')"></span><b>Ledinara Batista</b><span>O Mundo Doce</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/guilhermo-spindola.jpg')"></span><b>Guilhermo Spindola</b><span>Na mesa do cervejeiro</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/flavia-rogoski.jpg')"></span><b>Flavia Rogoski</b><span>Queijo e tal</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/ana-argenta.jpg')"></span><b>Ana Argenta</b><span>Grão em grão</span></div>
+            <div class="colu"><span class="colu__ph" style="background-image:url('assets/colunistas/jacir-bergmann-ii.jpg')"></span><b>Jacir Bergmann II</b><span>Explorador de Sabores</span></div>
+            <div class="colu"><span class="colu__ph colu__ph--sem">RM</span><b>Rui Morschel</b><span>Comida de Verdade</span></div>
+          </div>
+        </div>
+        <button type="button" class="vbtn vbtn--ghost vbtn--sm ver-mais-colu" data-ver-colu>Ver todos os 18 colunistas</button>
+        <p class="nota-dev">Bloco só das colunas, para a opinião de cada colunista não subir junto com a notícia da redação. Em cima, os 4 textos mais recentes; embaixo, todos os colunistas na ordem de quem publicou por último. Títulos, fotos e datas reais do site atual em 17/11. Quem não publica há mais de 3 semanas fica sem a indicação de quando.</p>
+      </div>
+    </section>
+
+    <!-- 6. Redes: o que está rodando em todas as contas -->
+    <section class="vsec" id="redes" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Nas redes</span>O que está rodando agora</h2>
+          <div class="social-row">
+            <a class="social" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 1 0 0 9.8 4.9 4.9 0 0 0 0-9.8zm0 8.1a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm6.3-8.3a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg> @gpbomgourmet</a>
+            <a class="social" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg> YouTube</a>
+            <a class="social" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.8c-1-.7-1.6-1.8-1.7-3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.5a5.8 5.8 0 1 0 5 5.7V9.1c1.2.9 2.7 1.4 4.2 1.4V7.4c-1 0-1.9-.6-2.6-1.6z"/></svg> TikTok</a>
+          </div>
+        </div>
+        <div class="hslider" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="hs-track shorts">
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@festivalbomgourmet</span><span class="short__play"></span><span class="short__cap">Os menus desta edição em 30 segundos</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@gpbomgourmet</span><span class="short__play"></span><span class="short__cap">Onde beber bem neste fim de semana</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@gpbomgourmet</span><span class="short__play"></span><span class="short__cap">Vinada: o que vai ter na praça</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@cwburguer_fest</span><span class="short__play"></span><span class="short__cap">O burger mais votado da última edição</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@premiobomgourmet</span><span class="short__play"></span><span class="short__cap">A noite da premiação</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@foodco.experience</span><span class="short__play"></span><span class="short__cap">FoodCo. em 60 segundos</span></a>
+            <a class="short" href="#" style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=500&q=70')"><span class="short__acct">@casabomgourmet</span><span class="short__play"></span><span class="short__cap">Tour pela Casa Bom Gourmet</span></a>
+          </div>
+        </div>
+        <p class="nota-dev">Puxa os últimos reels de todas as contas: Bom Gourmet e de cada projeto.</p>
+      </div>
+    </section>
+
+    <!-- 7. Agenda Bom Gourmet: datas de realização, card inteiro clicável -->
+    <section class="vsec vsec--creme2" id="agenda" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Para você se programar</span>Agenda Bom Gourmet</h2>
+        </div>
+        <div class="hslider" data-hslider>
+          <button class="hs-btn hs-prev" type="button" aria-label="Anterior"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="hs-btn hs-next" type="button" aria-label="Próximo"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          <div class="tline hs-track">
+            <a class="tl is-now" href="projeto.html?p=cwburguer"><span class="tl__mes">13 nov a 13 dez</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=70')"></i><span class="ativo">Vem aí</span></span><b>CW Burguer Fest</b><small>39 hamburguerias · Curitiba</small><span class="tl__link">Ver as hamburguerias →</span></a>
+            <a class="tl" href="projeto.html?p=verao"><span class="tl__mes">fim de nov a jan</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=400&q=70')"></i></span><b>Circuito de Verão</b><small>Curitiba e região</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=festival"><span class="tl__mes">mar 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=70')"></i></span><b>Festival Bom Gourmet</b><small>Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=cwburguer"><span class="tl__mes">abr e mai 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=70')"></i></span><b>CW Burguer Fest</b><small>Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=premio"><span class="tl__mes">abr a ago 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=400&q=70')"></i></span><b>Prêmio Bom Gourmet</b><small>Indicação, votação e cerimônia no PR</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=vinada"><span class="tl__mes">mai 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=70')"></i></span><b>Vinada Cultural</b><small>Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=inverno"><span class="tl__mes">jun e jul 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=70')"></i></span><b>Circuito de Inverno</b><small>Curitiba e região</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=premio"><span class="tl__mes">set 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=400&q=70')"></i></span><b>Prêmio Bom Gourmet RS</b><small>Porto Alegre</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=festival"><span class="tl__mes">out 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=400&q=70')"></i></span><b>Festival Bom Gourmet</b><small>Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=vinada"><span class="tl__mes">nov 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=400&q=70')"></i></span><b>Vinada Cultural</b><small>Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <a class="tl" href="projeto.html?p=foodco"><span class="tl__mes">6 edições em 2027</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=400&q=70')"></i></span><b>FoodCo. Experience</b><small>Casa Bom Gourmet · Curitiba</small><span class="tl__breve">Conhecer o projeto →</span></a>
+            <div class="tl tl--apoio"><span class="tl__mes">data a confirmar</span><span class="tl__foto"><i style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=400&q=70')"></i></span><b>Gastronomix</b><small>Curitiba · apoio Bom Gourmet</small><span class="tl__breve">Em breve mais informações</span></div>
+          </div>
+        </div>
+        <p class="pnote"><span class="tl__legenda"></span> Projeto que o Bom Gourmet apoia. Meses das edições de 2026, conferidos nas matérias publicadas. As datas exatas de 2027 ainda precisam ser confirmadas.</p>
+      </div>
+    </section>
+
+    <!-- 8. O que andam dizendo: curadoria da equipe, nada no automático -->
+    <section class="vsec" id="dizendo" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Por aí</span>O que andam dizendo</h2>
+        </div>
+        <div class="dizendo">
+          <a class="midia" href="#"><small>Gazeta do Povo · Imprensa</small><p>"Festival Bom Gourmet coloca mais de 300 restaurantes do Paraná no mesmo mês e muda o movimento da cidade."</p><b>Ler a matéria →</b></a>
+          <a class="dpost" href="#" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=70')"><span class="short__play"></span><small>@curitibacult · Instagram</small><p>"Fui em 6 restaurantes do Festival em duas semanas. Esse foi o melhor custo-benefício."</p><b>Ver o post →</b></a>
+          <a class="midia" href="#"><small>Cultura alimentar · Estudo</small><p>"O que a geração Z pede quando sai para comer: menos álcool, mais experiência e mais mesa compartilhada."</p><b>Ler o estudo →</b></a>
+          <a class="dpost" href="#" style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=70')"><span class="short__play"></span><small>@foodie.cwb · TikTok</small><p>"Ranking dos burgers do CW Burguer Fest que valem a fila, sem patrocínio."</p><b>Ver o vídeo →</b></a>
+          <a class="midia" href="#"><small>Band Paraná · TV</small><p>"A Vinada lotou a Praça da Espanha: mais de 15 mil pessoas, dez dogueiros e música até o fim da tarde."</p><b>Assistir →</b></a>
+          <a class="dpost" href="#" style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=70')"><span class="short__play"></span><small>@comernacidade · Instagram</small><p>"Fui na noite do Prêmio Bom Gourmet e conto quem levou o quê."</p><b>Ver o post →</b></a>
+        </div>
+        <p class="nota-dev">Curadoria da equipe: seis itens, revisados uma vez por mês. Mistura imprensa, influenciadores e um ou outro estudo sobre cultura alimentar. Nada entra no automático. Itens de exemplo.</p>
+      </div>
+    </section>
+
+    <!-- 9. Bloco modular: aparece só quando tem algo novo para divulgar -->
+    <section class="vsec" id="podcast" style="padding:0 0 40px">
+      <div class="container">
+        <a class="podcast podcast--bora" href="#">
+          <i style="background-image:url('assets/podcast/bora-bom-gourmet.png')" role="img" aria-label="Logo do podcast Bora Bom Gourmet"></i>
+          <div>
+            <small>Podcast Bora Bom Gourmet · episódio novo</small>
+            <h3>Bora viver a cidade? Vem ver o que vai rolar neste fim de semana</h3>
+            <p>O festival de hambúrguer a R$ 19, o Bolo Nuvem que virou febre e onde beber bem no sábado à noite. Dá o play e escolhe o seu rolê.</p>
+          </div>
+          <span class="vbtn vbtn--light">Dar o play</span>
+        </a>
+        <p class="nota-dev">Bloco modular: serve para podcast, lançamento ou campanha. Se não tem nada novo, ele não aparece. Aqui entra o podcast novo, Bora Bom Gourmet, com a logo aprovada. O texto do episódio é exemplo, montado com as notícias reais desta semana.</p>
+      </div>
+    </section>
+
+    <!-- 10. Gente que estava lá -->
+    <section class="vsec vsec--creme2" id="gente" style="padding:40px 0">
+      <div class="container">
+        <div class="sechead" style="margin-bottom:18px">
+          <h2><span class="kicker">Quem viveu</span>Gente que estava lá</h2>
+          <a class="vbtn vbtn--ghost vbtn--sm" href="https://www.instagram.com/gpbomgourmet/" target="_blank" rel="noopener">Marque o @gpbomgourmet e apareça aqui</a>
+        </div>
+        <div class="gente gente--moldura">
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=70')"></i><span><b>@mari.souza</b><small>Festival</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=400&q=70')"></i><span><b>@carlos_eats</b><small>Vinada</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=400&q=70')"></i><span><b>@turmadobatel</b><small>Prêmio</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=400&q=70')"></i><span><b>@ju.ramos</b><small>Circuito</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=400&q=70')"></i><span><b>@pedro.h</b><small>Casa BG</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=70')"></i><span><b>@fernanda.m</b><small>Festival</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=70')"></i><span><b>@lucas.burger</b><small>CW Burguer</small></span></a>
+          <a href="#"><i style="background-image:url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=70')"></i><span><b>@bia.cwb</b><small>Vinada</small></span></a>
+        </div>
+        <p class="nota-dev">Puxa as fotos em que o @gpbomgourmet foi marcado, pela API do Instagram, e só aparece o que a equipe aprovar. Marcação em story some em 24 horas e não dá para puxar.</p>
+      </div>
+    </section>
+
+    <!-- Fale com a gente: o mesmo bloco nas duas páginas -->
+    <section class="vsec" id="contato" style="padding:40px 0">
+      <div class="container">
+        <div class="falecom">
+          <div>
+            <span class="falecom__kicker">Contato</span>
+            <h2>Fale com a gente</h2>
+            <p>Restaurante, marca, imprensa ou qualquer outro assunto. Manda uma mensagem que a gente responde.</p>
+          </div>
+          <div class="falecom__btns">
+            <a class="vbtn vbtn--light" href="#">Falar pelo WhatsApp</a>
+            <a class="vbtn vbtn--ghost" href="#">Mandar um e-mail</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= RELACIONAMENTO (Trabalhe Conosco + News) — fecha a página ================= -->
-    <section class="section section--creme2" id="relacionamento">
-      <div class="container relate reveal">
-        <div class="relate__card">
-          <div>
-            <h3>Trabalhe conosco</h3>
-            <p>Vagas abertas e banco de talentos do ecossistema Bom Gourmet.</p>
-          </div>
-          <a href="#" class="btn btn--dark">Ver vagas</a>
-        </div>
-        <div class="relate__card">
-          <div>
-            <h3>Assine nossas news</h3>
-            <p>Captação contínua — o que está sendo planejado, em primeira mão.</p>
-          </div>
-          <form class="relate__news" onsubmit="return false">
-            <input type="email" placeholder="Seu e-mail" aria-label="E-mail" required />
-            <button class="btn btn--primary" type="submit">Assinar</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
+    </div><!-- /v5home -->
   </main>
-  <div data-component="footer"></div>
 
-  <script src="js/components.js?v=31"></script>
-  <script src="js/script.js?v=31"></script>
+  <div data-vfooter></div>
+  <script src="js/versoes.js?v=11"></script>
+  <script>
+    (function () {
+      var body = document.body, lembrar = document.querySelector("[data-lembrar]");
+      function entrar(salvar) {
+        body.setAttribute("data-frente", "b2c");
+        try { if (salvar) localStorage.setItem("bg_frente", "b2c"); } catch (e) {}
+        window.scrollTo(0, 0);
+      }
+      if (document.documentElement.getAttribute("data-frente-inicial") === "b2c") { entrar(false); lembrar.checked = true; }
+      try { if (sessionStorage.getItem("bg_frente_vez") === "b2c") { sessionStorage.removeItem("bg_frente_vez"); entrar(false); } } catch (e) {}
+      document.querySelector(".v5gate__btn--b2c").addEventListener("click", function () { entrar(false); });
+      lembrar.addEventListener("change", function () {
+        try { lembrar.checked ? localStorage.setItem("bg_frente", "b2c") : localStorage.removeItem("bg_frente"); } catch (e) {}
+      });
+
+      // colunistas no celular: mostra 6 e abre o resto no botão
+      document.querySelector("[data-ver-colu]").addEventListener("click", function () {
+        document.querySelector("[data-colunas]").classList.remove("recolhido"); this.hidden = true;
+      });
+
+      // filtros das notícias: estado, programa e tipo (menu Notícias / Roteiros)
+      var cards = document.querySelectorAll("[data-newsgrid] .vcard"), vazio = document.querySelector("[data-vazio]");
+      var uf = "todos", prog = "todos", tipo = "todos";
+      function filtrar() {
+        var n = 0;
+        cards.forEach(function (c) {
+          var fixa = c.hasAttribute("data-fixa");
+          var ok = (uf === "todos" || c.dataset.uf === uf || fixa) && (prog === "todos" || c.dataset.prog === prog || fixa) && (tipo === "todos" || c.dataset.tipo === tipo);
+          c.classList.toggle("is-hidden", !ok); if (ok) n++;
+        });
+        vazio.hidden = n > 0;
+        document.querySelector("[data-titulo-noticias]").textContent = { todos: "Como viver a cidade", noticia: "Notícias", roteiro: "Roteiros" }[tipo];
+      }
+      function grupo(sel, cb) { var bs = document.querySelectorAll(sel); bs.forEach(function (b) { b.addEventListener("click", function () { bs.forEach(function (x) { x.classList.toggle("is-on", x === b); }); cb(b); filtrar(); }); }); }
+      grupo("[data-ufs] button", function (b) { uf = b.dataset.uf; });
+      grupo("[data-programa] button", function (b) { prog = b.dataset.prog; });
+      document.querySelectorAll("[data-filtro]").forEach(function (a) { a.addEventListener("click", function () {
+        if (body.getAttribute("data-frente") === "gate") entrar(lembrar.checked);
+        tipo = a.dataset.filtro; filtrar();
+      }); });
+    })();
+  </script>
 </body>
 </html>
